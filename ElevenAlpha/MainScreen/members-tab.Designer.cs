@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.MemberInfoTable = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberInfoTable)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // MemberInfoTable
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(56, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(901, 659);
-            this.dataGridView1.TabIndex = 0;
+            this.MemberInfoTable.AllowUserToAddRows = false;
+            this.MemberInfoTable.AllowUserToDeleteRows = false;
+            this.MemberInfoTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MemberInfoTable.Location = new System.Drawing.Point(56, 30);
+            this.MemberInfoTable.Name = "MemberInfoTable";
+            this.MemberInfoTable.ReadOnly = true;
+            this.MemberInfoTable.RowTemplate.Height = 28;
+            this.MemberInfoTable.Size = new System.Drawing.Size(933, 573);
+            this.MemberInfoTable.TabIndex = 0;
             // 
             // members_tab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.MemberInfoTable);
             this.Name = "members_tab";
             this.Size = new System.Drawing.Size(1024, 697);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberInfoTable)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView MemberInfoTable;
     }
 }

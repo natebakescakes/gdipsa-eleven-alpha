@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MainScreen
+namespace ElevenAlpha
 {
     using System;
     using System.Data.Entity;

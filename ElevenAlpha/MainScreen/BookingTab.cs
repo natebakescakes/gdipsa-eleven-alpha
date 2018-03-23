@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainScreen
+namespace ElevenAlpha
 {
     public partial class BookingTab : UserControl
     {

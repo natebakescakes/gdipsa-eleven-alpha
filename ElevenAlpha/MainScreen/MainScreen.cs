@@ -12,9 +12,13 @@ namespace ElevenAlpha
 {
     public partial class MainScreen : Form
     {
+        BookingTab bookingTab;
+
         public MainScreen()
         {
             InitializeComponent();
+            bookingTab = new BookingTab();
+            bookingsTabPage.Controls.Add(bookingTab);
         }
     }
 }

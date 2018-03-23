@@ -81,6 +81,12 @@
     <Compile Include="FacilityType.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="FacilityTypeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacilityTypeManager.Designer.cs">
+      <DependentUpon>FacilityTypeManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FacilityTypeManager.resx">
+      <DependentUpon>FacilityTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>

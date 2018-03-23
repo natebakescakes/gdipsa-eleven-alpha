@@ -1,2 +1,2 @@
-# team-11a-sfbs
-GDipSA (Team 11A) Sports Facility Booking System
+# gdipsa-eleven-alpha
+GDipSA (Team 11A) Eleven Alpha - Sports Facility Booking System

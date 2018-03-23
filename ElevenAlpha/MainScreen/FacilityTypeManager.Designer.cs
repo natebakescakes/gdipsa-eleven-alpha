@@ -1,4 +1,4 @@
-﻿namespace MainScreen
+﻿namespace ElevenAlpha
 {
     partial class FacilityTypeManager
     {
@@ -28,36 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.InputTypeNameTextBox = new System.Windows.Forms.TextBox();
             this.AddButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.FacilityDataGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.FacilityDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // InputTypeNameTextBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Items.AddRange(new object[] {
-            "Squash Court",
-            "Tennis Court",
-            "Swimming Pool",
-            "Table Tennis Table",
-            "Basketball Court"});
-            this.listBox1.Location = new System.Drawing.Point(115, 111);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(488, 94);
-            this.listBox1.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(120, 245);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(483, 25);
-            this.textBox1.TabIndex = 2;
+            this.InputTypeNameTextBox.Location = new System.Drawing.Point(129, 277);
+            this.InputTypeNameTextBox.Name = "InputTypeNameTextBox";
+            this.InputTypeNameTextBox.Size = new System.Drawing.Size(483, 25);
+            this.InputTypeNameTextBox.TabIndex = 2;
             // 
             // AddButton
             // 
@@ -67,6 +52,7 @@
             this.AddButton.TabIndex = 3;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // UpdateButton
             // 
@@ -76,6 +62,7 @@
             this.UpdateButton.TabIndex = 4;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // DeleteButton
             // 
@@ -85,6 +72,7 @@
             this.DeleteButton.TabIndex = 5;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // CloseButton
             // 
@@ -94,32 +82,43 @@
             this.CloseButton.TabIndex = 6;
             this.CloseButton.Text = "Close";
             this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // FacilityDataGrid
+            // 
+            this.FacilityDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FacilityDataGrid.Location = new System.Drawing.Point(129, 12);
+            this.FacilityDataGrid.Name = "FacilityDataGrid";
+            this.FacilityDataGrid.RowTemplate.Height = 27;
+            this.FacilityDataGrid.Size = new System.Drawing.Size(483, 242);
+            this.FacilityDataGrid.TabIndex = 8;
             // 
             // FacilityTypeManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 468);
+            this.Controls.Add(this.FacilityDataGrid);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.InputTypeNameTextBox);
             this.Name = "FacilityTypeManager";
             this.Text = "FacilityTypeManager";
+            this.Load += new System.EventHandler(this.FacilityTypeManager_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.FacilityDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox InputTypeNameTextBox;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.DataGridView FacilityDataGrid;
     }
 }

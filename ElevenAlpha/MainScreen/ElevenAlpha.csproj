@@ -35,8 +35,17 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +57,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Booking.cs">
+      <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ElevenAlphaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElevenAlphaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ElevenAlphaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ElevenAlphaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElevenAlphaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Facility.cs">
+      <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FacilityType.cs">
+      <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +92,9 @@
     </Compile>
     <Compile Include="members-tab.Designer.cs">
       <DependentUpon>members-tab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs">
+      <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +114,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.manifest" />
+    <EntityDeploy Include="ElevenAlphaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ElevenAlphaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ElevenAlphaModel.edmx.diagram">
+      <DependentUpon>ElevenAlphaModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,6 +134,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ElevenAlphaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ElevenAlphaModel.Context.cs</LastGenOutput>
+      <DependentUpon>ElevenAlphaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="ElevenAlphaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ElevenAlphaModel.edmx</DependentUpon>
+      <LastGenOutput>ElevenAlphaModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

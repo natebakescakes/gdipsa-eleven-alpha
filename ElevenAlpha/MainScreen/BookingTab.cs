@@ -17,6 +17,7 @@ namespace ElevenAlpha
         public BookingTab()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
             context = new ElevenAlphaEntities();
             LoadFacilityTypes();
         }
@@ -84,18 +85,20 @@ namespace ElevenAlpha
                     if (list.Count == 0)
                     {
                         BookingDataGridView.Rows[j].Cells[i].Value = "Vacant";
-                        BookingDataGridView.Rows[j].Cells[i].Style.BackColor = Color.Green;
+                        BookingDataGridView.Rows[j].Cells[i].Style.BackColor = Color.FromArgb(198, 239, 206);
+                        BookingDataGridView.Rows[j].Cells[i].Style.ForeColor = Color.FromArgb(0, 97, 0);
                     }
                     else if (list.Count < totalFacilitiesOfType)
                     {
                         BookingDataGridView.Rows[j].Cells[i].Value = "Filled";
-                        BookingDataGridView.Rows[j].Cells[i].Style.BackColor = Color.Orange;
+                        BookingDataGridView.Rows[j].Cells[i].Style.BackColor = Color.FromArgb(255, 235, 156);
+                        BookingDataGridView.Rows[j].Cells[i].Style.ForeColor = Color.FromArgb(156, 101, 0);
                     }
                     else
                     {
                         BookingDataGridView.Rows[j].Cells[i].Value = "Fully Booked";
-                        BookingDataGridView.Rows[j].Cells[i].Style.BackColor = Color.Red;
-                        BookingDataGridView.Rows[j].Cells[i].Style.ForeColor = Color.White;
+                        BookingDataGridView.Rows[j].Cells[i].Style.BackColor = Color.FromArgb(255, 199, 206);
+                        BookingDataGridView.Rows[j].Cells[i].Style.ForeColor = Color.FromArgb(156, 0, 6);
                     }
                 }
             }

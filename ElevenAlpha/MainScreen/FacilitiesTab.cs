@@ -16,5 +16,23 @@ namespace MainScreen
         {
             InitializeComponent();
         }
+
+        private void SearchTextbox_Enter(object sender, EventArgs e)
+        {
+            if (SearchTextbox.Text == "Search...")
+            {
+                SearchTextbox.Text = "";
+                SearchTextbox.ForeColor = Color.Black;
+            }
+        }
+
+        private void SearchTextbox_Leave(object sender, EventArgs e)
+        {
+            if (SearchTextbox.Text == "")
+            {
+                SearchTextbox.Text = "Search...";
+                SearchTextbox.ForeColor = Color.Silver;
+            }
+        }
     }
 }

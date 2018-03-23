@@ -55,6 +55,7 @@
             // 
             // bookingsTabPage
             // 
+            this.bookingsTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookingsTabPage.Location = new System.Drawing.Point(10, 88);
             this.bookingsTabPage.Name = "bookingsTabPage";
             this.bookingsTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -65,6 +66,7 @@
             // 
             // membersTabPage
             // 
+            this.membersTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.membersTabPage.Location = new System.Drawing.Point(10, 88);
             this.membersTabPage.Name = "membersTabPage";
             this.membersTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -75,6 +77,7 @@
             // 
             // facilitiesTabPage
             // 
+            this.facilitiesTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.facilitiesTabPage.Location = new System.Drawing.Point(10, 88);
             this.facilitiesTabPage.Name = "facilitiesTabPage";
             this.facilitiesTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -85,6 +88,7 @@
             // 
             // reportsTabPage
             // 
+            this.reportsTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportsTabPage.Location = new System.Drawing.Point(10, 88);
             this.reportsTabPage.Name = "reportsTabPage";
             this.reportsTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -101,14 +105,15 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(2069, 1010);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl);
-            this.Name = "Form1";
+            this.Name = "MainScreen";
             this.Padding = new System.Windows.Forms.Padding(0, 150, 0, 0);
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

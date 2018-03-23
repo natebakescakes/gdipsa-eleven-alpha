@@ -30,7 +30,7 @@
         {
             this.bookingDataGridView = new System.Windows.Forms.DataGridView();
             this.facilityTypeLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.facilityTypeComboBox = new System.Windows.Forms.ComboBox();
             this.fromDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.toDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tildeLabel = new System.Windows.Forms.Label();
@@ -39,6 +39,7 @@
             // 
             // bookingDataGridView
             // 
+            this.bookingDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.bookingDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookingDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bookingDataGridView.Location = new System.Drawing.Point(0, 75);
@@ -56,13 +57,14 @@
             this.facilityTypeLabel.TabIndex = 1;
             this.facilityTypeLabel.Text = "Facility Type";
             // 
-            // comboBox1
+            // facilityTypeComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(207, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(365, 39);
-            this.comboBox1.TabIndex = 2;
+            this.facilityTypeComboBox.FormattingEnabled = true;
+            this.facilityTypeComboBox.Location = new System.Drawing.Point(207, 18);
+            this.facilityTypeComboBox.Name = "facilityTypeComboBox";
+            this.facilityTypeComboBox.Size = new System.Drawing.Size(365, 39);
+            this.facilityTypeComboBox.TabIndex = 2;
+            this.facilityTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.facilityTypeComboBox_SelectedIndexChanged);
             // 
             // fromDateTimePicker
             // 
@@ -72,6 +74,7 @@
             this.fromDateTimePicker.Name = "fromDateTimePicker";
             this.fromDateTimePicker.Size = new System.Drawing.Size(200, 38);
             this.fromDateTimePicker.TabIndex = 3;
+            this.fromDateTimePicker.ValueChanged += new System.EventHandler(this.fromDateTimePicker_ValueChanged);
             // 
             // toDateTimePicker
             // 
@@ -81,6 +84,7 @@
             this.toDateTimePicker.Name = "toDateTimePicker";
             this.toDateTimePicker.Size = new System.Drawing.Size(200, 38);
             this.toDateTimePicker.TabIndex = 4;
+            this.toDateTimePicker.ValueChanged += new System.EventHandler(this.toDateTimePicker_ValueChanged);
             // 
             // tildeLabel
             // 
@@ -96,10 +100,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.tildeLabel);
             this.Controls.Add(this.toDateTimePicker);
             this.Controls.Add(this.fromDateTimePicker);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.facilityTypeComboBox);
             this.Controls.Add(this.facilityTypeLabel);
             this.Controls.Add(this.bookingDataGridView);
             this.Name = "BookingTab";
@@ -115,7 +120,7 @@
 
         private System.Windows.Forms.DataGridView bookingDataGridView;
         private System.Windows.Forms.Label facilityTypeLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox facilityTypeComboBox;
         private System.Windows.Forms.DateTimePicker fromDateTimePicker;
         private System.Windows.Forms.DateTimePicker toDateTimePicker;
         private System.Windows.Forms.Label tildeLabel;

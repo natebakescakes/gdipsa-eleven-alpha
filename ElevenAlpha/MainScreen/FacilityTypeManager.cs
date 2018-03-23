@@ -12,86 +12,93 @@ namespace ElevenAlpha
 {
     public partial class FacilityTypeManager : Form
     {
-        public FacilityTypeManager()
+        ElevenAlphaEntities ctx = new ElevenAlphaEntities();
+
+        public void refresh()
         {
-            InitializeComponent();
-        }
-
-        
-
-        private void FacilityTypeManager_Load(object sender, EventArgs e)
-        {
-            ElevenAlphaEntities ctx = new ElevenAlphaEntities();
-         
-            var q = from x in ctx.FacilityTypes where x.Active == 1 select
-                    new { x .Name};
-
-            FacilityDataGrid.DataSource = q.ToList();
-        }
-
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-
-            ElevenAlphaEntities ctx1 = new ElevenAlphaEntities();
-            FacilityType f = new FacilityType();
-            f.Name = InputTypeNameTextBox.Text;
-            f.Active = 1;
-            ctx1.FacilityTypes.Add(f);
-            ctx1.SaveChanges();
-
-            //refresh
-            ElevenAlphaEntities ctx = new ElevenAlphaEntities();
-
             var q = from x in ctx.FacilityTypes
                     where x.Active == 1
                     select new { x.Name };
 
             FacilityDataGrid.DataSource = q.ToList();
 
+        }
 
+
+        public FacilityTypeManager()
+        {
+            InitializeComponent();
+        }
+        private void FacilityTypeManager_Load(object sender, EventArgs e)
+        {
+
+            refresh();
+
+        
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+
+            ElevenAlphaEntities ctx = new ElevenAlphaEntities();
+            FacilityType f = new FacilityType();
+            f.Name = InputTypeNameTextBox.Text;
+            f.Active = 1;
+            ctx.FacilityTypes.Add(f);
+            ctx.SaveChanges();
+
+            refresh();
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
 
            string OldType = FacilityDataGrid.SelectedCells[0].Value.ToString();
-
-            ElevenAlphaEntities ctx1 = new ElevenAlphaEntities();
-
-            FacilityType f1 = ctx1.FacilityTypes.Where(x => x.Name == OldType).First();
+          FacilityType f1 = ctx.FacilityTypes.Where(x => x.Name == OldType).FirstOrDefault(); //
             f1.Name = InputTypeNameTextBox.Text;         
-            ctx1.SaveChanges();
+            ctx.SaveChanges();
 
-            // refresh datagridview
-            ElevenAlphaEntities ctx = new ElevenAlphaEntities();
-
-            var q = from x in ctx.FacilityTypes
-                    where x.Active == 1
-                    select new { x.Name };
-
-            FacilityDataGrid.DataSource = q.ToList();
+            refresh();
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
+            //check whether related type has related record
 
-            string OldType = FacilityDataGrid.SelectedCells[0].Value.ToString();
+            string OldType = FacilityDataGrid.SelectedCells[0].Value.ToString();//selected typename
 
-            ElevenAlphaEntities ctx1 = new ElevenAlphaEntities();
+            FacilityType ft = ctx.FacilityTypes.Where(x => x.Name == OldType).First();//selected facilityType
+            List<int> fi=new List<int>(); //typeid related facilityid Array
+            foreach (Facility f in ctx.Facilities)
+            {
+                if (f.TypeID == ft.TypeID)
 
-            FacilityType f1 = ctx1.FacilityTypes.Where(x => x.Name == OldType).First();
-            ctx1.FacilityTypes.Remove(f1);
-            ctx1.SaveChanges();
-
-
-            // refresh datagridview
-            ElevenAlphaEntities ctx = new ElevenAlphaEntities();
-
-            var q = from x in ctx.FacilityTypes
-                    where x.Active == 1
-                    select new { x.Name };
-
-            FacilityDataGrid.DataSource = q.ToList();
+                {
+                    fi.Add(f.FacilityID);
+                }
+             }
+            int flag = 0;
+      
+          foreach(Booking b in ctx.Bookings )
+            {
+                for(int i=0;i<fi.Count();i++)
+                {
+                    if (b.FacilityID == fi[i])
+                    flag++;
+                        
+                }
+            }
+            if (flag != 0)
+            {
+                MessageBox.Show("can't delete!");
+                flag = 0;
+            }
+            else
+            {
+                FacilityType f = ctx.FacilityTypes.Where(x => x.Name == OldType).First();
+                ctx.FacilityTypes.Remove(f);
+                ctx.SaveChanges();
+            } 
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

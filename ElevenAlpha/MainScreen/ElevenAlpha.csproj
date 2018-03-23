@@ -60,6 +60,12 @@
     <Compile Include="Booking.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CreatFacility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatFacility.Designer.cs">
+      <DependentUpon>CreatFacility.cs</DependentUpon>
+    </Compile>
     <Compile Include="ElevenAlphaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -98,6 +104,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreatFacility.resx">
+      <DependentUpon>CreatFacility.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FacilityTypeManager.resx">
       <DependentUpon>FacilityTypeManager.cs</DependentUpon>
     </EmbeddedResource>

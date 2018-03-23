@@ -12,7 +12,7 @@ namespace ElevenAlpha
 {
     public partial class FacilityTypeManager : Form
     {
-        ElevenAlphaEntities ctx = new ElevenAlphaEntities();
+        ElevenAlphaEntities ctx= new ElevenAlphaEntities();
 
         public void refresh()
         {

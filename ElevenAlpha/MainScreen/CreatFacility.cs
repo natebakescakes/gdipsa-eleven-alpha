@@ -8,16 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainScreen
+namespace ElevenAlpha
 {
     public partial class CreatFacility : Form
     {
+
+       
         public CreatFacility()
         {
             InitializeComponent();
+            ElevenAlphaEntities ctx = new ElevenAlphaEntities();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+       
+
+        private void CreatFacility_Load(object sender, EventArgs e)
         {
-                    }    }
+            
+
+
+            FacilityTypeComB.Items.Add("");
+        }
+    }
 }

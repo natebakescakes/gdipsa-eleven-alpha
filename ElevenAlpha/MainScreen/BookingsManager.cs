@@ -259,8 +259,8 @@ namespace ElevenAlpha
             context.SaveChanges();
 
             LoadBookingDataGrid();
-            MessageBox.Show($"Booking successful!{Environment.NewLine}{MemberIdTextBox.Text}{Environment.NewLine}{facility}{Environment.NewLine}{BookingDateTimePicker.Value}{Environment.NewLine}{BookingManagerDataGrid.SelectedCells[0].OwningRow.HeaderCell.Value.ToString()}");
             parent.LoadBookingDataGrid();
+            MessageBox.Show($"Booking successful!{Environment.NewLine}{MemberIdTextBox.Text}{Environment.NewLine}{facility}{Environment.NewLine}{BookingDateTimePicker.Value}{Environment.NewLine}{BookingManagerDataGrid.SelectedCells[0].OwningRow.HeaderCell.Value.ToString()}");
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

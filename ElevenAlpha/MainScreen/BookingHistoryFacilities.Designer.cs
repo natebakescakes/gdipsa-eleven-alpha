@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.BookingFacilityDataGrid = new System.Windows.Forms.DataGridView();
             this.BookingIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,14 +81,14 @@
             // BookingFacilityDataGrid
             // 
             this.BookingFacilityDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BookingFacilityDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BookingFacilityDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.BookingFacilityDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BookingFacilityDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BookingIdColumn,
@@ -167,14 +167,14 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 8;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
             this.tableLayoutPanel2.Controls.Add(this.ToDateTimePicker, 7, 0);
             this.tableLayoutPanel2.Controls.Add(this.FromDateTimePicker, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.TildeLabel, 6, 0);
@@ -194,9 +194,9 @@
             // 
             this.ToDateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ToDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ToDateTimePicker.Location = new System.Drawing.Point(1113, 3);
+            this.ToDateTimePicker.Location = new System.Drawing.Point(1043, 3);
             this.ToDateTimePicker.Name = "ToDateTimePicker";
-            this.ToDateTimePicker.Size = new System.Drawing.Size(174, 38);
+            this.ToDateTimePicker.Size = new System.Drawing.Size(244, 38);
             this.ToDateTimePicker.TabIndex = 0;
             this.ToDateTimePicker.ValueChanged += new System.EventHandler(this.ToDateTimePicker_ValueChanged);
             // 
@@ -204,35 +204,35 @@
             // 
             this.FromDateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FromDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FromDateTimePicker.Location = new System.Drawing.Point(898, 3);
+            this.FromDateTimePicker.Location = new System.Drawing.Point(758, 3);
             this.FromDateTimePicker.Name = "FromDateTimePicker";
-            this.FromDateTimePicker.Size = new System.Drawing.Size(175, 38);
+            this.FromDateTimePicker.Size = new System.Drawing.Size(244, 38);
             this.FromDateTimePicker.TabIndex = 1;
             this.FromDateTimePicker.ValueChanged += new System.EventHandler(this.FromDateTimePicker_ValueChanged);
             // 
             // TildeLabel
             // 
             this.TildeLabel.AutoSize = true;
-            this.TildeLabel.Location = new System.Drawing.Point(1079, 0);
+            this.TildeLabel.Location = new System.Drawing.Point(1008, 0);
             this.TildeLabel.Name = "TildeLabel";
             this.TildeLabel.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.TildeLabel.Size = new System.Drawing.Size(28, 42);
+            this.TildeLabel.Size = new System.Drawing.Size(29, 42);
             this.TildeLabel.TabIndex = 2;
             this.TildeLabel.Text = "~";
             // 
             // FacilityIdTextBox
             // 
             this.FacilityIdTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FacilityIdTextBox.Location = new System.Drawing.Point(698, 3);
+            this.FacilityIdTextBox.Location = new System.Drawing.Point(538, 3);
             this.FacilityIdTextBox.Name = "FacilityIdTextBox";
-            this.FacilityIdTextBox.Size = new System.Drawing.Size(174, 38);
+            this.FacilityIdTextBox.Size = new System.Drawing.Size(194, 38);
             this.FacilityIdTextBox.TabIndex = 3;
             this.FacilityIdTextBox.TextChanged += new System.EventHandler(this.FacilityIdTextBox_TextChanged);
             // 
             // MemberIdLabel
             // 
             this.MemberIdLabel.AutoSize = true;
-            this.MemberIdLabel.Location = new System.Drawing.Point(533, 0);
+            this.MemberIdLabel.Location = new System.Drawing.Point(358, 0);
             this.MemberIdLabel.Name = "MemberIdLabel";
             this.MemberIdLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.MemberIdLabel.Size = new System.Drawing.Size(139, 37);
@@ -252,9 +252,9 @@
             // SearchTextBox
             // 
             this.SearchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SearchTextBox.Location = new System.Drawing.Point(115, 3);
+            this.SearchTextBox.Location = new System.Drawing.Point(143, 3);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(412, 38);
+            this.SearchTextBox.Size = new System.Drawing.Size(209, 38);
             this.SearchTextBox.TabIndex = 6;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 

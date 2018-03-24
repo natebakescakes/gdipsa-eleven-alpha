@@ -123,6 +123,15 @@ namespace ElevenAlpha
                 return;
             }
 
+            DateTime selectedDate = (DateTime)BookingFacilityDataGrid.SelectedCells[2].Value;
+            DateTime compareDate = new DateTime(selectedDate.Year, selectedDate.Month, selectedDate.Day, 0, 0, 0);
+
+            if (compareDate.CompareTo(System.DateTime.Now) == -1)
+            {
+                MessageBox.Show("Cannot cancel past booking.");
+                return;
+            }
+
             int bookingId = Int32.Parse(BookingFacilityDataGrid.SelectedCells[0].Value.ToString());
             Booking b = context.Bookings.Where(x => x.BookingID == bookingId).First();
 

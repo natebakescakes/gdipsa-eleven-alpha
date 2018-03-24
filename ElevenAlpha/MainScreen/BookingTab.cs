@@ -13,6 +13,7 @@ namespace ElevenAlpha
     public partial class BookingTab : UserControl
     {
         ElevenAlphaEntities context;
+        BookingsManager bookingsManager;
 
         public BookingTab()
         {
@@ -165,6 +166,12 @@ namespace ElevenAlpha
             {
                 LoadBookingDataGrid();
             }
+        }
+
+        private void BookingDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bookingsManager = new BookingsManager(FacilityTypeComboBox.Text, FromDateTimePicker.Value.AddDays(BookingDataGridView.SelectedCells[0].ColumnIndex + 1));
+            bookingsManager.ShowDialog();
         }
     }
 }

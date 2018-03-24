@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BookingManagerDataGrid = new System.Windows.Forms.DataGridView();
             this.MemberIdLabel = new System.Windows.Forms.Label();
             this.MemberIdTextBox = new System.Windows.Forms.TextBox();
@@ -48,15 +48,15 @@
             // 
             // BookingManagerDataGrid
             // 
-            this.BookingManagerDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BookingManagerDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.BookingManagerDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BookingManagerDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.BookingManagerDataGrid.ColumnHeadersHeight = 80;
             this.BookingManagerDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BookingManagerDataGrid.Location = new System.Drawing.Point(100, 150);
@@ -65,7 +65,7 @@
             this.BookingManagerDataGrid.RowHeadersWidth = 250;
             this.BookingManagerDataGrid.RowTemplate.Height = 80;
             this.BookingManagerDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.BookingManagerDataGrid.Size = new System.Drawing.Size(1078, 493);
+            this.BookingManagerDataGrid.Size = new System.Drawing.Size(1126, 1274);
             this.BookingManagerDataGrid.TabIndex = 0;
             // 
             // MemberIdLabel
@@ -98,7 +98,7 @@
             // FirstNameTextBox
             // 
             this.FirstNameTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.FirstNameTextBox.Location = new System.Drawing.Point(547, 36);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(712, 35);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.ReadOnly = true;
             this.FirstNameTextBox.Size = new System.Drawing.Size(254, 38);
@@ -107,7 +107,7 @@
             // 
             // LastNameTextBox
             // 
-            this.LastNameTextBox.Location = new System.Drawing.Point(807, 37);
+            this.LastNameTextBox.Location = new System.Drawing.Point(972, 36);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.ReadOnly = true;
             this.LastNameTextBox.Size = new System.Drawing.Size(254, 38);
@@ -135,7 +135,7 @@
             // FacilityTypeLabel
             // 
             this.FacilityTypeLabel.AutoSize = true;
-            this.FacilityTypeLabel.Location = new System.Drawing.Point(626, 87);
+            this.FacilityTypeLabel.Location = new System.Drawing.Point(791, 86);
             this.FacilityTypeLabel.Name = "FacilityTypeLabel";
             this.FacilityTypeLabel.Size = new System.Drawing.Size(175, 32);
             this.FacilityTypeLabel.TabIndex = 8;
@@ -144,7 +144,7 @@
             // FacilityTypeComboBox
             // 
             this.FacilityTypeComboBox.FormattingEnabled = true;
-            this.FacilityTypeComboBox.Location = new System.Drawing.Point(807, 84);
+            this.FacilityTypeComboBox.Location = new System.Drawing.Point(972, 83);
             this.FacilityTypeComboBox.Name = "FacilityTypeComboBox";
             this.FacilityTypeComboBox.Size = new System.Drawing.Size(254, 39);
             this.FacilityTypeComboBox.TabIndex = 9;
@@ -153,7 +153,7 @@
             // BookButton
             // 
             this.BookButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.BookButton.Location = new System.Drawing.Point(500, 692);
+            this.BookButton.Location = new System.Drawing.Point(524, 1473);
             this.BookButton.Name = "BookButton";
             this.BookButton.Size = new System.Drawing.Size(128, 47);
             this.BookButton.TabIndex = 10;
@@ -164,7 +164,8 @@
             // CloseButton
             // 
             this.CloseButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.CloseButton.Location = new System.Drawing.Point(634, 692);
+            this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.CloseButton.Location = new System.Drawing.Point(658, 1473);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(128, 47);
             this.CloseButton.TabIndex = 11;
@@ -197,7 +198,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CloseButton;
-            this.ClientSize = new System.Drawing.Size(1278, 793);
+            this.ClientSize = new System.Drawing.Size(1326, 1574);
             this.Controls.Add(this.NextDayButton);
             this.Controls.Add(this.PreviousDayButton);
             this.Controls.Add(this.CloseButton);

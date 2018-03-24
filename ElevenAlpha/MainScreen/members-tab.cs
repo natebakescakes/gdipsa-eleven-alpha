@@ -51,6 +51,11 @@ namespace ElevenAlpha
             MemberInfoTable.Columns[5].HeaderText = "Email Address";
             MemberInfoTable.Columns[6].HeaderText = "Emergency Contact Number";
             MemberInfoTable.Columns[7].HeaderText = "Member Status";
+
+            foreach (DataGridViewColumn column in MemberInfoTable.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void SearchAllMembers()

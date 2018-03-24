@@ -98,6 +98,12 @@
     <Compile Include="FacilityType.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="FacilitiesTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FacilitiesTab.Designer.cs">
+      <DependentUpon>FacilitiesTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookingTab.resx">
       <DependentUpon>BookingTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacilitiesTab.resx">
+      <DependentUpon>FacilitiesTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>

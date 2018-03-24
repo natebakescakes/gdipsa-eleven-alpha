@@ -58,11 +58,13 @@
             this.MemberInfoTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemberInfoTable.Location = new System.Drawing.Point(0, 0);
             this.MemberInfoTable.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.MemberInfoTable.MultiSelect = false;
             this.MemberInfoTable.Name = "MemberInfoTable";
             this.MemberInfoTable.RowTemplate.Height = 28;
             this.MemberInfoTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MemberInfoTable.Size = new System.Drawing.Size(1835, 682);
             this.MemberInfoTable.TabIndex = 0;
+            
             // 
             // NewButton
             // 

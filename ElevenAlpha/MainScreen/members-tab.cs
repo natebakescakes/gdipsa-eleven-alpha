@@ -13,10 +13,12 @@ namespace ElevenAlpha
     public partial class members_tab : UserControl
     {
         ElevenAlphaEntities ctx= new ElevenAlphaEntities();
+        
         public members_tab()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
+           
         }
         private void members_tab_Load(object sender, EventArgs e)
         {
@@ -36,6 +38,7 @@ namespace ElevenAlpha
             MemberInfoTable.DataSource = ctx.Members.Where(x => x.Active == 1)
               .Select(x => new { x.MemberID, x.FirstName, x.LastName, x.Gender, x.Mobile, x.Email, x.EmergencyContact, Active = x.Active == 1 ? "Active" : "Discontinued" }).ToList();
             SetColumnHeader();
+            //if(MemberInfoTable.)
         }
 
         private void SetColumnHeader()
@@ -193,6 +196,7 @@ namespace ElevenAlpha
             }
             else
                 SearchActiveMembers();
+       
         }
     }
 }

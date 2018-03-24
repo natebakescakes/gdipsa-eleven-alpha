@@ -104,7 +104,7 @@
             // 
             this.FacilityNameTextB.Location = new System.Drawing.Point(175, 27);
             this.FacilityNameTextB.Name = "FacilityNameTextB";
-            this.FacilityNameTextB.Size = new System.Drawing.Size(100, 25);
+            this.FacilityNameTextB.Size = new System.Drawing.Size(174, 25);
             this.FacilityNameTextB.TabIndex = 7;
             // 
             // OpenTimeMaskT
@@ -114,6 +114,7 @@
             this.OpenTimeMaskT.Name = "OpenTimeMaskT";
             this.OpenTimeMaskT.Size = new System.Drawing.Size(100, 25);
             this.OpenTimeMaskT.TabIndex = 8;
+            this.OpenTimeMaskT.ValidatingType = typeof(System.DateTime);
             // 
             // CloseTimeMaskT
             // 
@@ -144,7 +145,7 @@
             this.FacilityTypeComB.FormattingEnabled = true;
             this.FacilityTypeComB.Location = new System.Drawing.Point(489, 30);
             this.FacilityTypeComB.Name = "FacilityTypeComB";
-            this.FacilityTypeComB.Size = new System.Drawing.Size(121, 23);
+            this.FacilityTypeComB.Size = new System.Drawing.Size(175, 23);
             this.FacilityTypeComB.TabIndex = 12;
             // 
             // label6
@@ -173,6 +174,7 @@
             this.updateButton.TabIndex = 15;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // CloseButton
             // 

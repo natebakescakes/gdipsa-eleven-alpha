@@ -77,7 +77,6 @@
             this.membersTabPage.TabIndex = 1;
             this.membersTabPage.Text = "👪 Members";
             this.membersTabPage.UseVisualStyleBackColor = true;
-            this.membersTabPage.Click += new System.EventHandler(this.membersTabPage_Click);
             // 
             // facilitiesTabPage
             // 

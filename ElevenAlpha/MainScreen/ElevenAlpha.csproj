@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="BookingTab.Designer.cs">
       <DependentUpon>BookingTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="ElevenAlphaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

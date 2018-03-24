@@ -12,7 +12,7 @@ namespace ElevenAlpha
 {
     public partial class EditFacility : Form
     {
-        int facilityid=17;//take from Home page,after click edit
+        int facilityid=23;//take from Home page,after click edit
         string typename;
         int i = 0;
         DateTime opentime;
@@ -117,13 +117,19 @@ namespace ElevenAlpha
                     { MessageBox.Show("pls input opening time."); }
                     else
                     {
-                        opentime = Convert.ToDateTime(OpenTimeMaskT.Text.ToString());
+                        DateTime d1 = Convert.ToDateTime(OpenTimeMaskT.Text.ToString());
+                        opentime = new DateTime(1900, 1, 1, d1.Hour, d1.Minute, d1.Second);//
+                      
 
                         if (CloseTimeMaskT.MaskedTextProvider.AssignedEditPositionCount == 0)
                         { MessageBox.Show("pls input closing time."); }
                         else
                         {
-                            closetime = Convert.ToDateTime(CloseTimeMaskT.Text.ToString());
+                            DateTime d2 = Convert.ToDateTime(CloseTimeMaskT.Text.ToString());
+
+                            closetime = new DateTime(1900, 01, 01, d2.Hour, d2.Minute, d2.Second);//
+
+                            
                             f.Location = LocationTextB.Text;
                             f.Description = DescriptionTextB.Text;
                             f.Active = 1;

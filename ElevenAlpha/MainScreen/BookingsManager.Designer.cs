@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BookingManagerDataGrid = new System.Windows.Forms.DataGridView();
             this.MemberIdLabel = new System.Windows.Forms.Label();
             this.MemberIdTextBox = new System.Windows.Forms.TextBox();
@@ -45,11 +46,21 @@
             // 
             // BookingManagerDataGrid
             // 
-            this.BookingManagerDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BookingManagerDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BookingManagerDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.BookingManagerDataGrid.ColumnHeadersHeight = 80;
             this.BookingManagerDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BookingManagerDataGrid.Location = new System.Drawing.Point(100, 150);
             this.BookingManagerDataGrid.Name = "BookingManagerDataGrid";
-            this.BookingManagerDataGrid.RowTemplate.Height = 40;
+            this.BookingManagerDataGrid.RowHeadersWidth = 250;
+            this.BookingManagerDataGrid.RowTemplate.Height = 80;
             this.BookingManagerDataGrid.Size = new System.Drawing.Size(1078, 493);
             this.BookingManagerDataGrid.TabIndex = 0;
             // 

@@ -86,6 +86,7 @@
             // 
             // FacilityDataGrid
             // 
+            this.FacilityDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.FacilityDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FacilityDataGrid.Location = new System.Drawing.Point(129, 12);
             this.FacilityDataGrid.Name = "FacilityDataGrid";

@@ -12,7 +12,9 @@ namespace ElevenAlpha
 {
     public partial class FacilityTypeManager : Form
     {
-        ElevenAlphaEntities ctx= new ElevenAlphaEntities();
+        ElevenAlphaEntities ctx;
+        CreateFacility parent;
+
 
         public void refresh()
         {
@@ -25,9 +27,11 @@ namespace ElevenAlpha
         }
 
 
-        public FacilityTypeManager()
+        public FacilityTypeManager(CreateFacility parent)
         {
             InitializeComponent();
+            ctx = new ElevenAlphaEntities();
+            this.parent = parent;
         }
         private void FacilityTypeManager_Load(object sender, EventArgs e)
         {
@@ -105,6 +109,9 @@ namespace ElevenAlpha
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            parent.CreatFacility_Load(parent, new EventArgs());
+
+            
         }
     }
 }

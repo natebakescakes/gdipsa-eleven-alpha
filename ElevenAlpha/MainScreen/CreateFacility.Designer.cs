@@ -1,6 +1,6 @@
 ﻿namespace ElevenAlpha
 {
-    partial class CreatFacility
+    partial class CreateFacility
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.InputNameTextBox = new System.Windows.Forms.TextBox();
+            this.FacilityNameTxtB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,16 +42,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.LocationTexB = new System.Windows.Forms.TextBox();
             this.DescriptionTexB = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddFacilityButton = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // InputNameTextBox
+            // FacilityNameTxtB
             // 
-            this.InputNameTextBox.Location = new System.Drawing.Point(184, 33);
-            this.InputNameTextBox.Name = "InputNameTextBox";
-            this.InputNameTextBox.Size = new System.Drawing.Size(100, 25);
-            this.InputNameTextBox.TabIndex = 0;
+            this.FacilityNameTxtB.Location = new System.Drawing.Point(184, 33);
+            this.FacilityNameTxtB.Name = "FacilityNameTxtB";
+            this.FacilityNameTxtB.Size = new System.Drawing.Size(100, 25);
+            this.FacilityNameTxtB.TabIndex = 0;
             // 
             // label1
             // 
@@ -114,6 +114,7 @@
             this.FacilityTypeComB.Name = "FacilityTypeComB";
             this.FacilityTypeComB.Size = new System.Drawing.Size(121, 23);
             this.FacilityTypeComB.TabIndex = 9;
+            this.FacilityTypeComB.SelectedIndexChanged += new System.EventHandler(this.FacilityTypeComB_SelectedIndexChanged);
             // 
             // OpenHrsMskTxB
             // 
@@ -166,31 +167,33 @@
             this.DescriptionTexB.Size = new System.Drawing.Size(434, 150);
             this.DescriptionTexB.TabIndex = 15;
             // 
-            // button1
+            // AddFacilityButton
             // 
-            this.button1.Location = new System.Drawing.Point(218, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Add Facility";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddFacilityButton.Location = new System.Drawing.Point(218, 415);
+            this.AddFacilityButton.Name = "AddFacilityButton";
+            this.AddFacilityButton.Size = new System.Drawing.Size(118, 23);
+            this.AddFacilityButton.TabIndex = 16;
+            this.AddFacilityButton.Text = "Add Facility";
+            this.AddFacilityButton.UseVisualStyleBackColor = true;
+            this.AddFacilityButton.Click += new System.EventHandler(this.AddFacilityButton_Click);
             // 
-            // button2
+            // CloseButton
             // 
-            this.button2.Location = new System.Drawing.Point(386, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Close";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CloseButton.Location = new System.Drawing.Point(386, 415);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 17;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // CreatFacility
+            // CreateFacility
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CloseButton);
+            this.Controls.Add(this.AddFacilityButton);
             this.Controls.Add(this.DescriptionTexB);
             this.Controls.Add(this.LocationTexB);
             this.Controls.Add(this.label8);
@@ -204,8 +207,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.InputNameTextBox);
-            this.Name = "CreatFacility";
+            this.Controls.Add(this.FacilityNameTxtB);
+            this.Name = "CreateFacility";
             this.Text = "CreatFacility";
             this.Load += new System.EventHandler(this.CreatFacility_Load);
             this.ResumeLayout(false);
@@ -215,7 +218,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox InputNameTextBox;
+        private System.Windows.Forms.TextBox FacilityNameTxtB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -229,7 +232,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox LocationTexB;
         private System.Windows.Forms.TextBox DescriptionTexB;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddFacilityButton;
+        private System.Windows.Forms.Button CloseButton;
     }
 }

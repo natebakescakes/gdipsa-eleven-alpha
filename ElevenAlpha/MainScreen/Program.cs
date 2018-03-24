@@ -16,6 +16,8 @@ namespace ElevenAlpha
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new CreateFacility());
+          
             
         }
     }

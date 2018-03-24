@@ -60,6 +60,23 @@
     <Compile Include="Booking.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BookingsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingsManager.Designer.cs">
+      <DependentUpon>BookingsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BookingTab.Designer.cs">
+      <DependentUpon>BookingTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElevenAlphaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElevenAlphaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ElevenAlphaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,6 +104,12 @@
     <Compile Include="MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="members-tab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="members-tab.Designer.cs">
+      <DependentUpon>members-tab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Member.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
@@ -98,11 +121,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookingsManager.resx">
+      <DependentUpon>BookingsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingTab.resx">
+      <DependentUpon>BookingTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberLookup.resx">
       <DependentUpon>MemberLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="members-tab.resx">
+      <DependentUpon>members-tab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -119,6 +151,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ElevenAlphaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ElevenAlphaDataSet.xsc">
+      <DependentUpon>ElevenAlphaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ElevenAlphaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElevenAlphaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElevenAlphaDataSet.xss">
+      <DependentUpon>ElevenAlphaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="ElevenAlphaModel.edmx.diagram">
       <DependentUpon>ElevenAlphaModel.edmx</DependentUpon>
     </None>

@@ -13,6 +13,7 @@ namespace ElevenAlpha
     public partial class BookingsManager : Form
     {
         ElevenAlphaEntities context;
+        MemberLookup memberLookup;
 
         public BookingsManager(string facilityName, DateTime bookingDate)
         {
@@ -199,7 +200,8 @@ namespace ElevenAlpha
 
         private void ShowMemberLookupButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            memberLookup = new MemberLookup(this);
+            memberLookup.ShowDialog();
         }
 
         private void BookingDateTimePicker_ValueChanged(object sender, EventArgs e)

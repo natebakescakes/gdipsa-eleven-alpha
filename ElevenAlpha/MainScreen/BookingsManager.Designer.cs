@@ -226,7 +226,6 @@
 
         private System.Windows.Forms.DataGridView BookingManagerDataGrid;
         private System.Windows.Forms.Label MemberIdLabel;
-        private System.Windows.Forms.TextBox MemberIdTextBox;
         private System.Windows.Forms.Button ShowMemberLookupButton;
         private System.Windows.Forms.TextBox LastNameTextBox;
         private System.Windows.Forms.Label BookingDateLabel;
@@ -238,5 +237,6 @@
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Button PreviousDayButton;
         private System.Windows.Forms.Button NextDayButton;
+        public System.Windows.Forms.TextBox MemberIdTextBox;
     }
 }

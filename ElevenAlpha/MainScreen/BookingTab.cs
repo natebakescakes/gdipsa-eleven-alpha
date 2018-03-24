@@ -38,7 +38,7 @@ namespace ElevenAlpha
         /// <summary>
         /// Load DB data into DataGrid
         /// </summary>
-        private void LoadBookingDataGrid()
+        public void LoadBookingDataGrid()
         {
             if (context.Facilities.Where(x => x.FacilityType.Name == FacilityTypeComboBox.Text).FirstOrDefault() is null)
             {
@@ -170,7 +170,7 @@ namespace ElevenAlpha
 
         private void BookingDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            bookingsManager = new BookingsManager(FacilityTypeComboBox.Text, FromDateTimePicker.Value.AddDays(BookingDataGridView.SelectedCells[0].ColumnIndex + 1));
+            bookingsManager = new BookingsManager(this, FacilityTypeComboBox.Text, FromDateTimePicker.Value.AddDays(BookingDataGridView.SelectedCells[0].ColumnIndex));
             bookingsManager.ShowDialog();
         }
     }

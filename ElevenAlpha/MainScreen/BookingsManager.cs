@@ -14,10 +14,14 @@ namespace ElevenAlpha
     {
         ElevenAlphaEntities context;
         MemberLookup memberLookup;
+        BookingTab parent;
 
-        public BookingsManager(string facilityName, DateTime bookingDate)
+        public BookingsManager(BookingTab parent, string facilityName, DateTime bookingDate)
         {
             InitializeComponent();
+
+            // Reference parent
+            this.parent = parent;
 
             // Initialize DB context
             context = new ElevenAlphaEntities();
@@ -256,6 +260,7 @@ namespace ElevenAlpha
 
             LoadBookingDataGrid();
             MessageBox.Show($"Booking successful!{Environment.NewLine}{MemberIdTextBox.Text}{Environment.NewLine}{facility}{Environment.NewLine}{BookingDateTimePicker.Value}{Environment.NewLine}{BookingManagerDataGrid.SelectedCells[0].OwningRow.HeaderCell.Value.ToString()}");
+            parent.LoadBookingDataGrid();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

@@ -34,8 +34,8 @@ namespace ElevenAlpha
             FacilityTypeComB.Items.Clear();
 
             foreach (FacilityType ft in ctx.FacilityTypes)
-
-            { FacilityTypeComB.Items.Add(ft.Name); }
+             if(ft.Active==1)
+            { FacilityTypeComB.Items.Add(ft.Name);}
 
             FacilityTypeComB.Items.Add("New...");
         }

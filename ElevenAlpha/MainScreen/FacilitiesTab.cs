@@ -16,6 +16,8 @@ namespace ElevenAlpha
         public FacilitiesTab()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
+            
             //Data Grid Columns
             FacilitiesdataGridView1.ColumnCount = 6;
             for (int i = 0; i < FacilitiesdataGridView1.ColumnCount; i++)

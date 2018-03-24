@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6C7CC4C3-2C52-4479-AA3C-31EA7B88F125}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MainScreen</RootNamespace>
-    <AssemblyName>MainScreen</AssemblyName>
+    <RootNamespace>ElevenAlpha</RootNamespace>
+    <AssemblyName>ElevenAlpha</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -65,6 +65,10 @@
     </Compile>
     <Compile Include="BookingTab.Designer.cs">
       <DependentUpon>BookingTab.cs</DependentUpon>
+    <Compile Include="ElevenAlphaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElevenAlphaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ElevenAlphaModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -93,6 +97,12 @@
     <Compile Include="MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="members-tab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="members-tab.Designer.cs">
+      <DependentUpon>members-tab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Member.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
@@ -104,6 +114,9 @@
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="members-tab.resx">
+      <DependentUpon>members-tab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -112,12 +125,24 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
     <EntityDeploy Include="ElevenAlphaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ElevenAlphaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ElevenAlphaDataSet.xsc">
+      <DependentUpon>ElevenAlphaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ElevenAlphaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElevenAlphaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElevenAlphaDataSet.xss">
+      <DependentUpon>ElevenAlphaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="ElevenAlphaModel.edmx.diagram">
       <DependentUpon>ElevenAlphaModel.edmx</DependentUpon>
     </None>

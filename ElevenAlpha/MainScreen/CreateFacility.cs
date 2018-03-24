@@ -14,15 +14,14 @@ namespace ElevenAlpha
     {
         ElevenAlphaEntities ctx = new ElevenAlphaEntities();
         string typename = "";
-        
+
 
         public CreateFacility()
         {
             InitializeComponent();
-           
         }
 
-      
+
         public void CreatFacility_Load(object sender, EventArgs e)
         {
 
@@ -41,7 +40,7 @@ namespace ElevenAlpha
             FacilityTypeComB.Items.Add("New...");
         }
 
-       
+
 
         private void FacilityTypeComB_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -61,7 +60,7 @@ namespace ElevenAlpha
 
 
 
-        
+
 
 
         private void AddFacilityButton_Click(object sender, EventArgs e)
@@ -70,30 +69,33 @@ namespace ElevenAlpha
             int flag = 0;
             DateTime opentime;
             DateTime closetime;
-            
+
             string inputname = FacilityNameTxtB.Text;
             if (inputname == "")
             {
-                MessageBox.Show("Pls input the facility name.");
+                MessageBox.Show("Please input the Facility Name.");
             }
 
             else
             {
                 foreach (Facility f1 in ctx.Facilities)
                 {
-                    if (f1.Name == inputname) { flag++; break;
-                            
+                    if (f1.Name == inputname)
+                    {
+                        flag++; break;
+
                     }
                 }
                 if (flag > 0)
-                { MessageBox.Show("This Facility Name already exist.pls input another one.");flag = 0; }
+                { MessageBox.Show("This Facility Name already exists. Please input a different one."); flag = 0; }
                 else
-                { f.Name = inputname;
+                {
+                    f.Name = inputname;
 
                     if (typename == "")
                     {
-                        MessageBox.Show("pls choose a typename");
-                       
+                        MessageBox.Show("Please choose a Facility Type.");
+
                     }
                     else
                     {
@@ -101,13 +103,13 @@ namespace ElevenAlpha
                         f.TypeID = ft.TypeID; // set facility typeid 
 
                         if (OpenHrsMskTxB.MaskedTextProvider.AssignedEditPositionCount == 0)
-                        { MessageBox.Show("pls input opening time."); }
+                        { MessageBox.Show("Please input the Opening Time."); }
                         else
                         {
                             opentime = Convert.ToDateTime(OpenHrsMskTxB.Text.ToString());
 
                             if (CloseHrsMskTxB.MaskedTextProvider.AssignedEditPositionCount == 0)
-                            { MessageBox.Show("pls input closing time."); }
+                            { MessageBox.Show("Please input the Closing Time."); }
                             else
                             {
                                 closetime = Convert.ToDateTime(CloseHrsMskTxB.Text.ToString());
@@ -119,15 +121,12 @@ namespace ElevenAlpha
 
                                 ctx.Facilities.Add(f);
                                 ctx.SaveChanges();
-                                MessageBox.Show("Add Facility successful!");
+                                MessageBox.Show("Successfully added Facility.");
                             }
-                      }
-
-                   }
-               }
+                        }
+                    }
+                }
             }
-
-  
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -135,7 +134,5 @@ namespace ElevenAlpha
             this.Close();
         }
     }
-
-
-      }
+}
 

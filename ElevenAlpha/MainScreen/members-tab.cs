@@ -28,23 +28,41 @@ namespace ElevenAlpha
         {
             MemberInfoTable.DataSource = ctx.Members
               .Select(x => new { x.MemberID, x.FirstName, x.LastName, x.Gender, x.Mobile, x.Email, x.EmergencyContact, Active = x.Active == 1 ? "Active" : "Discontinued" }).ToList();
+            SetColumnHeader();
         }
 
         private void ViewActiveMembers()
         {
             MemberInfoTable.DataSource = ctx.Members.Where(x => x.Active == 1)
               .Select(x => new { x.MemberID, x.FirstName, x.LastName, x.Gender, x.Mobile, x.Email, x.EmergencyContact, Active = x.Active == 1 ? "Active" : "Discontinued" }).ToList();
+            SetColumnHeader();
         }
 
+        private void SetColumnHeader()
+        {
+            MemberInfoTable.Columns[0].HeaderText = "Member ID";
+            MemberInfoTable.Columns[1].HeaderText = "First Name";
+            MemberInfoTable.Columns[2].HeaderText = "Last Name";
+            MemberInfoTable.Columns[3].HeaderText = "Gender";
+            MemberInfoTable.Columns[4].HeaderText = "Contact Number";
+            MemberInfoTable.Columns[5].HeaderText = "Email Address";
+            MemberInfoTable.Columns[6].HeaderText = "Emergency Contact Number";
+            MemberInfoTable.Columns[7].HeaderText = "Member Status";
+        }
 
         private void SearchAllMembers()
         {
             string searchValue = SearchTextBox.Text.ToString();
             int searchValueLength = searchValue.Length;
             var q = from x in ctx.Members
-                    where x.FirstName.Substring(0, searchValueLength) == searchValue || x.LastName.Substring(0, searchValueLength) == searchValue || x.Mobile.Substring(4, searchValueLength) == searchValue || x.MemberID.ToString().Substring(0, searchValueLength) == searchValue
+                    where x.FirstName.Substring(0, searchValueLength) == searchValue ||
+                    x.LastName.Substring(0, searchValueLength) == searchValue ||
+                    x.Mobile.Substring(4, searchValueLength) == searchValue ||
+                    x.MemberID.ToString().Substring(0, searchValueLength) == searchValue||
+                    x.Email.Substring(0, searchValueLength) == searchValue
                     select new { x.MemberID, x.FirstName, x.LastName, x.Gender, x.Mobile, x.Email, x.EmergencyContact, Active = x.Active == 1 ? "Active" : "Discontinued" };
             MemberInfoTable.DataSource = q.ToList();
+            SetColumnHeader();
         }
 
         private void SearchActiveMembers()
@@ -52,9 +70,15 @@ namespace ElevenAlpha
             string searchValue = SearchTextBox.Text.ToString();
             int searchValueLength = searchValue.Length;
             var q = from x in ctx.Members
-                    where x.Active == 1 && (x.FirstName.Substring(0, searchValueLength) == searchValue || x.LastName.Substring(0, searchValueLength) == searchValue || x.Mobile.Substring(4, searchValueLength) == searchValue || x.MemberID.ToString().Substring(0, searchValueLength) == searchValue)
+                    where x.Active == 1 && 
+                    (x.FirstName.Substring(0, searchValueLength) == searchValue || 
+                     x.LastName.Substring(0, searchValueLength) == searchValue || 
+                     x.Mobile.Substring(4, searchValueLength) == searchValue ||
+                     x.Email.Substring(0, searchValueLength) == searchValue ||
+                     x.MemberID.ToString().Substring(0, searchValueLength) == searchValue)
                     select new { x.MemberID, x.FirstName, x.LastName, x.Gender, x.Mobile, x.Email, x.EmergencyContact, Active = x.Active == 1 ? "Active" : "Discontinued" };
             MemberInfoTable.DataSource = q.ToList();
+            SetColumnHeader();
 
         }
      
@@ -113,17 +137,26 @@ namespace ElevenAlpha
             }
             else
             {
-                memberToDelete.Active = 0;
-                ctx.SaveChanges();
-                MessageBox.Show(String.Format("Member ID: {0}\n Member Name: {1} {2} is discontinued!",memberToDelete.MemberID,memberToDelete.FirstName,memberToDelete.LastName));
+                if (MessageBox.Show("Are you sure you want to discontinue member?", "Confirm Member Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    memberToDelete.Active = 0;
+                    ctx.SaveChanges();
+    
+                    MessageBox.Show(String.Format("Member ID: {0}\n Member Name: {1} {2} is discontinued!", memberToDelete.MemberID, memberToDelete.FirstName, memberToDelete.LastName));
+                }
+                else
+                {
+                    // user clicked no
+                }
+                
             }
 
             if (InactiveCheckbox.Checked == true)
             {
-                ViewAllMembers();
+                SearchAllMembers();
             }
             else
-                ViewActiveMembers();
+                SearchActiveMembers();
         }
 
         private void BookHstryBttn_Click(object sender, EventArgs e)
@@ -131,6 +164,35 @@ namespace ElevenAlpha
             //int memberID = (int)MemberInfoTable.SelectedRows[0].Cells[0].Value;
             //Member member = (from x in ctx.Members where x.MemberID == memberID select x).First();
             
+        }
+
+        private void ActivateMemberButton_Click(object sender, EventArgs e)
+        {
+            int memberIdToActivate = (int)MemberInfoTable.SelectedRows[0].Cells[0].Value;
+            Member memberToActivate = (from x in ctx.Members where x.MemberID == memberIdToActivate select x).First();
+
+            if (memberToActivate.Active == 1)
+            {
+                MessageBox.Show("Already activated member!");
+            }
+            else
+            {
+                if (MessageBox.Show("Are you sure you want to activate member?", "Confirm Member Activation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    memberToActivate.Active = 1;
+                    ctx.SaveChanges();
+
+                    MessageBox.Show(String.Format("Member ID: {0}\nMember Name: {1} {2} is activated!", memberToActivate.MemberID, memberToActivate.FirstName, memberToActivate.LastName));
+                }
+               
+            }
+
+            if (InactiveCheckbox.Checked == true)
+            {
+                SearchAllMembers();
+            }
+            else
+                SearchActiveMembers();
         }
     }
 }

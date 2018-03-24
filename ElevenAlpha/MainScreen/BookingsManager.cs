@@ -39,7 +39,7 @@ namespace ElevenAlpha
         private void LoadBookingDataGrid()
         {
             // Check if there are Facilities that match Facility Type
-            if (context.Facilities.Where(x => x.FacilityType.Name == FacilityTypeComboBox.Text).FirstOrDefault() is null)
+            if (context.Facilities.Where(x => x.FacilityType.Name == FacilityTypeComboBox.Text && x.Active == 1).FirstOrDefault() is null)
             {
                 BookingManagerDataGrid.Rows.Clear();
                 BookingManagerDataGrid.Columns.Clear();

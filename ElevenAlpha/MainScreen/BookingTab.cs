@@ -19,7 +19,18 @@ namespace ElevenAlpha
             InitializeComponent();
             this.Dock = DockStyle.Fill;
             context = new ElevenAlphaEntities();
+
+            // Load Facility Types
             LoadFacilityTypes();
+
+            // Initialize DatePickers
+            LoadDatePickers();
+        }
+
+        private void LoadDatePickers()
+        {
+            FromDateTimePicker.MinDate = System.DateTime.Now;
+            ToDateTimePicker.MaxDate = FromDateTimePicker.Value.AddDays(14);
         }
 
         /// <summary>

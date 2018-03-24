@@ -27,6 +27,14 @@ namespace ElevenAlpha
         /// </summary>
         private void LoadBookingDataGrid()
         {
+            if (context.Facilities.Where(x => x.FacilityType.Name == FacilityTypeComboBox.Text).FirstOrDefault() is null)
+            {
+                BookingDataGridView.Rows.Clear();
+                BookingDataGridView.Columns.Clear();
+                MessageBox.Show("There are no Facilities associated with this Facility Type.");
+                return;
+            }
+
             // Get opening time
             DateTime openingTime = context.Facilities
                 .Where(x => x.FacilityType.Name == FacilityTypeComboBox.Text)

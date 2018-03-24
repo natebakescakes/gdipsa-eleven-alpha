@@ -30,6 +30,8 @@ namespace ElevenAlpha
 
         private void LoadDatePickers()
         {
+            ToDateTimePicker.Value = FromDateTimePicker.Value.AddDays(14);
+
             FromDateTimePicker.MinDate = System.DateTime.Now;
             ToDateTimePicker.MinDate = System.DateTime.Now;
             ToDateTimePicker.MaxDate = FromDateTimePicker.Value.AddDays(14);

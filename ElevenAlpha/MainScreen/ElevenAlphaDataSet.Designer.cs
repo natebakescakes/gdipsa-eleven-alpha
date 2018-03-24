@@ -2848,7 +2848,7 @@ SELECT BookingID, FacilityID, MemberID, BookingDate, Timeslot, Status, DateReque
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MainScreen.Properties.Settings.Default.ElevenAlphaConnectionString;
+            this._connection.ConnectionString = global::ElevenAlpha.Properties.Settings.Default.ElevenAlphaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3325,7 +3325,7 @@ SELECT FacilityID, Name, TypeID, OpeningTime, ClosingTime, Location, Description
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MainScreen.Properties.Settings.Default.ElevenAlphaConnectionString;
+            this._connection.ConnectionString = global::ElevenAlpha.Properties.Settings.Default.ElevenAlphaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3810,7 +3810,7 @@ SELECT FacilityID, Name, TypeID, OpeningTime, ClosingTime, Location, Description
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MainScreen.Properties.Settings.Default.ElevenAlphaConnectionString;
+            this._connection.ConnectionString = global::ElevenAlpha.Properties.Settings.Default.ElevenAlphaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4186,7 +4186,7 @@ SELECT MemberID, FirstName, LastName, Salutations, DateOfBirth, Gender, Mobile, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MainScreen.Properties.Settings.Default.ElevenAlphaConnectionString;
+            this._connection.ConnectionString = global::ElevenAlpha.Properties.Settings.Default.ElevenAlphaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

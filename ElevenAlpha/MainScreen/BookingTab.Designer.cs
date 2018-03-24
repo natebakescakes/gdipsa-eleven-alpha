@@ -62,6 +62,7 @@
             this.BookingDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.BookingDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BookingDataGridView.Location = new System.Drawing.Point(0, 75);
+            this.BookingDataGridView.MultiSelect = false;
             this.BookingDataGridView.Name = "BookingDataGridView";
             this.BookingDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
@@ -75,6 +76,7 @@
             this.BookingDataGridView.RowHeadersWidth = 300;
             this.BookingDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.BookingDataGridView.RowTemplate.Height = 80;
+            this.BookingDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.BookingDataGridView.Size = new System.Drawing.Size(1561, 837);
             this.BookingDataGridView.TabIndex = 0;
             // 

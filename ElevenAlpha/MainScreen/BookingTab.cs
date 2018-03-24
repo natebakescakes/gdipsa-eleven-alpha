@@ -46,6 +46,11 @@ namespace ElevenAlpha
             BookingDataGridView.ColumnCount = noOfDays;
             BookingDataGridView.RowCount = noOfSlots;
 
+            foreach (DataGridViewColumn column in BookingDataGridView.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
             // Fill opening hours
             for (int i = 0; i < noOfSlots; i++)
             {

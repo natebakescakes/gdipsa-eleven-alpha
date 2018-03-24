@@ -98,17 +98,23 @@
     <Compile Include="FacilityType.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="FacilitiesTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FacilitiesTab.Designer.cs">
+      <DependentUpon>FacilitiesTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="members-tab.cs">
+    <Compile Include="MembersTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="members-tab.Designer.cs">
-      <DependentUpon>members-tab.cs</DependentUpon>
+    <Compile Include="MembersTab.Designer.cs">
+      <DependentUpon>MembersTab.cs</DependentUpon>
     </Compile>
     <Compile Include="Member.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
@@ -127,14 +133,17 @@
     <EmbeddedResource Include="BookingTab.resx">
       <DependentUpon>BookingTab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FacilitiesTab.resx">
+      <DependentUpon>FacilitiesTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberLookup.resx">
       <DependentUpon>MemberLookup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="members-tab.resx">
-      <DependentUpon>members-tab.cs</DependentUpon>
+    <EmbeddedResource Include="MembersTab.resx">
+      <DependentUpon>MembersTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

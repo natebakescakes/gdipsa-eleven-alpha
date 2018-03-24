@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace ElevenAlpha
 {
+    
     public partial class MainScreen : Form
     {
+        FacilitiesTab facilitiestab;
         public MainScreen()
         {
             InitializeComponent();
+
+            facilitiestab = new FacilitiesTab();
+            facilitiesTabPage.Controls.Add(facilitiestab);
+          
         }
+
+        
     }
 }

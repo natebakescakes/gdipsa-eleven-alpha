@@ -60,6 +60,11 @@
     <Compile Include="Booking.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BookingTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BookingTab.Designer.cs">
+      <DependentUpon>BookingTab.cs</DependentUpon>
     <Compile Include="ElevenAlphaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -103,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookingTab.resx">
+      <DependentUpon>BookingTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>

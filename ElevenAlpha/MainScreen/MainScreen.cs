@@ -12,20 +12,20 @@ namespace ElevenAlpha
 {
     public partial class MainScreen : Form
     {
+        BookingTab bookingTab;
         members_tab membersUserControl;
 
         public MainScreen()
         {
             InitializeComponent();
+            
+            // Initialize Bookings Tab
+            bookingTab = new BookingTab();
+            bookingsTabPage.Controls.Add(bookingTab);
+            
+            // Initialize Members Tab
             membersUserControl = new members_tab();
             membersTabPage.Controls.Add(membersUserControl);
-
-   
-        }
-
-        private void membersTabPage_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

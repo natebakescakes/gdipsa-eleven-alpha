@@ -100,5 +100,43 @@ namespace ElevenAlpha
         {
             LoadBookingHistoryDataGrid();
         }
+
+        private void ViewReceiptButton_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void PrintReceiptButton_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CancelBookingButton_Click(object sender, EventArgs e)
+        {
+            if (BookingFacilityDataGrid.SelectedCells[7].Value.ToString() == "Cancelled")
+            {
+                MessageBox.Show("Booking has already been cancelled.");
+                return;
+            }
+
+            int bookingId = Int32.Parse(BookingFacilityDataGrid.SelectedCells[0].Value.ToString());
+            Booking b = context.Bookings.Where(x => x.BookingID == bookingId).First();
+
+            b.Status = 0;
+            context.SaveChanges();
+
+            LoadBookingHistoryDataGrid();
+            MessageBox.Show("Booking has been cancelled.");
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ShowCancelledCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadBookingHistoryDataGrid();
+        }
     }
 }

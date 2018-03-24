@@ -44,14 +44,35 @@ namespace ElevenAlpha
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            string inputname = InputTypeNameTextBox.Text;
+          
+                 
+            // check if the inputname already exist but deactive
+            int flag = 0;
+            foreach(FacilityType f1 in ctx.FacilityTypes )
+            {
+                if (f1.Name == inputname)
+                {
+                    ElevenAlphaEntities ctx = new ElevenAlphaEntities();
+                    FacilityType f = ctx.FacilityTypes.Where(x => x.Name == inputname).First();
+                    f.Active = 1;
+                    flag = 1;
+                    ctx.SaveChanges();
+                    refresh();
+                    break;
+                }
 
-            ElevenAlphaEntities ctx = new ElevenAlphaEntities();
-            FacilityType f = new FacilityType();
-            f.Name = InputTypeNameTextBox.Text;
-            f.Active = 1;
-            ctx.FacilityTypes.Add(f);
-            ctx.SaveChanges();
+            }
 
+            if (flag == 0)
+            {
+                ElevenAlphaEntities ctx = new ElevenAlphaEntities();
+                FacilityType fnew = new FacilityType();
+                fnew.Active = 1;
+                fnew.Name = inputname;
+                ctx.FacilityTypes.Add(fnew);
+                ctx.SaveChanges();
+            }
             refresh();
         }
 
@@ -66,13 +87,14 @@ namespace ElevenAlpha
             refresh();
         }
 
-        private void DeleteButton_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e) //delete means Deactive
         {
             //check whether related type has related record
-
+            
             string OldType = FacilityDataGrid.SelectedCells[0].Value.ToString();//selected typename
 
             FacilityType ft = ctx.FacilityTypes.Where(x => x.Name == OldType).First();//selected facilityType
+
             List<int> fi=new List<int>(); //typeid related facilityid Array
             foreach (Facility f in ctx.Facilities)
             {
@@ -82,6 +104,9 @@ namespace ElevenAlpha
                     fi.Add(f.FacilityID);
                 }
              }
+
+
+            
             int flag = 0;
       
           foreach(Booking b in ctx.Bookings )
@@ -90,21 +115,27 @@ namespace ElevenAlpha
                 {
                     if (b.FacilityID == fi[i])
                     flag++;
-                        
+                   
                 }
             }
             if (flag != 0)
             {
                 MessageBox.Show("can't delete due to there are booking records");
                 flag = 0;
+             
+
             }
             else
             {
+                ElevenAlphaEntities ctx = new ElevenAlphaEntities();
+                OldType = FacilityDataGrid.SelectedCells[0].Value.ToString();
                 FacilityType f = ctx.FacilityTypes.Where(x => x.Name == OldType).First();
-                ctx.FacilityTypes.Remove(f);
-                ctx.SaveChanges();
+                f.Active = 0; 
+                ctx.SaveChanges();             
+                refresh();
+                
             }
-            refresh();
+           
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

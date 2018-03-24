@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BookingManagerDataGrid = new System.Windows.Forms.DataGridView();
             this.MemberIdLabel = new System.Windows.Forms.Label();
             this.MemberIdTextBox = new System.Windows.Forms.TextBox();
@@ -41,26 +41,30 @@
             this.FacilityTypeComboBox = new System.Windows.Forms.ComboBox();
             this.BookButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.PreviousDayButton = new System.Windows.Forms.Button();
+            this.NextDayButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BookingManagerDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // BookingManagerDataGrid
             // 
             this.BookingManagerDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BookingManagerDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BookingManagerDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.BookingManagerDataGrid.ColumnHeadersHeight = 80;
             this.BookingManagerDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BookingManagerDataGrid.Location = new System.Drawing.Point(100, 150);
+            this.BookingManagerDataGrid.MultiSelect = false;
             this.BookingManagerDataGrid.Name = "BookingManagerDataGrid";
             this.BookingManagerDataGrid.RowHeadersWidth = 250;
             this.BookingManagerDataGrid.RowTemplate.Height = 80;
+            this.BookingManagerDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.BookingManagerDataGrid.Size = new System.Drawing.Size(1078, 493);
             this.BookingManagerDataGrid.TabIndex = 0;
             // 
@@ -94,7 +98,7 @@
             // FirstNameTextBox
             // 
             this.FirstNameTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.FirstNameTextBox.Location = new System.Drawing.Point(516, 36);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(547, 36);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.ReadOnly = true;
             this.FirstNameTextBox.Size = new System.Drawing.Size(254, 38);
@@ -103,7 +107,7 @@
             // 
             // LastNameTextBox
             // 
-            this.LastNameTextBox.Location = new System.Drawing.Point(776, 37);
+            this.LastNameTextBox.Location = new System.Drawing.Point(807, 37);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.ReadOnly = true;
             this.LastNameTextBox.Size = new System.Drawing.Size(254, 38);
@@ -126,11 +130,12 @@
             this.BookingDateTimePicker.Name = "BookingDateTimePicker";
             this.BookingDateTimePicker.Size = new System.Drawing.Size(214, 38);
             this.BookingDateTimePicker.TabIndex = 7;
+            this.BookingDateTimePicker.ValueChanged += new System.EventHandler(this.BookingDateTimePicker_ValueChanged);
             // 
             // FacilityTypeLabel
             // 
             this.FacilityTypeLabel.AutoSize = true;
-            this.FacilityTypeLabel.Location = new System.Drawing.Point(595, 87);
+            this.FacilityTypeLabel.Location = new System.Drawing.Point(626, 87);
             this.FacilityTypeLabel.Name = "FacilityTypeLabel";
             this.FacilityTypeLabel.Size = new System.Drawing.Size(175, 32);
             this.FacilityTypeLabel.TabIndex = 8;
@@ -139,10 +144,11 @@
             // FacilityTypeComboBox
             // 
             this.FacilityTypeComboBox.FormattingEnabled = true;
-            this.FacilityTypeComboBox.Location = new System.Drawing.Point(776, 84);
+            this.FacilityTypeComboBox.Location = new System.Drawing.Point(807, 84);
             this.FacilityTypeComboBox.Name = "FacilityTypeComboBox";
             this.FacilityTypeComboBox.Size = new System.Drawing.Size(254, 39);
             this.FacilityTypeComboBox.TabIndex = 9;
+            this.FacilityTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.FacilityTypeComboBox_SelectedIndexChanged);
             // 
             // BookButton
             // 
@@ -153,6 +159,7 @@
             this.BookButton.TabIndex = 10;
             this.BookButton.Text = "Book";
             this.BookButton.UseVisualStyleBackColor = true;
+            this.BookButton.Click += new System.EventHandler(this.BookButton_Click);
             // 
             // CloseButton
             // 
@@ -163,12 +170,36 @@
             this.CloseButton.TabIndex = 11;
             this.CloseButton.Text = "Close";
             this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // PreviousDayButton
+            // 
+            this.PreviousDayButton.Location = new System.Drawing.Point(516, 83);
+            this.PreviousDayButton.Name = "PreviousDayButton";
+            this.PreviousDayButton.Size = new System.Drawing.Size(49, 38);
+            this.PreviousDayButton.TabIndex = 12;
+            this.PreviousDayButton.Text = "<";
+            this.PreviousDayButton.UseVisualStyleBackColor = true;
+            this.PreviousDayButton.Click += new System.EventHandler(this.PreviousDayButton_Click);
+            // 
+            // NextDayButton
+            // 
+            this.NextDayButton.Location = new System.Drawing.Point(571, 83);
+            this.NextDayButton.Name = "NextDayButton";
+            this.NextDayButton.Size = new System.Drawing.Size(49, 38);
+            this.NextDayButton.TabIndex = 13;
+            this.NextDayButton.Text = ">";
+            this.NextDayButton.UseVisualStyleBackColor = true;
+            this.NextDayButton.Click += new System.EventHandler(this.NextDayButton_Click);
             // 
             // BookingsManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.CloseButton;
             this.ClientSize = new System.Drawing.Size(1278, 793);
+            this.Controls.Add(this.NextDayButton);
+            this.Controls.Add(this.PreviousDayButton);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.BookButton);
             this.Controls.Add(this.FacilityTypeComboBox);
@@ -183,7 +214,7 @@
             this.Controls.Add(this.BookingManagerDataGrid);
             this.Name = "BookingsManager";
             this.Padding = new System.Windows.Forms.Padding(100, 150, 100, 150);
-            this.Text = "BookingsManager";
+            this.Text = "Booking Manager";
             ((System.ComponentModel.ISupportInitialize)(this.BookingManagerDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,5 +235,7 @@
         private System.Windows.Forms.TextBox FirstNameTextBox;
         private System.Windows.Forms.Button BookButton;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button PreviousDayButton;
+        private System.Windows.Forms.Button NextDayButton;
     }
 }

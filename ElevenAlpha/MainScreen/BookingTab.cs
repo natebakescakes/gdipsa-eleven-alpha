@@ -30,6 +30,7 @@ namespace ElevenAlpha
         private void LoadDatePickers()
         {
             FromDateTimePicker.MinDate = System.DateTime.Now;
+            ToDateTimePicker.MinDate = System.DateTime.Now;
             ToDateTimePicker.MaxDate = FromDateTimePicker.Value.AddDays(14);
         }
 
@@ -150,6 +151,8 @@ namespace ElevenAlpha
 
         private void FromDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
+            ToDateTimePicker.MaxDate = FromDateTimePicker.Value.AddDays(14);
+
             if (FacilityTypeComboBox.Text != "")
             {
                 LoadBookingDataGrid();

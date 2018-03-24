@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ElevenAlpha
 {
-    public partial class members_tab : UserControl
+    public partial class MembersTab : UserControl
     {
         ElevenAlphaEntities ctx= new ElevenAlphaEntities();
         
-        public members_tab()
+        public MembersTab()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;

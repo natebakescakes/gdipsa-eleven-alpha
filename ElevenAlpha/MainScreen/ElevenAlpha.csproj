@@ -60,6 +60,18 @@
     <Compile Include="Booking.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BookingsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingsManager.Designer.cs">
+      <DependentUpon>BookingsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BookingTab.Designer.cs">
+      <DependentUpon>BookingTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="ElevenAlphaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,13 +119,28 @@
     <Compile Include="Member.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MemberLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberLookup.Designer.cs">
+      <DependentUpon>MemberLookup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookingsManager.resx">
+      <DependentUpon>BookingsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingTab.resx">
+      <DependentUpon>BookingTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FacilitiesTab.resx">
       <DependentUpon>FacilitiesTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberLookup.resx">
+      <DependentUpon>MemberLookup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="members-tab.resx">
       <DependentUpon>members-tab.cs</DependentUpon>

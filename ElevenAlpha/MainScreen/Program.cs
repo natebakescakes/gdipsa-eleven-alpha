@@ -17,6 +17,8 @@ namespace ElevenAlpha
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainScreen());
+            //Application.Run(new MemberLookup());
+            //Application.Run(new BookingsManager("Tennis Court", new DateTime(2018, 03, 24)));
         }
     }
 }

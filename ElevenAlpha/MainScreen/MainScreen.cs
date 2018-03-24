@@ -23,9 +23,6 @@ namespace ElevenAlpha
    
         }
 
-        private void membersTabPage_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

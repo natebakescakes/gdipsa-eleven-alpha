@@ -16,7 +16,8 @@ namespace ElevenAlpha
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainScreen());
+            //Application.Run(new MainScreen());
+            Application.Run(new BookingsManager());
         }
     }
 }

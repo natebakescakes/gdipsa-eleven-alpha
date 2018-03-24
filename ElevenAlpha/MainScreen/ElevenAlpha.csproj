@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6C7CC4C3-2C52-4479-AA3C-31EA7B88F125}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MainScreen</RootNamespace>
-    <AssemblyName>MainScreen</AssemblyName>
+    <RootNamespace>ElevenAlpha</RootNamespace>
+    <AssemblyName>ElevenAlpha</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -60,6 +60,12 @@
     <Compile Include="Booking.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BookingsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingsManager.Designer.cs">
+      <DependentUpon>BookingsManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="ElevenAlphaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +98,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookingsManager.resx">
+      <DependentUpon>BookingsManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +112,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
     <EntityDeploy Include="ElevenAlphaModel.edmx">

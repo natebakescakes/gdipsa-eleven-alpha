@@ -44,7 +44,8 @@ namespace ElevenAlpha
                         x.BookingDate.Value <= ToDateTimePicker.Value && 
                         (x.MemberID.Value.ToString().Contains(SearchTextBox.Text) || 
                         x.Member.FirstName.Contains(SearchTextBox.Text) ||
-                        x.Member.LastName.Contains(SearchTextBox.Text)))
+                        x.Member.LastName.Contains(SearchTextBox.Text) ||
+                        x.BookingID.ToString().Contains(SearchTextBox.Text)))
                     .OrderByDescending(x => x.BookingDate)
                     .Select(x => new
                     {
@@ -68,7 +69,8 @@ namespace ElevenAlpha
                         x.Status == 1 &&
                         (x.MemberID.Value.ToString().Contains(SearchTextBox.Text) ||
                         x.Member.FirstName.Contains(SearchTextBox.Text) ||
-                        x.Member.LastName.Contains(SearchTextBox.Text)))
+                        x.Member.LastName.Contains(SearchTextBox.Text) ||
+                        x.BookingID.ToString().Contains(SearchTextBox.Text)))
                     .OrderByDescending(x => x.BookingDate)
                     .Select(x => new
                     {

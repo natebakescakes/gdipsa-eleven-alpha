@@ -90,7 +90,7 @@ namespace ElevenAlpha
             }
             if (flag != 0)
             {
-                MessageBox.Show("can't delete!");
+                MessageBox.Show("can't delete due to there are booking records");
                 flag = 0;
             }
             else
@@ -98,7 +98,8 @@ namespace ElevenAlpha
                 FacilityType f = ctx.FacilityTypes.Where(x => x.Name == OldType).First();
                 ctx.FacilityTypes.Remove(f);
                 ctx.SaveChanges();
-            } 
+            }
+            refresh();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

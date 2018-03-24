@@ -106,18 +106,26 @@ namespace ElevenAlpha
                         { MessageBox.Show("Please input the Opening Time."); }
                         else
                         {
-                            opentime = Convert.ToDateTime(OpenHrsMskTxB.Text.ToString());
+                            DateTime d1 = Convert.ToDateTime(OpenHrsMskTxB.Text.ToString());
+                            
+                            
+                            //OpenHrsMskTxB.value.hour
+                            opentime = new DateTime(1900,1,1,d1.Hour,d1.Minute,d1.Second);//
 
                             if (CloseHrsMskTxB.MaskedTextProvider.AssignedEditPositionCount == 0)
                             { MessageBox.Show("Please input the Closing Time."); }
                             else
                             {
-                                closetime = Convert.ToDateTime(CloseHrsMskTxB.Text.ToString());
+                                DateTime d2 = Convert.ToDateTime(CloseHrsMskTxB.Text.ToString());
+
+                                closetime = new DateTime(1900,01,01,d2.Hour,d2.Minute,d2.Second);//
 
                                 f.Location = LocationTexB.Text;
                                 f.Description = DescriptionTexB.Text;
                                 f.Active = 1;
-
+                                f.OpeningTime = opentime;
+                                f.ClosingTime = closetime;
+                                
 
                                 ctx.Facilities.Add(f);
                                 ctx.SaveChanges();

@@ -93,9 +93,9 @@
             this.ActiveCheckbox.AutoSize = true;
             this.ActiveCheckbox.Location = new System.Drawing.Point(705, 441);
             this.ActiveCheckbox.Name = "ActiveCheckbox";
-            this.ActiveCheckbox.Size = new System.Drawing.Size(134, 24);
+            this.ActiveCheckbox.Size = new System.Drawing.Size(127, 24);
             this.ActiveCheckbox.TabIndex = 6;
-            this.ActiveCheckbox.Text = "Show Inactive";
+            this.ActiveCheckbox.Text = "Hide Inactive";
             this.ActiveCheckbox.UseVisualStyleBackColor = true;
             this.ActiveCheckbox.CheckedChanged += new System.EventHandler(this.ActiveCheckbox_CheckedChanged);
             this.ActiveCheckbox.Click += new System.EventHandler(this.SearchTextbox_Enter);

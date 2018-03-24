@@ -24,9 +24,7 @@ namespace ElevenAlpha
                 FacilitiesdataGridView1.Columns[i].Name = FacilityGridColumns[i];
                 FacilitiesdataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
-
             LoadDataGridView();
-
         }
 
         private void LoadDataGridView()
@@ -35,6 +33,7 @@ namespace ElevenAlpha
             //filling columns
             FacilitiesdataGridView1.AutoGenerateColumns = false;
             ElevenAlphaEntities context = new ElevenAlphaEntities();
+
             var columns = context.Facilities
                 .Select
                 (x => new Result
@@ -145,7 +144,6 @@ namespace ElevenAlpha
         {
             
         }
-        
         //Hiding or showing deactivated facilities via checkbox
         private void ActiveCheckbox_CheckedChanged(object sender, EventArgs e)
         {

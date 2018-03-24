@@ -21,19 +21,8 @@ namespace ElevenAlpha
             InitializeComponent();
             membersUserControl = new members_tab();
             membersTabPage.Controls.Add(membersUserControl);
-
-   
-        }
-
-        private void membersTabPage_Click(object sender, EventArgs e)
-        {
-
-
             facilitiestab = new FacilitiesTab();
             facilitiesTabPage.Controls.Add(facilitiestab);
-          
         }
-
-        
     }
 }

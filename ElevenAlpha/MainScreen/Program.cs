@@ -17,7 +17,7 @@ namespace ElevenAlpha
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new MainScreen());
-            //Application.Run(new BookingHistoryMembers());
+            //Application.Run(new BookingHistoryMembers(6, new DateTime(2018, 03, 24), new DateTime(2018, 03, 24)));
             Application.Run(new BookingHistoryFacilities(17, new DateTime(2018, 03, 24), new DateTime(2018, 03, 24)));
         }
     }

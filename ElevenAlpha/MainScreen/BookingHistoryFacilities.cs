@@ -20,6 +20,8 @@ namespace ElevenAlpha
             context = new ElevenAlphaEntities();
 
             FacilityIdTextBox.Text = facilityId.ToString();
+            FromDateTimePicker.Value = fromDateTime;
+            ToDateTimePicker.Value = toDateTime;
 
             LoadBookingHistoryDataGrid();
         }
@@ -43,6 +45,7 @@ namespace ElevenAlpha
                         (x.MemberID.Value.ToString().Contains(SearchTextBox.Text) || 
                         x.Member.FirstName.Contains(SearchTextBox.Text) ||
                         x.Member.LastName.Contains(SearchTextBox.Text)))
+                    .OrderByDescending(x => x.BookingDate)
                     .Select(x => new
                     {
                         x.BookingID,
@@ -66,6 +69,7 @@ namespace ElevenAlpha
                         (x.MemberID.Value.ToString().Contains(SearchTextBox.Text) ||
                         x.Member.FirstName.Contains(SearchTextBox.Text) ||
                         x.Member.LastName.Contains(SearchTextBox.Text)))
+                    .OrderByDescending(x => x.BookingDate)
                     .Select(x => new
                     {
                         x.BookingID,

@@ -12,9 +12,133 @@ namespace ElevenAlpha
 {
     public partial class BookingHistoryMembers : Form
     {
-        public BookingHistoryMembers()
+        ElevenAlphaEntities context;
+
+        public BookingHistoryMembers(int memberId, DateTime fromDateTime, DateTime toDateTime)
         {
             InitializeComponent();
+            context = new ElevenAlphaEntities();
+
+            MemberIdTextBox.Text = memberId.ToString();
+            FromDateTimePicker.Value = fromDateTime;
+            ToDateTimePicker.Value = toDateTime;
+        }
+
+        private void LoadBookingHistoryDataGrid()
+        {
+            int memberId = -1;
+
+            if (MemberIdTextBox.Text != "" && !Int32.TryParse(MemberIdTextBox.Text, out memberId))
+            {
+                MessageBox.Show("Invalid Member ID.");
+                return;
+            }
+
+            if (ShowCancelledCheckBox.Checked)
+            {
+                BookingMemberDataGrid.DataSource = context.Bookings
+                    .Where(x => x.MemberID == memberId &&
+                        x.BookingDate.Value >= FromDateTimePicker.Value &&
+                        x.BookingDate.Value <= ToDateTimePicker.Value &&
+                        (x.FacilityID.Value.ToString().Contains(SearchTextBox.Text) ||
+                        x.Facility.Name.Contains(SearchTextBox.Text) ||
+                        x.Facility.FacilityType.Name.Contains(SearchTextBox.Text)))
+                    .OrderByDescending(x => x.BookingDate)
+                    .Select(x => new
+                    {
+                        x.BookingID,
+                        x.DateRequested,
+                        x.BookingDate,
+                        x.Timeslot,
+                        x.FacilityID,
+                        FacilityName = x.Facility.Name,
+                        FacilityTypeName = x.Facility.FacilityType.Name,
+                        Status = x.Status == 1 ? "Booked" : "Cancelled"
+                    })
+                    .ToList();
+            }
+            else
+            {
+                BookingMemberDataGrid.DataSource = context.Bookings
+                    .Where(x => x.MemberID == memberId &&
+                        x.BookingDate.Value >= FromDateTimePicker.Value &&
+                        x.BookingDate.Value <= ToDateTimePicker.Value &&
+                        x.Status == 1 &&
+                        (x.FacilityID.Value.ToString().Contains(SearchTextBox.Text) ||
+                        x.Facility.Name.Contains(SearchTextBox.Text) ||
+                        x.Facility.FacilityType.Name.Contains(SearchTextBox.Text)))
+                    .OrderByDescending(x => x.BookingDate)
+                    .Select(x => new
+                    {
+                        x.BookingID,
+                        x.DateRequested,
+                        x.BookingDate,
+                        x.Timeslot,
+                        x.FacilityID,
+                        FacilityName = x.Facility.Name,
+                        FacilityTypeName = x.Facility.FacilityType.Name,
+                        Status = x.Status == 1 ? "Booked" : "Cancelled"
+                    })
+                    .ToList();
+            }
+        }
+
+        private void MemberIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            LoadBookingHistoryDataGrid();
+        }
+
+        private void ViewReceiptButton_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void PrintReceiptButton_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CancelBookingButton_Click(object sender, EventArgs e)
+        {
+            if (BookingMemberDataGrid.SelectedCells[7].Value.ToString() == "Cancelled")
+            {
+                MessageBox.Show("Booking has already been cancelled.");
+                return;
+            }
+
+            int bookingId = Int32.Parse(BookingMemberDataGrid.SelectedCells[0].Value.ToString());
+            Booking b = context.Bookings.Where(x => x.BookingID == bookingId).First();
+
+            b.Status = 0;
+            context.SaveChanges();
+
+            LoadBookingHistoryDataGrid();
+            MessageBox.Show("Booking has been cancelled.");
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ToDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            LoadBookingHistoryDataGrid();
+        }
+
+        private void FromDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            LoadBookingHistoryDataGrid();
+        }
+
+        private void ShowCancelledCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadBookingHistoryDataGrid();
+        }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            LoadBookingHistoryDataGrid();
         }
     }
 }

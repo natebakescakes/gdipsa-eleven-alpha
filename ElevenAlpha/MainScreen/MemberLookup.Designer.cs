@@ -31,11 +31,18 @@
             this.TableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.MemberLookupDataGrid = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.SearchLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.OkButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.MemberIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GenderColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MobileColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateOfBirthColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemberLookupDataGrid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -63,11 +70,21 @@
             // 
             // MemberLookupDataGrid
             // 
+            this.MemberLookupDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.MemberLookupDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MemberLookupDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MemberIdColumn,
+            this.FirstNameColumn,
+            this.LastNameColumn,
+            this.GenderColumn,
+            this.MobileColumn,
+            this.EmailColumn,
+            this.DateOfBirthColumn});
             this.MemberLookupDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemberLookupDataGrid.Location = new System.Drawing.Point(3, 87);
             this.MemberLookupDataGrid.Name = "MemberLookupDataGrid";
             this.MemberLookupDataGrid.RowTemplate.Height = 40;
+            this.MemberLookupDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MemberLookupDataGrid.Size = new System.Drawing.Size(856, 672);
             this.MemberLookupDataGrid.TabIndex = 0;
             // 
@@ -76,7 +93,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.SearchTextBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.SearchLabel, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 23);
@@ -86,13 +103,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(856, 58);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // textBox1
+            // SearchTextBox
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(128, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(725, 38);
-            this.textBox1.TabIndex = 0;
+            this.SearchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SearchTextBox.Location = new System.Drawing.Point(128, 3);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(725, 38);
+            this.SearchTextBox.TabIndex = 0;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // SearchLabel
             // 
@@ -129,20 +147,74 @@
             this.OkButton.TabIndex = 0;
             this.OkButton.Text = "OK";
             this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // CloseButton
             // 
+            this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CloseButton.Location = new System.Drawing.Point(441, 3);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(130, 48);
             this.CloseButton.TabIndex = 1;
             this.CloseButton.Text = "Close";
             this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // MemberIdColumn
+            // 
+            this.MemberIdColumn.DataPropertyName = "MemberId";
+            this.MemberIdColumn.HeaderText = "Member ID";
+            this.MemberIdColumn.Name = "MemberIdColumn";
+            this.MemberIdColumn.Width = 206;
+            // 
+            // FirstNameColumn
+            // 
+            this.FirstNameColumn.DataPropertyName = "FirstName";
+            this.FirstNameColumn.HeaderText = "First Name";
+            this.FirstNameColumn.Name = "FirstNameColumn";
+            this.FirstNameColumn.Width = 206;
+            // 
+            // LastNameColumn
+            // 
+            this.LastNameColumn.DataPropertyName = "LastName";
+            this.LastNameColumn.HeaderText = "Last Name";
+            this.LastNameColumn.Name = "LastNameColumn";
+            this.LastNameColumn.Width = 205;
+            // 
+            // GenderColumn
+            // 
+            this.GenderColumn.DataPropertyName = "Gender";
+            this.GenderColumn.HeaderText = "Gender";
+            this.GenderColumn.Name = "GenderColumn";
+            this.GenderColumn.Width = 164;
+            // 
+            // MobileColumn
+            // 
+            this.MobileColumn.DataPropertyName = "Mobile";
+            this.MobileColumn.HeaderText = "Mobile No.";
+            this.MobileColumn.Name = "MobileColumn";
+            this.MobileColumn.Width = 205;
+            // 
+            // EmailColumn
+            // 
+            this.EmailColumn.DataPropertyName = "Email";
+            this.EmailColumn.HeaderText = "Email";
+            this.EmailColumn.Name = "EmailColumn";
+            this.EmailColumn.Width = 141;
+            // 
+            // DateOfBirthColumn
+            // 
+            this.DateOfBirthColumn.DataPropertyName = "DateOfBirth";
+            this.DateOfBirthColumn.HeaderText = "Date of Birth";
+            this.DateOfBirthColumn.Name = "DateOfBirthColumn";
+            this.DateOfBirthColumn.Width = 226;
             // 
             // MemberLookup
             // 
+            this.AcceptButton = this.OkButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.CloseButton;
             this.ClientSize = new System.Drawing.Size(1062, 848);
             this.Controls.Add(this.TableLayoutPanel);
             this.Name = "MemberLookup";
@@ -162,10 +234,17 @@
         private System.Windows.Forms.TableLayoutPanel TableLayoutPanel;
         private System.Windows.Forms.DataGridView MemberLookupDataGrid;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.Label SearchLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button OkButton;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MemberIdColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GenderColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MobileColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateOfBirthColumn;
     }
 }

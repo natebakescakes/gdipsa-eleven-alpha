@@ -93,6 +93,7 @@
             this.FacilityDataGrid.RowTemplate.Height = 27;
             this.FacilityDataGrid.Size = new System.Drawing.Size(483, 242);
             this.FacilityDataGrid.TabIndex = 8;
+            this.FacilityDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellclick);
             // 
             // FacilityTypeManager
             // 

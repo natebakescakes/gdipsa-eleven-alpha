@@ -37,7 +37,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.FacilityTypeComB = new System.Windows.Forms.ComboBox();
             this.OpenHrsMskTxB = new System.Windows.Forms.MaskedTextBox();
-            this.CloseHrsTexB = new System.Windows.Forms.MaskedTextBox();
+            this.CloseHrsMskTxB = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.LocationTexB = new System.Windows.Forms.TextBox();
@@ -125,14 +125,14 @@
             this.OpenHrsMskTxB.TabIndex = 10;
             this.OpenHrsMskTxB.ValidatingType = typeof(System.DateTime);
             // 
-            // CloseHrsTexB
+            // CloseHrsMskTxB
             // 
-            this.CloseHrsTexB.Location = new System.Drawing.Point(529, 111);
-            this.CloseHrsTexB.Mask = "00:00";
-            this.CloseHrsTexB.Name = "CloseHrsTexB";
-            this.CloseHrsTexB.Size = new System.Drawing.Size(100, 25);
-            this.CloseHrsTexB.TabIndex = 11;
-            this.CloseHrsTexB.ValidatingType = typeof(System.DateTime);
+            this.CloseHrsMskTxB.Location = new System.Drawing.Point(529, 111);
+            this.CloseHrsMskTxB.Mask = "00:00";
+            this.CloseHrsMskTxB.Name = "CloseHrsMskTxB";
+            this.CloseHrsMskTxB.Size = new System.Drawing.Size(100, 25);
+            this.CloseHrsMskTxB.TabIndex = 11;
+            this.CloseHrsMskTxB.ValidatingType = typeof(System.DateTime);
             // 
             // label7
             // 
@@ -179,12 +179,11 @@
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(386, 415);
+            this.CloseButton.Location = new System.Drawing.Point(419, 415);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(75, 23);
-            this.CloseButton.TabIndex = 17;
+            this.CloseButton.TabIndex = 0;
             this.CloseButton.Text = "Close";
-            this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // CreateFacility
@@ -198,7 +197,7 @@
             this.Controls.Add(this.LocationTexB);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.CloseHrsTexB);
+            this.Controls.Add(this.CloseHrsMskTxB);
             this.Controls.Add(this.OpenHrsMskTxB);
             this.Controls.Add(this.FacilityTypeComB);
             this.Controls.Add(this.label6);
@@ -227,7 +226,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox FacilityTypeComB;
         private System.Windows.Forms.MaskedTextBox OpenHrsMskTxB;
-        private System.Windows.Forms.MaskedTextBox CloseHrsTexB;
+        private System.Windows.Forms.MaskedTextBox CloseHrsMskTxB;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox LocationTexB;

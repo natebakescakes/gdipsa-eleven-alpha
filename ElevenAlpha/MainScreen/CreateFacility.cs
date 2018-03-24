@@ -14,6 +14,7 @@ namespace ElevenAlpha
     {
         ElevenAlphaEntities ctx = new ElevenAlphaEntities();
         string typename = "";
+        
 
         public CreateFacility()
         {
@@ -47,7 +48,7 @@ namespace ElevenAlpha
             if (FacilityTypeComB.SelectedItem.ToString() == "New...")
             {
                 FacilityTypeManager ftm = new FacilityTypeManager(this);
-                ftm.Show();
+                ftm.ShowDialog();
 
             }
             else
@@ -58,32 +59,83 @@ namespace ElevenAlpha
 
         }
 
+
+
+        
+
+
         private void AddFacilityButton_Click(object sender, EventArgs e)
         {
             Facility f = new Facility();
-            f.Name = FacilityNameTxtB.Text;//setacility name
+            int flag = 0;
+            DateTime opentime;
+            DateTime closetime;
+            
+            string inputname = FacilityNameTxtB.Text;
+            if (inputname == "")
+            {
+                MessageBox.Show("Pls input the facility name.");
+            }
 
-            FacilityType ft = ctx.FacilityTypes.Where(x => x.Name == typename).FirstOrDefault(); //found selected facilitytype
-            f.TypeID = ft.TypeID; // set facility typeid 
+            else
+            {
+                foreach (Facility f1 in ctx.Facilities)
+                {
+                    if (f1.Name == inputname) { flag++; break;
+                            
+                    }
+                }
+                if (flag > 0)
+                { MessageBox.Show("This Facility Name already exist.pls input another one.");flag = 0; }
+                else
+                { f.Name = inputname;
 
-            f.OpeningTime = Convert.ToDateTime(OpenHrsMskTxB.Text);
-            f.ClosingTime = Convert.ToDateTime(CloseHrsTexB.Text);
+                    if (typename == "")
+                    {
+                        MessageBox.Show("pls choose a typename");
+                       
+                    }
+                    else
+                    {
+                        FacilityType ft = ctx.FacilityTypes.Where(x => x.Name == typename).FirstOrDefault(); //found selected facilitytype
+                        f.TypeID = ft.TypeID; // set facility typeid 
 
-            f.Location = LocationTexB.Text;
-            f.Description = DescriptionTexB.Text;
-            f.Active = 1;
+                        if (OpenHrsMskTxB.MaskedTextProvider.AssignedEditPositionCount == 0)
+                        { MessageBox.Show("pls input opening time."); }
+                        else
+                        {
+                            opentime = Convert.ToDateTime(OpenHrsMskTxB.Text.ToString());
 
-            ctx.Facilities.Add(f);
-            ctx.SaveChanges();
+                            if (CloseHrsMskTxB.MaskedTextProvider.AssignedEditPositionCount == 0)
+                            { MessageBox.Show("pls input closing time."); }
+                            else
+                            {
+                                closetime = Convert.ToDateTime(CloseHrsMskTxB.Text.ToString());
+
+                                f.Location = LocationTexB.Text;
+                                f.Description = DescriptionTexB.Text;
+                                f.Active = 1;
+
+
+                                ctx.Facilities.Add(f);
+                                ctx.SaveChanges();
+                                MessageBox.Show("Add Facility successful!");
+                            }
+                      }
+
+                   }
+               }
+            }
+
+  
         }
-
-       
-
-       
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
     }
-}
+
+
+      }
+

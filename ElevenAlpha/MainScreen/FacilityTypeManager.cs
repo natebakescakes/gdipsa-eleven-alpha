@@ -37,8 +37,9 @@ namespace ElevenAlpha
         {
 
             refresh();
+           
 
-        
+
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -112,6 +113,17 @@ namespace ElevenAlpha
             parent.CreatFacility_Load(parent, new EventArgs());
 
             
+        }
+
+        private void selectchanged(object sender, EventArgs e)
+        {
+           // InputTypeNameTextBox.Text= FacilityDataGrid.SelectedCells[0].Value.ToString();//selected typename
+        }
+
+        private void cellclick(object sender, DataGridViewCellEventArgs e)
+        {
+            InputTypeNameTextBox.Text = FacilityDataGrid.SelectedCells[0].Value.ToString();//selected typename
+
         }
     }
 }

@@ -43,6 +43,7 @@ namespace ElevenAlpha
             {
                 BookingManagerDataGrid.Rows.Clear();
                 BookingManagerDataGrid.Columns.Clear();
+                MessageBox.Show("There are no Facilities associated with this Facility Type.");
                 return;
             }
 

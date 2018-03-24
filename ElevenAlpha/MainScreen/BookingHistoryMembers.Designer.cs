@@ -39,7 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.ShowCompletedCheckBox = new System.Windows.Forms.CheckBox();
+            this.ShowCancelledCheckBox = new System.Windows.Forms.CheckBox();
             this.CloseButton = new System.Windows.Forms.Button();
             this.CancelBookingButton = new System.Windows.Forms.Button();
             this.PrintReceiptButton = new System.Windows.Forms.Button();
@@ -181,7 +181,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.Controls.Add(this.ShowCompletedCheckBox, 6, 0);
+            this.tableLayoutPanel3.Controls.Add(this.ShowCancelledCheckBox, 6, 0);
             this.tableLayoutPanel3.Controls.Add(this.CloseButton, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.CancelBookingButton, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.PrintReceiptButton, 2, 0);
@@ -194,22 +194,22 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1290, 69);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // ShowCompletedCheckBox
+            // ShowCancelledCheckBox
             // 
-            this.ShowCompletedCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ShowCompletedCheckBox.AutoSize = true;
-            this.ShowCompletedCheckBox.Location = new System.Drawing.Point(1018, 3);
-            this.ShowCompletedCheckBox.Name = "ShowCompletedCheckBox";
-            this.ShowCompletedCheckBox.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.ShowCompletedCheckBox.Size = new System.Drawing.Size(269, 41);
-            this.ShowCompletedCheckBox.TabIndex = 0;
-            this.ShowCompletedCheckBox.Text = "Show Completed";
-            this.ShowCompletedCheckBox.UseVisualStyleBackColor = true;
+            this.ShowCancelledCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ShowCancelledCheckBox.AutoSize = true;
+            this.ShowCancelledCheckBox.Location = new System.Drawing.Point(1028, 3);
+            this.ShowCancelledCheckBox.Name = "ShowCancelledCheckBox";
+            this.ShowCancelledCheckBox.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.ShowCancelledCheckBox.Size = new System.Drawing.Size(259, 41);
+            this.ShowCancelledCheckBox.TabIndex = 0;
+            this.ShowCancelledCheckBox.Text = "Show Cancelled";
+            this.ShowCancelledCheckBox.UseVisualStyleBackColor = true;
             // 
             // CloseButton
             // 
             this.CloseButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CloseButton.Location = new System.Drawing.Point(779, 3);
+            this.CloseButton.Location = new System.Drawing.Point(784, 3);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(147, 43);
             this.CloseButton.TabIndex = 1;
@@ -219,7 +219,7 @@
             // CancelBookingButton
             // 
             this.CancelBookingButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CancelBookingButton.Location = new System.Drawing.Point(538, 3);
+            this.CancelBookingButton.Location = new System.Drawing.Point(543, 3);
             this.CancelBookingButton.Name = "CancelBookingButton";
             this.CancelBookingButton.Size = new System.Drawing.Size(235, 43);
             this.CancelBookingButton.TabIndex = 2;
@@ -229,7 +229,7 @@
             // PrintReceiptButton
             // 
             this.PrintReceiptButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PrintReceiptButton.Location = new System.Drawing.Point(319, 3);
+            this.PrintReceiptButton.Location = new System.Drawing.Point(324, 3);
             this.PrintReceiptButton.Name = "PrintReceiptButton";
             this.PrintReceiptButton.Size = new System.Drawing.Size(213, 43);
             this.PrintReceiptButton.TabIndex = 3;
@@ -239,7 +239,7 @@
             // ViewReceiptButton
             // 
             this.ViewReceiptButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ViewReceiptButton.Location = new System.Drawing.Point(108, 3);
+            this.ViewReceiptButton.Location = new System.Drawing.Point(113, 3);
             this.ViewReceiptButton.Name = "ViewReceiptButton";
             this.ViewReceiptButton.Size = new System.Drawing.Size(205, 43);
             this.ViewReceiptButton.TabIndex = 4;
@@ -278,7 +278,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.CheckBox ShowCompletedCheckBox;
+        private System.Windows.Forms.CheckBox ShowCancelledCheckBox;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Button CancelBookingButton;
         private System.Windows.Forms.Button PrintReceiptButton;

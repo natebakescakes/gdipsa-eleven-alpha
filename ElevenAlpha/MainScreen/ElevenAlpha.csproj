@@ -113,6 +113,12 @@
     <Compile Include="Member.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MemberLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberLookup.Designer.cs">
+      <DependentUpon>MemberLookup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BookingsManager.resx">
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberLookup.resx">
+      <DependentUpon>MemberLookup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="members-tab.resx">
       <DependentUpon>members-tab.cs</DependentUpon>

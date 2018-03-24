@@ -37,7 +37,7 @@
             this.BookingDateLabel = new System.Windows.Forms.Label();
             this.BookingDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FacilityTypeLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.FacilityTypeComboBox = new System.Windows.Forms.ComboBox();
             this.BookButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BookingManagerDataGrid)).BeginInit();
@@ -68,6 +68,7 @@
             this.MemberIdTextBox.Name = "MemberIdTextBox";
             this.MemberIdTextBox.Size = new System.Drawing.Size(158, 38);
             this.MemberIdTextBox.TabIndex = 2;
+            this.MemberIdTextBox.TextChanged += new System.EventHandler(this.MemberIdTextBox_TextChanged);
             // 
             // ShowMemberLookupButton
             // 
@@ -77,6 +78,7 @@
             this.ShowMemberLookupButton.TabIndex = 3;
             this.ShowMemberLookupButton.Text = "...";
             this.ShowMemberLookupButton.UseVisualStyleBackColor = true;
+            this.ShowMemberLookupButton.Click += new System.EventHandler(this.ShowMemberLookupButton_Click);
             // 
             // FirstNameTextBox
             // 
@@ -117,19 +119,19 @@
             // FacilityTypeLabel
             // 
             this.FacilityTypeLabel.AutoSize = true;
-            this.FacilityTypeLabel.Location = new System.Drawing.Point(665, 84);
+            this.FacilityTypeLabel.Location = new System.Drawing.Point(595, 87);
             this.FacilityTypeLabel.Name = "FacilityTypeLabel";
-            this.FacilityTypeLabel.Size = new System.Drawing.Size(168, 32);
+            this.FacilityTypeLabel.Size = new System.Drawing.Size(175, 32);
             this.FacilityTypeLabel.TabIndex = 8;
-            this.FacilityTypeLabel.Text = "FacilityType";
+            this.FacilityTypeLabel.Text = "Facility Type";
             // 
-            // comboBox1
+            // FacilityTypeComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(839, 81);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 39);
-            this.comboBox1.TabIndex = 9;
+            this.FacilityTypeComboBox.FormattingEnabled = true;
+            this.FacilityTypeComboBox.Location = new System.Drawing.Point(776, 84);
+            this.FacilityTypeComboBox.Name = "FacilityTypeComboBox";
+            this.FacilityTypeComboBox.Size = new System.Drawing.Size(254, 39);
+            this.FacilityTypeComboBox.TabIndex = 9;
             // 
             // BookButton
             // 
@@ -158,7 +160,7 @@
             this.ClientSize = new System.Drawing.Size(1278, 793);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.BookButton);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.FacilityTypeComboBox);
             this.Controls.Add(this.FacilityTypeLabel);
             this.Controls.Add(this.BookingDateTimePicker);
             this.Controls.Add(this.BookingDateLabel);
@@ -187,7 +189,7 @@
         private System.Windows.Forms.Label BookingDateLabel;
         private System.Windows.Forms.DateTimePicker BookingDateTimePicker;
         private System.Windows.Forms.Label FacilityTypeLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox FacilityTypeComboBox;
         private System.Windows.Forms.TextBox FirstNameTextBox;
         private System.Windows.Forms.Button BookButton;
         private System.Windows.Forms.Button CloseButton;

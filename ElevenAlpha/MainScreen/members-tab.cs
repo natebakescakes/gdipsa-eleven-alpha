@@ -16,6 +16,7 @@ namespace ElevenAlpha
         public members_tab()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         private void members_tab_Load(object sender, EventArgs e)
         {

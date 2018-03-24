@@ -39,16 +39,20 @@
             // 
             // InputTypeNameTextBox
             // 
-            this.InputTypeNameTextBox.Location = new System.Drawing.Point(129, 277);
+            this.InputTypeNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.InputTypeNameTextBox.Location = new System.Drawing.Point(99, 648);
+            this.InputTypeNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.InputTypeNameTextBox.Name = "InputTypeNameTextBox";
-            this.InputTypeNameTextBox.Size = new System.Drawing.Size(483, 25);
+            this.InputTypeNameTextBox.Size = new System.Drawing.Size(638, 38);
             this.InputTypeNameTextBox.TabIndex = 2;
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(120, 344);
+            this.AddButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.AddButton.Location = new System.Drawing.Point(99, 698);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(75, 23);
+            this.AddButton.Size = new System.Drawing.Size(150, 48);
             this.AddButton.TabIndex = 3;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -56,9 +60,11 @@
             // 
             // UpdateButton
             // 
-            this.UpdateButton.Location = new System.Drawing.Point(248, 344);
+            this.UpdateButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.UpdateButton.Location = new System.Drawing.Point(261, 698);
+            this.UpdateButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(75, 23);
+            this.UpdateButton.Size = new System.Drawing.Size(150, 48);
             this.UpdateButton.TabIndex = 4;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = true;
@@ -66,9 +72,11 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(383, 344);
+            this.DeleteButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.DeleteButton.Location = new System.Drawing.Point(423, 698);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteButton.Size = new System.Drawing.Size(150, 48);
             this.DeleteButton.TabIndex = 5;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -76,9 +84,11 @@
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(528, 344);
+            this.CloseButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.CloseButton.Location = new System.Drawing.Point(585, 698);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.Size = new System.Drawing.Size(150, 48);
             this.CloseButton.TabIndex = 6;
             this.CloseButton.Text = "Close";
             this.CloseButton.UseVisualStyleBackColor = true;
@@ -88,25 +98,29 @@
             // 
             this.FacilityDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.FacilityDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FacilityDataGrid.Location = new System.Drawing.Point(129, 12);
+            this.FacilityDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FacilityDataGrid.Location = new System.Drawing.Point(100, 50);
+            this.FacilityDataGrid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.FacilityDataGrid.Name = "FacilityDataGrid";
             this.FacilityDataGrid.RowTemplate.Height = 27;
-            this.FacilityDataGrid.Size = new System.Drawing.Size(483, 242);
+            this.FacilityDataGrid.Size = new System.Drawing.Size(637, 586);
             this.FacilityDataGrid.TabIndex = 8;
             this.FacilityDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellclick);
             // 
             // FacilityTypeManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 468);
+            this.ClientSize = new System.Drawing.Size(837, 786);
             this.Controls.Add(this.FacilityDataGrid);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.InputTypeNameTextBox);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "FacilityTypeManager";
+            this.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
             this.Text = "FacilityTypeManager";
             this.Load += new System.EventHandler(this.FacilityTypeManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FacilityDataGrid)).EndInit();

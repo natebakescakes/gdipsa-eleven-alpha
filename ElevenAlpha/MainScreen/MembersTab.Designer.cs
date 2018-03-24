@@ -1,6 +1,6 @@
 ﻿namespace ElevenAlpha
 {
-    partial class members_tab
+    partial class MembersTab
     {
         /// <summary> 
         /// Required designer variable.

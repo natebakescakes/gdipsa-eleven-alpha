@@ -1,4 +1,4 @@
-﻿namespace MainScreen
+﻿namespace ElevenAlpha
 {
     partial class FacilitiesTab
     {
@@ -102,6 +102,7 @@
             this.SearchTextbox.Size = new System.Drawing.Size(184, 26);
             this.SearchTextbox.TabIndex = 7;
             this.SearchTextbox.Text = "Search...";
+            this.SearchTextbox.Enter += new System.EventHandler(this.SearchTextbox_Enter);
             this.SearchTextbox.Leave += new System.EventHandler(this.SearchTextbox_Leave);
             // 
             // FacilitiesTab

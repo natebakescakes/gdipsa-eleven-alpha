@@ -47,7 +47,7 @@
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.Location = new System.Drawing.Point(0, 97);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl.Name = "tabControl";
             this.tabControl.Padding = new System.Drawing.Point(150, 10);
             this.tabControl.SelectedIndex = 0;
@@ -57,9 +57,9 @@
             // bookingsTabPage
             // 
             this.bookingsTabPage.Location = new System.Drawing.Point(4, 60);
-            this.bookingsTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bookingsTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.bookingsTabPage.Name = "bookingsTabPage";
-            this.bookingsTabPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bookingsTabPage.Padding = new System.Windows.Forms.Padding(2);
             this.bookingsTabPage.Size = new System.Drawing.Size(1460, 491);
             this.bookingsTabPage.TabIndex = 0;
             this.bookingsTabPage.Text = "📕 Bookings";
@@ -68,9 +68,9 @@
             // membersTabPage
             // 
             this.membersTabPage.Location = new System.Drawing.Point(4, 60);
-            this.membersTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.membersTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.membersTabPage.Name = "membersTabPage";
-            this.membersTabPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.membersTabPage.Padding = new System.Windows.Forms.Padding(2);
             this.membersTabPage.Size = new System.Drawing.Size(1460, 491);
             this.membersTabPage.TabIndex = 1;
             this.membersTabPage.Text = "👪 Members";
@@ -78,10 +78,11 @@
             // 
             // facilitiesTabPage
             // 
+            this.facilitiesTabPage.AutoScroll = true;
             this.facilitiesTabPage.Location = new System.Drawing.Point(4, 60);
-            this.facilitiesTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.facilitiesTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.facilitiesTabPage.Name = "facilitiesTabPage";
-            this.facilitiesTabPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.facilitiesTabPage.Padding = new System.Windows.Forms.Padding(2);
             this.facilitiesTabPage.Size = new System.Drawing.Size(1460, 491);
             this.facilitiesTabPage.TabIndex = 2;
             this.facilitiesTabPage.Text = "🎾 Facilities";
@@ -90,10 +91,10 @@
             // reportsTabPage
             // 
             this.reportsTabPage.Location = new System.Drawing.Point(4, 60);
-            this.reportsTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reportsTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.reportsTabPage.Name = "reportsTabPage";
-            this.reportsTabPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.reportsTabPage.Size = new System.Drawing.Size(1156, 491);
+            this.reportsTabPage.Padding = new System.Windows.Forms.Padding(2);
+            this.reportsTabPage.Size = new System.Drawing.Size(1460, 491);
             this.reportsTabPage.TabIndex = 3;
             this.reportsTabPage.Text = "📃 Reports";
             this.reportsTabPage.UseVisualStyleBackColor = true;
@@ -101,7 +102,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(967, 83);
             this.pictureBox1.TabIndex = 1;
@@ -111,15 +112,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1468, 652);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainScreen";
             this.Padding = new System.Windows.Forms.Padding(0, 97, 0, 0);
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MainScreen_Load);
             this.tabControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

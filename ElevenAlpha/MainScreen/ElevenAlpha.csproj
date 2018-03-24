@@ -60,6 +60,12 @@
     <Compile Include="Booking.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BookingsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingsManager.Designer.cs">
+      <DependentUpon>BookingsManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookingTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookingsManager.resx">
+      <DependentUpon>BookingsManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookingTab.resx">
       <DependentUpon>BookingTab.cs</DependentUpon>
     </EmbeddedResource>

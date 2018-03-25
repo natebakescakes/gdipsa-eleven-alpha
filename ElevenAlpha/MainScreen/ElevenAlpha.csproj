@@ -57,11 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewMember.cs">
+    <Compile Include="CreateMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewMember.Designer.cs">
-      <DependentUpon>AddNewMember.cs</DependentUpon>
+    <Compile Include="CreateMember.Designer.cs">
+      <DependentUpon>CreateMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Booking.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
@@ -172,8 +172,8 @@
     <EmbeddedResource Include="FacilitiesTab.resx">
       <DependentUpon>FacilitiesTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNewMember.resx">
-      <DependentUpon>AddNewMember.cs</DependentUpon>
+    <EmbeddedResource Include="CreateMember.resx">
+      <DependentUpon>CreateMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditMember.resx">
       <DependentUpon>EditMember.cs</DependentUpon>

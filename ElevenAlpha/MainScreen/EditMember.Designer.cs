@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Close = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.UpdateMemberButton = new System.Windows.Forms.Button();
             this.FirstNameTxtBox = new System.Windows.Forms.TextBox();
             this.EmergencyContact = new System.Windows.Forms.GroupBox();
@@ -53,24 +53,23 @@
             this.EmergencyContact.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Close
+            // CloseButton
             // 
-            this.Close.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Close.Location = new System.Drawing.Point(656, 491);
-            this.Close.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(142, 53);
-            this.Close.TabIndex = 31;
-            this.Close.Text = "Cancel ";
-            this.Close.UseVisualStyleBackColor = true;
-            this.Close.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CloseButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CloseButton.Location = new System.Drawing.Point(656, 491);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(5);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(142, 53);
+            this.CloseButton.TabIndex = 31;
+            this.CloseButton.Text = "Cancel ";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // UpdateMemberButton
             // 
             this.UpdateMemberButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UpdateMemberButton.Location = new System.Drawing.Point(390, 491);
-            this.UpdateMemberButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.UpdateMemberButton.Margin = new System.Windows.Forms.Padding(5);
             this.UpdateMemberButton.Name = "UpdateMemberButton";
             this.UpdateMemberButton.Size = new System.Drawing.Size(236, 53);
             this.UpdateMemberButton.TabIndex = 30;
@@ -82,7 +81,7 @@
             // 
             this.FirstNameTxtBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FirstNameTxtBox.Location = new System.Drawing.Point(340, 46);
-            this.FirstNameTxtBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.FirstNameTxtBox.Margin = new System.Windows.Forms.Padding(5);
             this.FirstNameTxtBox.Name = "FirstNameTxtBox";
             this.FirstNameTxtBox.Size = new System.Drawing.Size(311, 38);
             this.FirstNameTxtBox.TabIndex = 1;
@@ -97,9 +96,9 @@
             this.EmergencyContact.Controls.Add(this.ContactNumber);
             this.EmergencyContact.Controls.Add(this.ContactName);
             this.EmergencyContact.Location = new System.Drawing.Point(57, 194);
-            this.EmergencyContact.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.EmergencyContact.Margin = new System.Windows.Forms.Padding(5);
             this.EmergencyContact.Name = "EmergencyContact";
-            this.EmergencyContact.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.EmergencyContact.Padding = new System.Windows.Forms.Padding(5);
             this.EmergencyContact.Size = new System.Drawing.Size(1076, 267);
             this.EmergencyContact.TabIndex = 29;
             this.EmergencyContact.TabStop = false;
@@ -109,7 +108,7 @@
             // 
             this.MemberRelationTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MemberRelationTextBox.Location = new System.Drawing.Point(384, 175);
-            this.MemberRelationTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.MemberRelationTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.MemberRelationTextBox.Name = "MemberRelationTextBox";
             this.MemberRelationTextBox.Size = new System.Drawing.Size(418, 38);
             this.MemberRelationTextBox.TabIndex = 9;
@@ -118,7 +117,7 @@
             // 
             this.EmergencyNumberTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EmergencyNumberTextBox.Location = new System.Drawing.Point(384, 125);
-            this.EmergencyNumberTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.EmergencyNumberTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.EmergencyNumberTextBox.Name = "EmergencyNumberTextBox";
             this.EmergencyNumberTextBox.Size = new System.Drawing.Size(418, 38);
             this.EmergencyNumberTextBox.TabIndex = 8;
@@ -127,7 +126,7 @@
             // 
             this.EmergencyNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EmergencyNameTextBox.Location = new System.Drawing.Point(384, 75);
-            this.EmergencyNameTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.EmergencyNameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.EmergencyNameTextBox.Name = "EmergencyNameTextBox";
             this.EmergencyNameTextBox.Size = new System.Drawing.Size(418, 38);
             this.EmergencyNameTextBox.TabIndex = 7;
@@ -169,7 +168,7 @@
             // 
             this.EmailTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EmailTextBox.Location = new System.Drawing.Point(725, 146);
-            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(408, 38);
             this.EmailTextBox.TabIndex = 6;
@@ -194,7 +193,7 @@
             "Male",
             "Female"});
             this.GenderComboBox.Location = new System.Drawing.Point(980, 98);
-            this.GenderComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.GenderComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.GenderComboBox.Name = "GenderComboBox";
             this.GenderComboBox.Size = new System.Drawing.Size(153, 39);
             this.GenderComboBox.TabIndex = 4;
@@ -203,7 +202,7 @@
             // 
             this.MobileTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MobileTextBox.Location = new System.Drawing.Point(268, 143);
-            this.MobileTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.MobileTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.MobileTextBox.Name = "MobileTextBox";
             this.MobileTextBox.Size = new System.Drawing.Size(239, 38);
             this.MobileTextBox.TabIndex = 5;
@@ -212,7 +211,7 @@
             // 
             this.DOBPicker.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DOBPicker.Location = new System.Drawing.Point(239, 95);
-            this.DOBPicker.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.DOBPicker.Margin = new System.Windows.Forms.Padding(5);
             this.DOBPicker.MaxDate = new System.DateTime(2018, 3, 24, 0, 0, 0, 0);
             this.DOBPicker.Name = "DOBPicker";
             this.DOBPicker.Size = new System.Drawing.Size(611, 38);
@@ -223,7 +222,7 @@
             // 
             this.LNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LNameTextBox.Location = new System.Drawing.Point(822, 46);
-            this.LNameTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.LNameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.LNameTextBox.Name = "LNameTextBox";
             this.LNameTextBox.Size = new System.Drawing.Size(311, 38);
             this.LNameTextBox.TabIndex = 2;
@@ -295,7 +294,7 @@
             "Mdm",
             "Dr"});
             this.SalutationComboBox.Location = new System.Drawing.Point(59, 45);
-            this.SalutationComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.SalutationComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.SalutationComboBox.Name = "SalutationComboBox";
             this.SalutationComboBox.Size = new System.Drawing.Size(111, 39);
             this.SalutationComboBox.TabIndex = 0;
@@ -305,9 +304,9 @@
             this.AcceptButton = this.UpdateMemberButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.Close;
+            this.CancelButton = this.CloseButton;
             this.ClientSize = new System.Drawing.Size(1199, 587);
-            this.Controls.Add(this.Close);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.UpdateMemberButton);
             this.Controls.Add(this.FirstNameTxtBox);
             this.Controls.Add(this.EmergencyContact);
@@ -323,7 +322,7 @@
             this.Controls.Add(this.LastName);
             this.Controls.Add(this.FirstName);
             this.Controls.Add(this.SalutationComboBox);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "EditMember";
             this.Text = "Edit Member";
             this.Load += new System.EventHandler(this.EditMember_Load);
@@ -336,7 +335,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Close;
+        private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Button UpdateMemberButton;
         private System.Windows.Forms.TextBox FirstNameTxtBox;
         private System.Windows.Forms.GroupBox EmergencyContact;

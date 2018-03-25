@@ -246,7 +246,7 @@
             this.Controls.Add(this.FacilityNameTxtB);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreateFacility";
-            this.Text = "Create Facility";
+            this.Text = "New Facility";
             this.Load += new System.EventHandler(this.CreatFacility_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

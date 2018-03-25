@@ -12,10 +12,10 @@ using System.Text.RegularExpressions;
 
 namespace ElevenAlpha
 {
-    public partial class AddNewMember : Form
+    public partial class CreateMember : Form
     {
         ElevenAlphaEntities ctx = new ElevenAlphaEntities();
-        public AddNewMember()
+        public CreateMember()
         {
             InitializeComponent();
         }
@@ -55,19 +55,20 @@ namespace ElevenAlpha
             }
             else
             {
-                
-                Member newMember = new Member();
 
-                newMember.FirstName = FirstNameTxtBox.Text;
-                newMember.LastName = LNameTextBox.Text;
-                newMember.Email = EmailTextBox.Text;
-                newMember.DateOfBirth = DOBPicker.Value;
-                newMember.Active = 1;
-                newMember.Mobile = MobileTextBox.Text;
-                newMember.EmergencyContact = EmergencyNumberTextBox.Text;
-                newMember.EmergencyName = EmergencyNameTextBox.Text;
-                newMember.EmergencyRelation = MemberRelationTextBox.Text;
-                
+                Member newMember = new Member
+                {
+                    FirstName = FirstNameTxtBox.Text,
+                    LastName = LNameTextBox.Text,
+                    Email = EmailTextBox.Text,
+                    DateOfBirth = DOBPicker.Value,
+                    Active = 1,
+                    Mobile = MobileTextBox.Text,
+                    EmergencyContact = EmergencyNumberTextBox.Text,
+                    EmergencyName = EmergencyNameTextBox.Text,
+                    EmergencyRelation = MemberRelationTextBox.Text
+                };
+
                 if (SalutationComboBox.SelectedItem == null)
                 {
                     newMember.Salutations = "";
@@ -99,11 +100,9 @@ namespace ElevenAlpha
 
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        
     }
 }

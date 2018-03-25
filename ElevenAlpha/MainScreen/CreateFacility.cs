@@ -25,11 +25,11 @@ namespace ElevenAlpha
         public void CreatFacility_Load(object sender, EventArgs e)
         {
 
-            refresh();
+            RefreshFacilityTypes();
 
         }
 
-        private void refresh()
+        private void RefreshFacilityTypes()
         {
             FacilityTypeComB.Items.Clear();
 

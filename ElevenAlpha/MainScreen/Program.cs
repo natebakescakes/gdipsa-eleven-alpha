@@ -21,6 +21,7 @@ namespace ElevenAlpha
             //Application.Run(new CreateFacility());
             //Application.Run(new MemberLookup());
             //Application.Run(new BookingsManager("Tennis Court", new DateTime(2018, 03, 24)));
+            Application.Run(new EditFacility(17));
         }
     }
 }

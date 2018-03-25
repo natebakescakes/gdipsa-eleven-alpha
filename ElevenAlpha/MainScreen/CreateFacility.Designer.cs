@@ -48,34 +48,38 @@
             // 
             // FacilityNameTxtB
             // 
+            this.FacilityNameTxtB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FacilityNameTxtB.Location = new System.Drawing.Point(255, 41);
-            this.FacilityNameTxtB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FacilityNameTxtB.Margin = new System.Windows.Forms.Padding(6);
             this.FacilityNameTxtB.Name = "FacilityNameTxtB";
             this.FacilityNameTxtB.Size = new System.Drawing.Size(404, 38);
             this.FacilityNameTxtB.TabIndex = 0;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(37, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 32);
+            this.label1.Size = new System.Drawing.Size(187, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Faclity Name";
+            this.label1.Text = "Facility Name";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(37, 94);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 32);
+            this.label2.Size = new System.Drawing.Size(194, 32);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Opening Hours";
+            this.label2.Text = "Opening Time";
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(37, 144);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
@@ -86,6 +90,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(37, 201);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
@@ -96,6 +101,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(671, 44);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
@@ -106,19 +112,21 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(671, 94);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(193, 32);
+            this.label6.Size = new System.Drawing.Size(181, 32);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Closing Hours";
+            this.label6.Text = "Closing Time";
             // 
             // FacilityTypeComB
             // 
+            this.FacilityTypeComB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FacilityTypeComB.FormattingEnabled = true;
             this.FacilityTypeComB.Location = new System.Drawing.Point(876, 40);
-            this.FacilityTypeComB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FacilityTypeComB.Margin = new System.Windows.Forms.Padding(6);
             this.FacilityTypeComB.Name = "FacilityTypeComB";
             this.FacilityTypeComB.Size = new System.Drawing.Size(412, 39);
             this.FacilityTypeComB.TabIndex = 9;
@@ -126,8 +134,9 @@
             // 
             // OpenHrsMskTxB
             // 
+            this.OpenHrsMskTxB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.OpenHrsMskTxB.Location = new System.Drawing.Point(255, 91);
-            this.OpenHrsMskTxB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.OpenHrsMskTxB.Margin = new System.Windows.Forms.Padding(6);
             this.OpenHrsMskTxB.Mask = "00:00";
             this.OpenHrsMskTxB.Name = "OpenHrsMskTxB";
             this.OpenHrsMskTxB.Size = new System.Drawing.Size(281, 38);
@@ -137,8 +146,9 @@
             // 
             // CloseHrsMskTxB
             // 
+            this.CloseHrsMskTxB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CloseHrsMskTxB.Location = new System.Drawing.Point(876, 91);
-            this.CloseHrsMskTxB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.CloseHrsMskTxB.Margin = new System.Windows.Forms.Padding(6);
             this.CloseHrsMskTxB.Mask = "00:00";
             this.CloseHrsMskTxB.Name = "CloseHrsMskTxB";
             this.CloseHrsMskTxB.Size = new System.Drawing.Size(289, 38);
@@ -148,6 +158,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(548, 94);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
@@ -158,6 +169,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(1177, 94);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
@@ -168,16 +180,18 @@
             // 
             // LocationTexB
             // 
+            this.LocationTexB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LocationTexB.Location = new System.Drawing.Point(255, 141);
-            this.LocationTexB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.LocationTexB.Margin = new System.Windows.Forms.Padding(6);
             this.LocationTexB.Name = "LocationTexB";
             this.LocationTexB.Size = new System.Drawing.Size(1033, 38);
             this.LocationTexB.TabIndex = 14;
             // 
             // DescriptionTexB
             // 
+            this.DescriptionTexB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DescriptionTexB.Location = new System.Drawing.Point(255, 198);
-            this.DescriptionTexB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.DescriptionTexB.Margin = new System.Windows.Forms.Padding(6);
             this.DescriptionTexB.Multiline = true;
             this.DescriptionTexB.Name = "DescriptionTexB";
             this.DescriptionTexB.Size = new System.Drawing.Size(1033, 380);
@@ -185,9 +199,9 @@
             // 
             // AddFacilityButton
             // 
-            this.AddFacilityButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.AddFacilityButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddFacilityButton.Location = new System.Drawing.Point(485, 637);
-            this.AddFacilityButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.AddFacilityButton.Margin = new System.Windows.Forms.Padding(6);
             this.AddFacilityButton.Name = "AddFacilityButton";
             this.AddFacilityButton.Size = new System.Drawing.Size(236, 48);
             this.AddFacilityButton.TabIndex = 16;
@@ -197,9 +211,10 @@
             // 
             // CloseButton
             // 
-            this.CloseButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.CloseButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CloseButton.Location = new System.Drawing.Point(733, 637);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(6);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(150, 48);
             this.CloseButton.TabIndex = 0;
@@ -229,7 +244,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FacilityNameTxtB);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreateFacility";
             this.Text = "Create Facility";
             this.Load += new System.EventHandler(this.CreatFacility_Load);

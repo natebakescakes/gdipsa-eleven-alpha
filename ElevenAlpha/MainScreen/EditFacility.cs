@@ -95,9 +95,10 @@ namespace ElevenAlpha
 
             int flag = 0;
             string inputname = FacilityNameTextB.Text;
+
             if (inputname == "")
             {
-                MessageBox.Show("Pls input the facility name.");
+                MessageBox.Show("Please input the Facility Name.");
             }
             else
             {
@@ -110,12 +111,12 @@ namespace ElevenAlpha
                     }
                 }
                 if (flag > 0 && inputname != f.Name)
-                { MessageBox.Show("This Facility Name already exist.pls input another one."); flag = 0; }
+                { MessageBox.Show("This Facility Name already exists. Please input a different one."); flag = 0; }
                 else
                 {
                     f.Name = inputname;
                     if (OpenTimeMaskT.MaskedTextProvider.AssignedEditPositionCount == 0)
-                    { MessageBox.Show("pls input opening time."); }
+                    { MessageBox.Show("Please input the Opening Time."); }
                     else
                     {
                         DateTime d1 = Convert.ToDateTime(OpenTimeMaskT.Text.ToString());
@@ -123,7 +124,7 @@ namespace ElevenAlpha
                       
 
                         if (CloseTimeMaskT.MaskedTextProvider.AssignedEditPositionCount == 0)
-                        { MessageBox.Show("pls input closing time."); }
+                        { MessageBox.Show("Please input the Closing Time."); }
                         else
                         {
                             DateTime d2 = Convert.ToDateTime(CloseTimeMaskT.Text.ToString());
@@ -137,7 +138,7 @@ namespace ElevenAlpha
                             f.OpeningTime = opentime;
                             f.ClosingTime = closetime;
                             ctx.SaveChanges();
-                            MessageBox.Show("Edit Facility successful!");
+                            MessageBox.Show("Successfully updated Facility.");
 
                         }
                     }

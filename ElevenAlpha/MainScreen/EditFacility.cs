@@ -12,16 +12,17 @@ namespace ElevenAlpha
 {
     public partial class EditFacility : Form
     {
-        int facilityid=23;//take from Home page,after click edit
+        int facilityid;
         string typename;
         int i = 0;
         DateTime opentime;
         DateTime closetime;
 
         ElevenAlphaEntities ctx = new ElevenAlphaEntities();
-        public EditFacility()
+        public EditFacility(int facilityId)
         {
             InitializeComponent();
+            this.facilityid = facilityId;
         }
 
         private void EditFacility_Load(object sender, EventArgs e)

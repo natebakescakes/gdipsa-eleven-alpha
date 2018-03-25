@@ -66,6 +66,12 @@
     <Compile Include="Booking.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EditFacility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFacility.Designer.cs">
+      <DependentUpon>EditFacility.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookingsManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ElevenAlphaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CreateFacility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateFacility.Designer.cs">
+      <DependentUpon>CreateFacility.cs</DependentUpon>
+    </Compile>
     <Compile Include="ElevenAlphaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +121,12 @@
     </Compile>
     <Compile Include="FacilityType.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FacilityTypeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacilityTypeManager.Designer.cs">
+      <DependentUpon>FacilityTypeManager.cs</DependentUpon>
     </Compile>
     <Compile Include="FacilitiesTab.cs">
       <SubType>UserControl</SubType>
@@ -139,6 +157,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateFacility.resx">
+      <DependentUpon>CreateFacility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacilityTypeManager.resx">
+      <DependentUpon>FacilityTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookingsManager.resx">
       <DependentUpon>BookingsManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditMember.resx">
       <DependentUpon>EditMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFacility.resx">
+      <DependentUpon>EditFacility.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>

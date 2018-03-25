@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewMember.Designer.cs">
+      <DependentUpon>AddNewMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Booking.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="BookingTab.Designer.cs">
       <DependentUpon>BookingTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMember.Designer.cs">
+      <DependentUpon>EditMember.cs</DependentUpon>
     </Compile>
     <Compile Include="ElevenAlphaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -159,6 +171,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FacilitiesTab.resx">
       <DependentUpon>FacilitiesTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewMember.resx">
+      <DependentUpon>AddNewMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMember.resx">
+      <DependentUpon>EditMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditFacility.resx">
       <DependentUpon>EditFacility.cs</DependentUpon>

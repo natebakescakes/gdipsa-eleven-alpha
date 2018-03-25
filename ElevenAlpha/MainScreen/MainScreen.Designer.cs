@@ -46,12 +46,12 @@
             this.tabControl.Controls.Add(this.reportsTabPage);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl.Location = new System.Drawing.Point(0, 150);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabControl.Location = new System.Drawing.Point(0, 97);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl.Name = "tabControl";
             this.tabControl.Padding = new System.Drawing.Point(150, 10);
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1924, 861);
+            this.tabControl.Size = new System.Drawing.Size(1082, 555);
             this.tabControl.TabIndex = 0;
             // 
             // bookingsTabPage
@@ -104,8 +104,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(11, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(967, 83);
             this.pictureBox1.TabIndex = 1;
@@ -119,9 +119,9 @@
             this.ClientSize = new System.Drawing.Size(1924, 1011);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainScreen";
-            this.Padding = new System.Windows.Forms.Padding(0, 150, 0, 0);
+            this.Padding = new System.Windows.Forms.Padding(0, 97, 0, 0);
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabControl.ResumeLayout(false);

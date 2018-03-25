@@ -13,17 +13,21 @@ namespace ElevenAlpha
 {
     public partial class EditMember : Form
     {
-        int memberId = 6;
-        ElevenAlphaEntities ctx = new ElevenAlphaEntities();
+        private int memberId;
+        ElevenAlphaEntities ctx;
         
         public EditMember()
         {
             InitializeComponent();
+            memberId = 6;
+            ctx = new ElevenAlphaEntities();
         }
 
         public EditMember(int memberId)
         {
+            InitializeComponent();
             this.memberId = memberId;
+            ctx = new ElevenAlphaEntities();
         }
 
 
@@ -68,30 +72,30 @@ namespace ElevenAlpha
 
             if (FirstNameTxtBox.Text == "")
             {
-                MessageBox.Show("Please enter First Name!");
+                MessageBox.Show("Please input First Name.");
             }
 
             else if (GenderComboBox.SelectedIndex <= 0)
             {
-                MessageBox.Show("Please input gender!");
+                MessageBox.Show("Please input Gender.");
             }
             else if ((MobileTextBox.Text == "") || !isValidNumber.IsMatch(MobileTextBox.Text))
             {
-                MessageBox.Show("Please input valid Mobile number!");
+                MessageBox.Show("Please input a valid Mobile Number.");
             }
 
             else if (EmailTextBox.Text == "" || !isValidEmail.IsMatch(EmailTextBox.Text))
             {
-                MessageBox.Show("Please input valid email!");
+                MessageBox.Show("Please input a valid Email Address.");
             }
 
             else if (EmergencyNameTextBox.Text == "")
             {
-                MessageBox.Show("Please input emergency contact name!");
+                MessageBox.Show("Please input an Emergency Contact Name.");
             }
             else if (EmergencyNumberTextBox.Text == "" || !isValidNumber.IsMatch(MobileTextBox.Text))
             {
-                MessageBox.Show("Please input emergency contact number!");
+                MessageBox.Show("Please input an Emergency Contact Number.");
             }
             else
             {
@@ -130,7 +134,7 @@ namespace ElevenAlpha
             }
         }
 
-            private void CancelButton_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }

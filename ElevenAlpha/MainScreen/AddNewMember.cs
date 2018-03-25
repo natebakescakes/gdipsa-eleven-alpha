@@ -28,30 +28,30 @@ namespace ElevenAlpha
 
             if (FirstNameTxtBox.Text == "")
             {
-                MessageBox.Show("Please enter First Name!");
+                MessageBox.Show("Please input a First Name.");
             }
            
             else if (GenderComboBox.SelectedIndex <= 0)
             {
-                MessageBox.Show("Please input gender!");
+                MessageBox.Show("Please input Gender.");
             }
             else if ((MobileTextBox.Text == "") || !isValidNumber.IsMatch(MobileTextBox.Text))
             {
-                MessageBox.Show("Please input valid Mobile number!");
+                MessageBox.Show("Please input a valid Mobile number.");
             }
             
             else if (EmailTextBox.Text == "" || !isValidEmail.IsMatch(EmailTextBox.Text))
             {
-                MessageBox.Show("Please input valid email!");
+                MessageBox.Show("Please input a valid Email Address.");
             }
            
             else if (EmergencyNameTextBox.Text == "")
             {
-                MessageBox.Show("Please input emergency contact name!");
+                MessageBox.Show("Please input an Emergency Contact Name.");
             }
             else if (EmergencyNumberTextBox.Text == "" || !isValidNumber.IsMatch(MobileTextBox.Text))
             {
-                MessageBox.Show("Please input emergency contact number!");
+                MessageBox.Show("Please input an Emergency Contact Number.");
             }
             else
             {

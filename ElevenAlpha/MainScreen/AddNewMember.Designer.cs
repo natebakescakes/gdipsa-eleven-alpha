@@ -57,7 +57,7 @@
             // 
             // SalutationComboBox
             // 
-            this.SalutationComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.SalutationComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SalutationComboBox.FormattingEnabled = true;
             this.SalutationComboBox.Items.AddRange(new object[] {
             "",
@@ -66,206 +66,222 @@
             "Mrs",
             "Mdm",
             "Dr"});
-            this.SalutationComboBox.Location = new System.Drawing.Point(30, 29);
+            this.SalutationComboBox.Location = new System.Drawing.Point(57, 45);
+            this.SalutationComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.SalutationComboBox.Name = "SalutationComboBox";
-            this.SalutationComboBox.Size = new System.Drawing.Size(64, 28);
+            this.SalutationComboBox.Size = new System.Drawing.Size(111, 39);
             this.SalutationComboBox.TabIndex = 0;
             // 
             // FirstName
             // 
-            this.FirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.FirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FirstName.AutoSize = true;
-            this.FirstName.Location = new System.Drawing.Point(110, 33);
+            this.FirstName.Location = new System.Drawing.Point(178, 50);
+            this.FirstName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.FirstName.Name = "FirstName";
-            this.FirstName.Size = new System.Drawing.Size(86, 20);
+            this.FirstName.Size = new System.Drawing.Size(152, 32);
             this.FirstName.TabIndex = 1;
             this.FirstName.Text = "First Name";
-            //this.FirstName.Click += new System.EventHandler(this.FirstName_Click);
             // 
             // LastName
             // 
-            this.LastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.LastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LastName.AutoSize = true;
-            this.LastName.Location = new System.Drawing.Point(445, 34);
+            this.LastName.Location = new System.Drawing.Point(661, 48);
+            this.LastName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LastName.Name = "LastName";
-            this.LastName.Size = new System.Drawing.Size(86, 20);
+            this.LastName.Size = new System.Drawing.Size(151, 32);
             this.LastName.TabIndex = 3;
             this.LastName.Text = "Last Name";
-            //this.LastName.Click += new System.EventHandler(this.LastName_Click);
             // 
             // DOB
             // 
-            this.DOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.DOB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DOB.AutoSize = true;
-            this.DOB.Location = new System.Drawing.Point(24, 92);
+            this.DOB.Location = new System.Drawing.Point(51, 101);
+            this.DOB.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.DOB.Name = "DOB";
-            this.DOB.Size = new System.Drawing.Size(102, 20);
+            this.DOB.Size = new System.Drawing.Size(172, 32);
             this.DOB.TabIndex = 4;
-            this.DOB.Text = "Date Of Birth";
-            //this.DOB.Click += new System.EventHandler(this.DOB_Click);
+            this.DOB.Text = "Date of Birth";
             // 
             // Gender
             // 
-            this.Gender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.Gender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Gender.AutoSize = true;
-            this.Gender.Location = new System.Drawing.Point(463, 92);
+            this.Gender.Location = new System.Drawing.Point(860, 101);
+            this.Gender.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(63, 20);
+            this.Gender.Size = new System.Drawing.Size(110, 32);
             this.Gender.TabIndex = 5;
             this.Gender.Text = "Gender";
-            //this.Gender.Click += new System.EventHandler(this.Gender_Click);
             // 
             // MobileNumber
             // 
-            this.MobileNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.MobileNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MobileNumber.AutoSize = true;
-            this.MobileNumber.Location = new System.Drawing.Point(24, 143);
+            this.MobileNumber.Location = new System.Drawing.Point(51, 146);
+            this.MobileNumber.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.MobileNumber.Name = "MobileNumber";
-            this.MobileNumber.Size = new System.Drawing.Size(115, 20);
+            this.MobileNumber.Size = new System.Drawing.Size(207, 32);
             this.MobileNumber.TabIndex = 6;
             this.MobileNumber.Text = "Mobile Number";
-            //this.MobileNumber.Click += new System.EventHandler(this.MobileNumber_Click);
             // 
             // LNameTextBox
             // 
-            this.LNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.LNameTextBox.Location = new System.Drawing.Point(533, 32);
+            this.LNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LNameTextBox.Location = new System.Drawing.Point(822, 44);
+            this.LNameTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.LNameTextBox.Name = "LNameTextBox";
-            this.LNameTextBox.Size = new System.Drawing.Size(237, 26);
-            this.LNameTextBox.TabIndex = 7;
+            this.LNameTextBox.Size = new System.Drawing.Size(311, 38);
+            this.LNameTextBox.TabIndex = 2;
             // 
             // DOBPicker
             // 
-            this.DOBPicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.DOBPicker.Location = new System.Drawing.Point(132, 89);
+            this.DOBPicker.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DOBPicker.Location = new System.Drawing.Point(233, 95);
+            this.DOBPicker.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.DOBPicker.MaxDate = new System.DateTime(2018, 3, 24, 0, 0, 0, 0);
             this.DOBPicker.Name = "DOBPicker";
-            this.DOBPicker.Size = new System.Drawing.Size(307, 26);
-            this.DOBPicker.TabIndex = 8;
+            this.DOBPicker.Size = new System.Drawing.Size(617, 38);
+            this.DOBPicker.TabIndex = 3;
             this.DOBPicker.Value = new System.DateTime(2018, 3, 24, 0, 0, 0, 0);
             // 
             // MobileTextBox
             // 
-            this.MobileTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.MobileTextBox.Location = new System.Drawing.Point(143, 143);
+            this.MobileTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MobileTextBox.Location = new System.Drawing.Point(268, 143);
+            this.MobileTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.MobileTextBox.Name = "MobileTextBox";
-            this.MobileTextBox.Size = new System.Drawing.Size(187, 26);
-            this.MobileTextBox.TabIndex = 9;
+            this.MobileTextBox.Size = new System.Drawing.Size(239, 38);
+            this.MobileTextBox.TabIndex = 5;
             this.toolTip1.SetToolTip(this.MobileTextBox, "Mobile Number Format: +65-0000-0000");
             // 
             // GenderComboBox
             // 
-            this.GenderComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.GenderComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GenderComboBox.FormattingEnabled = true;
             this.GenderComboBox.Items.AddRange(new object[] {
             "",
             "Male",
             "Female"});
-            this.GenderComboBox.Location = new System.Drawing.Point(532, 87);
+            this.GenderComboBox.Location = new System.Drawing.Point(980, 98);
+            this.GenderComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.GenderComboBox.Name = "GenderComboBox";
-            this.GenderComboBox.Size = new System.Drawing.Size(100, 28);
-            this.GenderComboBox.TabIndex = 10;
+            this.GenderComboBox.Size = new System.Drawing.Size(153, 39);
+            this.GenderComboBox.TabIndex = 4;
             // 
             // Email
             // 
-            this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.Email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Email.AutoSize = true;
-            this.Email.Location = new System.Drawing.Point(337, 146);
+            this.Email.Location = new System.Drawing.Point(517, 149);
+            this.Email.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(111, 20);
+            this.Email.Size = new System.Drawing.Size(198, 32);
             this.Email.TabIndex = 11;
             this.Email.Text = "Email Address";
-            //this.Email.Click += new System.EventHandler(this.Email_Click);
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.EmailTextBox.Location = new System.Drawing.Point(453, 143);
+            this.EmailTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EmailTextBox.Location = new System.Drawing.Point(725, 146);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(316, 26);
-            this.EmailTextBox.TabIndex = 12;
+            this.EmailTextBox.Size = new System.Drawing.Size(408, 38);
+            this.EmailTextBox.TabIndex = 6;
             // 
             // EmergencyContact
             // 
-            this.EmergencyContact.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.EmergencyContact.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EmergencyContact.Controls.Add(this.MemberRelationTextBox);
             this.EmergencyContact.Controls.Add(this.EmergencyNumberTextBox);
             this.EmergencyContact.Controls.Add(this.EmergencyNameTextBox);
             this.EmergencyContact.Controls.Add(this.MemberRelationship);
             this.EmergencyContact.Controls.Add(this.ContactNumber);
             this.EmergencyContact.Controls.Add(this.ContactName);
-            this.EmergencyContact.Location = new System.Drawing.Point(28, 199);
+            this.EmergencyContact.Location = new System.Drawing.Point(57, 194);
+            this.EmergencyContact.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.EmergencyContact.Name = "EmergencyContact";
-            this.EmergencyContact.Size = new System.Drawing.Size(741, 172);
+            this.EmergencyContact.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.EmergencyContact.Size = new System.Drawing.Size(1076, 267);
             this.EmergencyContact.TabIndex = 13;
             this.EmergencyContact.TabStop = false;
             this.EmergencyContact.Text = "Emergency Contact Details";
-            //this.EmergencyContact.Enter += new System.EventHandler(this.EmergencyContact_Enter);
             // 
             // MemberRelationTextBox
             // 
             this.MemberRelationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.MemberRelationTextBox.Location = new System.Drawing.Point(221, 112);
+            this.MemberRelationTextBox.Location = new System.Drawing.Point(384, 172);
+            this.MemberRelationTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.MemberRelationTextBox.Name = "MemberRelationTextBox";
-            this.MemberRelationTextBox.Size = new System.Drawing.Size(237, 26);
-            this.MemberRelationTextBox.TabIndex = 12;
+            this.MemberRelationTextBox.Size = new System.Drawing.Size(418, 38);
+            this.MemberRelationTextBox.TabIndex = 9;
             // 
             // EmergencyNumberTextBox
             // 
             this.EmergencyNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.EmergencyNumberTextBox.Location = new System.Drawing.Point(221, 80);
+            this.EmergencyNumberTextBox.Location = new System.Drawing.Point(384, 122);
+            this.EmergencyNumberTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.EmergencyNumberTextBox.Name = "EmergencyNumberTextBox";
-            this.EmergencyNumberTextBox.Size = new System.Drawing.Size(237, 26);
-            this.EmergencyNumberTextBox.TabIndex = 11;
+            this.EmergencyNumberTextBox.Size = new System.Drawing.Size(418, 38);
+            this.EmergencyNumberTextBox.TabIndex = 8;
             // 
             // EmergencyNameTextBox
             // 
             this.EmergencyNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.EmergencyNameTextBox.Location = new System.Drawing.Point(221, 48);
+            this.EmergencyNameTextBox.Location = new System.Drawing.Point(384, 72);
+            this.EmergencyNameTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.EmergencyNameTextBox.Name = "EmergencyNameTextBox";
-            this.EmergencyNameTextBox.Size = new System.Drawing.Size(237, 26);
-            this.EmergencyNameTextBox.TabIndex = 10;
+            this.EmergencyNameTextBox.Size = new System.Drawing.Size(418, 38);
+            this.EmergencyNameTextBox.TabIndex = 7;
             // 
             // MemberRelationship
             // 
             this.MemberRelationship.AutoSize = true;
-            this.MemberRelationship.Location = new System.Drawing.Point(33, 115);
+            this.MemberRelationship.Location = new System.Drawing.Point(59, 178);
+            this.MemberRelationship.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.MemberRelationship.Name = "MemberRelationship";
-            this.MemberRelationship.Size = new System.Drawing.Size(177, 20);
+            this.MemberRelationship.Size = new System.Drawing.Size(315, 32);
             this.MemberRelationship.TabIndex = 5;
             this.MemberRelationship.Text = "Relationship to Member";
             // 
             // ContactNumber
             // 
             this.ContactNumber.AutoSize = true;
-            this.ContactNumber.Location = new System.Drawing.Point(33, 83);
+            this.ContactNumber.Location = new System.Drawing.Point(59, 129);
+            this.ContactNumber.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.ContactNumber.Name = "ContactNumber";
-            this.ContactNumber.Size = new System.Drawing.Size(125, 20);
+            this.ContactNumber.Size = new System.Drawing.Size(220, 32);
             this.ContactNumber.TabIndex = 4;
             this.ContactNumber.Text = "Contact Number";
             // 
             // ContactName
             // 
             this.ContactName.AutoSize = true;
-            this.ContactName.Location = new System.Drawing.Point(33, 48);
+            this.ContactName.Location = new System.Drawing.Point(59, 74);
+            this.ContactName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.ContactName.Name = "ContactName";
-            this.ContactName.Size = new System.Drawing.Size(111, 20);
+            this.ContactName.Size = new System.Drawing.Size(195, 32);
             this.ContactName.TabIndex = 2;
             this.ContactName.Text = "Contact Name";
             // 
             // FirstNameTxtBox
             // 
-            this.FirstNameTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.FirstNameTxtBox.Location = new System.Drawing.Point(200, 30);
+            this.FirstNameTxtBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.FirstNameTxtBox.Location = new System.Drawing.Point(340, 47);
+            this.FirstNameTxtBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.FirstNameTxtBox.Name = "FirstNameTxtBox";
-            this.FirstNameTxtBox.Size = new System.Drawing.Size(237, 26);
-            this.FirstNameTxtBox.TabIndex = 9;
+            this.FirstNameTxtBox.Size = new System.Drawing.Size(311, 38);
+            this.FirstNameTxtBox.TabIndex = 1;
             // 
             // AddMemberButton
             // 
-            this.AddMemberButton.Location = new System.Drawing.Point(275, 388);
+            this.AddMemberButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddMemberButton.Location = new System.Drawing.Point(416, 487);
+            this.AddMemberButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.AddMemberButton.Name = "AddMemberButton";
-            this.AddMemberButton.Size = new System.Drawing.Size(114, 34);
+            this.AddMemberButton.Size = new System.Drawing.Size(203, 53);
             this.AddMemberButton.TabIndex = 14;
             this.AddMemberButton.Text = "Add Member";
             this.AddMemberButton.UseVisualStyleBackColor = true;
@@ -273,11 +289,14 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(406, 388);
+            this.CancelButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.CancelButton.Location = new System.Drawing.Point(649, 487);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(80, 34);
+            this.CancelButton.Size = new System.Drawing.Size(142, 53);
             this.CancelButton.TabIndex = 15;
-            this.CancelButton.Text = "Cancel ";
+            this.CancelButton.Text = "Close";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -288,9 +307,11 @@
             // 
             // AddNewMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AcceptButton = this.AddMemberButton;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.CancelButton = this.CancelButton;
+            this.ClientSize = new System.Drawing.Size(1199, 587);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.AddMemberButton);
             this.Controls.Add(this.FirstNameTxtBox);
@@ -307,8 +328,9 @@
             this.Controls.Add(this.LastName);
             this.Controls.Add(this.FirstName);
             this.Controls.Add(this.SalutationComboBox);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "AddNewMember";
-            this.Text = "AddNewMember";
+            this.Text = "New Member";
             this.EmergencyContact.ResumeLayout(false);
             this.EmergencyContact.PerformLayout();
             this.ResumeLayout(false);

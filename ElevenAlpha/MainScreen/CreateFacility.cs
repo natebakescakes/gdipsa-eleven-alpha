@@ -37,14 +37,14 @@ namespace ElevenAlpha
              if(ft.Active==1)
             { FacilityTypeComB.Items.Add(ft.Name);}
 
-            FacilityTypeComB.Items.Add("New...");
+            FacilityTypeComB.Items.Add("Manage Facility Types...");
         }
 
 
 
         private void FacilityTypeComB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (FacilityTypeComB.SelectedItem.ToString() == "New...")
+            if (FacilityTypeComB.SelectedItem.ToString() == "Manage Facility Types...")
             {
                 FacilityTypeManager ftm = new FacilityTypeManager(this);
                 ftm.ShowDialog();

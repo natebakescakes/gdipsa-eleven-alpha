@@ -59,6 +59,7 @@ namespace ElevenAlpha
                     flag = 1;
                     ctx.SaveChanges();
                     refresh();
+                    MessageBox.Show("Facility Type successfully reactivated.");
                     break;
                 }
 
@@ -72,8 +73,9 @@ namespace ElevenAlpha
                 fnew.Name = inputname;
                 ctx.FacilityTypes.Add(fnew);
                 ctx.SaveChanges();
+                refresh();
+                MessageBox.Show("Facility Type successfully added.");
             }
-            refresh();
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
@@ -85,6 +87,7 @@ namespace ElevenAlpha
             ctx.SaveChanges();
 
             refresh();
+            MessageBox.Show("Facility Type successfully updated.");
         }
 
         private void DeleteButton_Click(object sender, EventArgs e) //delete means Deactive
@@ -120,7 +123,7 @@ namespace ElevenAlpha
             }
             if (flag != 0)
             {
-                MessageBox.Show("can't delete due to there are booking records");
+                MessageBox.Show("Unable to delete due to existing Booking Records.");
                 flag = 0;
              
 

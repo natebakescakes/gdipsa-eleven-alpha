@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace ElevenAlpha
 {
+    
     public partial class MainScreen : Form
     {
         BookingTab bookingTab;
-        members_tab membersUserControl;
+        MembersTab membersUserControl;
 
+        FacilitiesTab facilitiestab;
         public MainScreen()
         {
             InitializeComponent();
@@ -24,8 +26,12 @@ namespace ElevenAlpha
             bookingsTabPage.Controls.Add(bookingTab);
             
             // Initialize Members Tab
-            membersUserControl = new members_tab();
+            membersUserControl = new MembersTab();
             membersTabPage.Controls.Add(membersUserControl);
+
+            // Initialize Facilities Tab
+            facilitiestab = new FacilitiesTab();
+            facilitiesTabPage.Controls.Add(facilitiestab);
         }
     }
 }

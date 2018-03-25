@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Nate\Dropbox\NUS GDipSA\SA4102 Enterprise System Development under .NET Framework\gdipsa-eleven-alpha\ElevenAlpha\MainScreen\ElevenAlphaModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\hejia\Desktop\SA46\Sports\gdipsa-eleven-alpha\ElevenAlpha\MainScreen\ElevenAlphaModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

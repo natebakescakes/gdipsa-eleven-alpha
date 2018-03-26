@@ -13,12 +13,15 @@ namespace ElevenAlpha
     public partial class MembersTab : UserControl
     {
         ElevenAlphaEntities ctx= new ElevenAlphaEntities();
-        
+        private MemberList memberlistform;
+
         public MembersTab()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
-           
+            memberlistform = new MemberList();
+            memberlistform.mainform = this;
+
         }
         private void members_tab_Load(object sender, EventArgs e)
         {
@@ -224,6 +227,9 @@ namespace ElevenAlpha
             createNewMember.ShowDialog();
         }
 
-       
+        private void MemberListCR_Click(object sender, EventArgs e)
+        {
+            memberlistform.Show();
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.HideInactiveCheckbox = new System.Windows.Forms.CheckBox();
             this.SearchLabel = new System.Windows.Forms.Label();
             this.ActivateMemberButton = new System.Windows.Forms.Button();
+            this.MemberListCR = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MemberInfoTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,10 +159,22 @@
             this.ActivateMemberButton.UseVisualStyleBackColor = true;
             this.ActivateMemberButton.Click += new System.EventHandler(this.ActivateMemberButton_Click);
             // 
+            // MemberListCR
+            // 
+            this.MemberListCR.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.MemberListCR.Location = new System.Drawing.Point(851, 474);
+            this.MemberListCR.Name = "MemberListCR";
+            this.MemberListCR.Size = new System.Drawing.Size(131, 29);
+            this.MemberListCR.TabIndex = 10;
+            this.MemberListCR.Text = "Member List Report";
+            this.MemberListCR.UseVisualStyleBackColor = true;
+            this.MemberListCR.Click += new System.EventHandler(this.MemberListCR_Click);
+            // 
             // MembersTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.MemberListCR);
             this.Controls.Add(this.ActivateMemberButton);
             this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.HideInactiveCheckbox);
@@ -192,5 +205,6 @@
         public System.Windows.Forms.DataGridView MemberInfoTable;
         public System.Windows.Forms.CheckBox HideInactiveCheckbox;
         public System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.Button MemberListCR;
     }
 }

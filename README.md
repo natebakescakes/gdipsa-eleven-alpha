@@ -8,8 +8,8 @@ Function
 -----------------
 # Bookings Manager
 * Select Facility Type and Date Period, View the avalible time slot .
- * click any time slot to see details:All facility avalilibity information of one type in the same day(can re-choose date and facility Type).
-   * input memberID and make mooking.
+* click any time slot to see details:All facility avalilibity information of one type in the same day(can re-choose date and facility Type).
+* input memberID and make mooking.
    
 # Members Manager
 * In member Tab, system shows all member List.
@@ -17,8 +17,8 @@ Function
 * In this Tab, there are New,Edit,Deactive,Active,View Booking hitory,Member List total 6 button.
 ## New 
 * click New button, New Memberform shows.
- * Input Member Information, click Add Member and close,back to Members Manager and member list refresh.
- * Can't add exist member.
+* Input Member Information, click Add Member and close,back to Members Manager and member list refresh.
+* Can't add exist member.
 
 ## Edit
 * select any member,click Edit button, Edit Member form shows and pops out the member information which is selected.

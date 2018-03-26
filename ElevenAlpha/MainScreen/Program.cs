@@ -39,6 +39,7 @@ namespace ElevenAlpha
             //Application.Run(new AddNewMember());
             //Application.Run(new EditMember(68));
             //Application.Run(new ViewBookingReceipt(100));
+            //Application.Run(new ViewOccupancyRates());
             //Application.Run(new ViewOccupancyTrend());
         }
     }

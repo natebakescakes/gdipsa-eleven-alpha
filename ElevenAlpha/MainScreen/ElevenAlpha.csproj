@@ -192,6 +192,12 @@
     <Compile Include="MemberLookup.Designer.cs">
       <DependentUpon>MemberLookup.cs</DependentUpon>
     </Compile>
+    <Compile Include="OccupancyRates.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OccupancyRates.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="OccupancyTrend.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -200,6 +206,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportsTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportsTab.Designer.cs">
+      <DependentUpon>ReportsTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewBookingReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +223,12 @@
     </Compile>
     <Compile Include="ViewOccupancyTrend.Designer.cs">
       <DependentUpon>ViewOccupancyTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewOccupancyRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewOccupancyRates.Designer.cs">
+      <DependentUpon>ViewOccupancyRates.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BookingReceipt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -266,6 +284,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>OccupancyTrend.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="OccupancyRates.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OccupancyRates.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -276,11 +298,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportsTab.resx">
+      <DependentUpon>ReportsTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewBookingReceipt.resx">
       <DependentUpon>ViewBookingReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewOccupancyTrend.resx">
       <DependentUpon>ViewOccupancyTrend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOccupancyRates.resx">
+      <DependentUpon>ViewOccupancyRates.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <EntityDeploy Include="ElevenAlphaModel.edmx">

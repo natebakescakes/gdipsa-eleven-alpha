@@ -61,6 +61,7 @@
             this.FacilititesTabBtnNew.TabIndex = 2;
             this.FacilititesTabBtnNew.Text = "New";
             this.FacilititesTabBtnNew.UseVisualStyleBackColor = true;
+            this.FacilititesTabBtnNew.Click += new System.EventHandler(this.FacilititesTabBtnNew_Click);
             // 
             // FacilitiesTabBtnEdit
             // 
@@ -71,6 +72,7 @@
             this.FacilitiesTabBtnEdit.TabIndex = 3;
             this.FacilitiesTabBtnEdit.Text = "Edit";
             this.FacilitiesTabBtnEdit.UseVisualStyleBackColor = true;
+            this.FacilitiesTabBtnEdit.Click += new System.EventHandler(this.FacilitiesTabBtnEdit_Click);
             // 
             // FacilitiesTabBtnDeactivate
             // 
@@ -86,7 +88,7 @@
             // FacilitiesTabBtnViewHist
             // 
             this.FacilitiesTabBtnViewHist.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.FacilitiesTabBtnViewHist.Location = new System.Drawing.Point(595, 441);
+            this.FacilitiesTabBtnViewHist.Location = new System.Drawing.Point(590, 441);
             this.FacilitiesTabBtnViewHist.Name = "FacilitiesTabBtnViewHist";
             this.FacilitiesTabBtnViewHist.Size = new System.Drawing.Size(178, 29);
             this.FacilitiesTabBtnViewHist.TabIndex = 5;
@@ -112,7 +114,7 @@
             this.SearchTextbox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.SearchTextbox.Location = new System.Drawing.Point(65, 443);
             this.SearchTextbox.Name = "SearchTextbox";
-            this.SearchTextbox.Size = new System.Drawing.Size(324, 26);
+            this.SearchTextbox.Size = new System.Drawing.Size(190, 26);
             this.SearchTextbox.TabIndex = 7;
             this.SearchTextbox.TextChanged += new System.EventHandler(this.SearchTextbox_TextChanged);
             // 
@@ -121,7 +123,7 @@
             this.FacilitiesTabBtnActivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.FacilitiesTabBtnActivate.Location = new System.Drawing.Point(509, 441);
             this.FacilitiesTabBtnActivate.Name = "FacilitiesTabBtnActivate";
-            this.FacilitiesTabBtnActivate.Size = new System.Drawing.Size(80, 29);
+            this.FacilitiesTabBtnActivate.Size = new System.Drawing.Size(75, 29);
             this.FacilitiesTabBtnActivate.TabIndex = 8;
             this.FacilitiesTabBtnActivate.Text = "Activate";
             this.FacilitiesTabBtnActivate.UseVisualStyleBackColor = true;

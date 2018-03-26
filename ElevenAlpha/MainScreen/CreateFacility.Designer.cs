@@ -133,8 +133,10 @@
             this.OpenHrsMskTxB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OpenHrsMskTxB.Mask = "00:00";
             this.OpenHrsMskTxB.Name = "OpenHrsMskTxB";
-            this.OpenHrsMskTxB.Size = new System.Drawing.Size(160, 26);
+            this.OpenHrsMskTxB.ReadOnly = true;
+            this.OpenHrsMskTxB.Size = new System.Drawing.Size(281, 38);
             this.OpenHrsMskTxB.TabIndex = 10;
+            this.OpenHrsMskTxB.Text = "0800";
             this.OpenHrsMskTxB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.OpenHrsMskTxB.ValidatingType = typeof(System.DateTime);
             this.OpenHrsMskTxB.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.OpenHrsMskTxB_MaskInputRejected);
@@ -146,8 +148,10 @@
             this.CloseHrsMskTxB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CloseHrsMskTxB.Mask = "00:00";
             this.CloseHrsMskTxB.Name = "CloseHrsMskTxB";
-            this.CloseHrsMskTxB.Size = new System.Drawing.Size(164, 26);
+            this.CloseHrsMskTxB.ReadOnly = true;
+            this.CloseHrsMskTxB.Size = new System.Drawing.Size(289, 38);
             this.CloseHrsMskTxB.TabIndex = 11;
+            this.CloseHrsMskTxB.Text = "2000";
             this.CloseHrsMskTxB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CloseHrsMskTxB.ValidatingType = typeof(System.DateTime);
             // 

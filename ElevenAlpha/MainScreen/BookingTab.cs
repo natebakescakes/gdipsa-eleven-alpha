@@ -14,12 +14,14 @@ namespace ElevenAlpha
     {
         ElevenAlphaEntities context;
         BookingsManager bookingsManager;
+        MainScreen parent;
 
-        public BookingTab()
+        public BookingTab(MainScreen parent)
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
             context = new ElevenAlphaEntities();
+            this.parent = parent;
 
             // Load Facility Types
             LoadFacilityTypes();
@@ -42,11 +44,12 @@ namespace ElevenAlpha
         /// </summary>
         public void LoadBookingDataGrid()
         {
-            if (context.Facilities.Where(x => x.FacilityType.Name == FacilityTypeComboBox.Text).FirstOrDefault() is null)
+            if (context.Facilities.Where(x => x.FacilityType.Name == FacilityTypeComboBox.Text && x.Active == 1).FirstOrDefault() is null)
             {
                 BookingDataGridView.Rows.Clear();
                 BookingDataGridView.Columns.Clear();
-                MessageBox.Show("There are no Facilities associated with this Facility Type.");
+                if (parent.tabControl.SelectedIndex == 0)
+                    MessageBox.Show("There are no Facilities associated with this Facility Type.");
                 return;
             }
 

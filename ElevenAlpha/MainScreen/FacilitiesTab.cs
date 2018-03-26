@@ -14,13 +14,15 @@ namespace ElevenAlpha
     public partial class FacilitiesTab : UserControl
     {
         private CreateFacility createfacilityform;
+        private MainScreen parent;
         
-        public FacilitiesTab()
+        public FacilitiesTab(MainScreen parent)
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
             createfacilityform = new CreateFacility();
             createfacilityform.facilitiesTab = this;
+            this.parent = parent;
 
             //Data Grid Columns
             FacilitiesdataGridView1.ColumnCount = 5;
@@ -186,7 +188,8 @@ namespace ElevenAlpha
                 LoadDataSearchFilter();
                 StatusFilter();
             }
-            
+
+            parent.bookingTab.LoadBookingDataGrid();
         }
         //deactivating facilities
         private void FacilitiesTabBtnDeactivate_Click(object sender, EventArgs e)//already deactivated keeps popping out
@@ -207,6 +210,8 @@ namespace ElevenAlpha
                 LoadDataSearchFilter();
                 StatusFilter();
             }
+
+            parent.bookingTab.LoadBookingDataGrid();
         }
 
         private void FacilititesTabBtnNew_Click(object sender, EventArgs e)

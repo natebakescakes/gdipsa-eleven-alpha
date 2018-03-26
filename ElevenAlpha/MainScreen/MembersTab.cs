@@ -173,7 +173,7 @@ namespace ElevenAlpha
 
         private void BookHstryBttn_Click(object sender, EventArgs e)
         {
-            var bookingHistoryMembers = new BookingHistoryMembers(
+            var bookingHistoryMembers = new BookingHistoryMembers(null,
                 Int32.Parse(MemberInfoTable.SelectedCells[0].Value.ToString()),
                 System.DateTime.Now,
                 System.DateTime.Now

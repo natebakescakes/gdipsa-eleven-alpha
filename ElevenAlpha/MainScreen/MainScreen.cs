@@ -15,7 +15,7 @@ namespace ElevenAlpha
     {
         public BookingTab bookingTab;
         public MembersTab membersUserControl;
-        public cilitiesTab facilitiesTab;
+        public FacilitiesTab facilitiesTab;
         public ReportsTab reportsTab;
 
         public MainScreen()

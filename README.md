@@ -18,11 +18,11 @@ Function
 ## New 
 * click New button, New Memberform shows.
  * Input Member Information, click Add Member and close,back to Members Manager and member list refresh.
-   * Can't add exist member.
+ * Can't add exist member.
 
 ## Edit
 * select any member,click Edit button, Edit Member form shows and pops out the member information which is selected.
- * chaneg the information and click Update button and close,back to Members Manager and member list refresh.
+* chaneg the information and click Update button and close,back to Members Manager and member list refresh.
 ## Deactive
 * select any member,click Deactive,the member which is selected is set deactive and member list refresh.
 
@@ -31,10 +31,10 @@ Function
 
 ## View booking history
 * Click View Booking History button,Booking History(By Members) Manager form shows.
- * Select date period,input member ID,the booking history shows in screen.
-  * Search box can provide search by BookingID,Member Name and FacilityID.
-   * select one Booking Transaction,click View button to View Booking Receipt.
-    * select one Booking Transaction ,click cancel button to cancel booking(only when booking date is later than system date).
+* Select date period,input member ID,the booking history shows in screen.
+* Search box can provide search by BookingID,Member Name and FacilityID.
+* select one Booking Transaction,click View button to View Booking Receipt.
+* select one Booking Transaction ,click cancel button to cancel booking(only when booking date is later than system date).
     
 ## Member List
 

@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.BookingReceiptCrystalReport = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
-            // crystalReportViewer1
+            // BookingReceiptCrystalReport
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1221, 1412);
-            this.crystalReportViewer1.TabIndex = 0;
+            this.BookingReceiptCrystalReport.ActiveViewIndex = -1;
+            this.BookingReceiptCrystalReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BookingReceiptCrystalReport.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BookingReceiptCrystalReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BookingReceiptCrystalReport.Location = new System.Drawing.Point(0, 0);
+            this.BookingReceiptCrystalReport.Name = "BookingReceiptCrystalReport";
+            this.BookingReceiptCrystalReport.Size = new System.Drawing.Size(1221, 1412);
+            this.BookingReceiptCrystalReport.TabIndex = 0;
+            this.BookingReceiptCrystalReport.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // ViewBookingReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1221, 1412);
-            this.Controls.Add(this.crystalReportViewer1);
+            this.Controls.Add(this.BookingReceiptCrystalReport);
             this.Name = "ViewBookingReceipt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewBookingReceipt";
@@ -58,6 +59,6 @@
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer BookingReceiptCrystalReport;
     }
 }

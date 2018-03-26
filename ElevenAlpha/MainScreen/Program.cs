@@ -19,8 +19,8 @@ namespace ElevenAlpha
             //Application.Run(new MainScreen());
 
             // Debug Application Calls
-          
-            //Application.Run(new BookingHistoryMembers(6, new DateTime(2018, 03, 24), new DateTime(2018, 03, 24)));
+
+            Application.Run(new BookingHistoryMembers(6, new DateTime(2018, 03, 24), new DateTime(2018, 03, 24)));
             //Application.Run(new BookingHistoryFacilities(17, new DateTime(2018, 03, 24), new DateTime(2018, 03, 24)));
             //Application.Run(new MemberLookup());
             //Application.Run(new BookingsManager("Tennis Court", new DateTime(2018, 03, 24)));
@@ -33,7 +33,7 @@ namespace ElevenAlpha
             //Application.Run(new EditFacility(17));
             //Application.Run(new AddNewMember());
             //Application.Run(new EditMember(68));
-            Application.Run(new ViewBookingReceipt(100));
+            //Application.Run(new ViewBookingReceipt(100));
         }
     }
 }

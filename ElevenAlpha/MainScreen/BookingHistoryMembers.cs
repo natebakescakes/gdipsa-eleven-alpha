@@ -126,12 +126,14 @@ namespace ElevenAlpha
 
         private void ViewReceiptButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-        }
+            if (BookingMemberDataGrid.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a Booking Transaction to View Receipt.");
+                return;
+            }
 
-        private void PrintReceiptButton_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
+            var bookingReceipt = new ViewBookingReceipt(Int32.Parse(BookingMemberDataGrid.SelectedCells[0].Value.ToString()));
+            bookingReceipt.ShowDialog();
         }
 
         private void CancelBookingButton_Click(object sender, EventArgs e)

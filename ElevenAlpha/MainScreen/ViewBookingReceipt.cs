@@ -27,6 +27,8 @@ namespace ElevenAlpha
         {
             BookingReceipt bookingReceipt = new BookingReceipt();
 
+            this.Text = $"Booking Receipt #{bookingId}";
+
             bookingReceipt.Database.Tables[0].SetDataSource(context.Bookings
                 .Where(x => x.BookingID == bookingId)
                 .Select(x => new
@@ -56,7 +58,7 @@ namespace ElevenAlpha
                     OpeningTime = x.OpeningTime ?? new DateTime()
                 }));
 
-            crystalReportViewer1.ReportSource = bookingReceipt;
+            BookingReceiptCrystalReport.ReportSource = bookingReceipt;
         }
     }
 }

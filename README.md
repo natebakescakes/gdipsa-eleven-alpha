@@ -40,31 +40,31 @@ New Button
 * Select date period,input member ID,the booking history shows in screen.
 * Search box can provide search by BookingID,Member Name and FacilityID.
 * Select one Booking Transaction,click View Receipt button to View Booking Receipt.
-* Select one Booking Transaction ,click Cancel Booking button to cancel booking(only when booking date is later than system date).
+* Select one Booking Transaction ,click Cancel Booking button to cancel booking(only when booking date is later than present date).
     
 ## View Member Report Button
-* Click View Member Report to view all Member List whick Contains MemberID,FirstName,LasteName,DateOfBirth,Mobile,EmailAdress.
+* Click View Member Report to view all member List which contains Member ID,First Name,Last Name,Date Of Birth,Mobile Number and Email Address.
 
 # Facility
-* In Facility Tab, system shows all facility List.
-* Screen can hide inactive Facility by click "Hide Inactive Facilities".
-* In this Tab, there are New,Edit,Deactive,Active,View Booking history.
+* In Facility Tab, system shows list of all facilities.
+* Screen can hide inactive Facility by clicking "Hide Inactive Facilities".
+* In this Tab, there are New,Edit,Deactivate,Activate and View Booking history buttons.
 New Button
-* Click New button, New Facility shows.
+* Click New button, New Facility Form shows.
 ## New button-New Facility Form
 * Input Facility Name, Chose Facility Type,input location and description.
-* Click Update, new facility is created (Facility Name can't be found the same in the facilty list)
-* If need create new facility type, choose "Manage Facility Type..." in Facility Type Box,Facility Type Manager Form shows.
+* Click Update, new facility is created (Facility Name cannot be an existing name in the database)
+* If we need to create a new facility type, choose "Manage Facility Type..." in Facility Type Box. Then Facility Type Manager Form shows.
 ### Manage Facility Type... —— Facility Type Manager Form
 * In Facility Type Manager Form,  there are buttons to Add/Delete/Update Facility Type.
-* Can't delete Facility Type that has booking records.
-* Click close button, go back to New facility Form, Facility Type Box refreshed.
+* Facility Type that has booking records cannot be deleted. It can only be deactivated.
+* Click close button, go back to New facility Form, Facility Type Box is refreshed.
 
 
 ## Edit Button —— Edit Facility Form
 * Chose a facility and click edit, Edit facility Form shows.
-* In Edit Facility Form, the selected members details can be edited.
-* Click Update Button, Facility information is changed and saved(Facility Name can't be found the same in the facilty list).
+* In Edit Facility Form, the selected member's details can be edited.
+* Click Update Button, Facility information is changed and saved(Facility Name can't be found the same in the facility list).
 
 ## Deactive Button
 * Select a facility,click Deactive button, choosen facility is deactive.

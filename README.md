@@ -1,6 +1,6 @@
 Sports Facility Booking System
 ========================
-#GDipSA (Team 11A) Eleven Alpha
+GDipSA (Team 11A) Eleven Alpha
 
 The software solution is for sports staff to make the booking/cancellation of facilittie in a sports center.This project is written uising C# on visual studio 2017.
 
@@ -12,21 +12,21 @@ Features
    * input memberID and make mooking
    
 #Members Manager
-* new 
-* edit
-* deactive
-* Active
-* View booking history
-* Member List
+##New 
+##Edit
+##Deactive
+##Active
+##View booking history
+##Member List
 
 
 
 #Facility Manager
-* new 
-* edit
-* deactive
-* Active
-* View booking history
+##New 
+##Edit
+##Deactive
+##Active
+##View booking history
 
 
 #Reports

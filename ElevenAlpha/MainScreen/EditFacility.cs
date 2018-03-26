@@ -110,7 +110,7 @@ namespace ElevenAlpha
 
                     }
                 }
-                if (flag > 0 && inputname != f.Name)
+                if (flag > 0 && inputname.ToLower() != f.Name.ToLower())
                 { MessageBox.Show("This Facility Name already exists. Please input a different one."); flag = 0; }
                 else
                 {

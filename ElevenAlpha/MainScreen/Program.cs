@@ -16,9 +16,11 @@ namespace ElevenAlpha
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainScreen());
+            //Application.Run(new MainScreen());
 
             //Application.Run(new CreateFacility());
+            CreateFacility f = new CreateFacility();
+            Application.Run(new FacilityTypeManager(f));
 
             //Application.Run(new MemberLookup());
             //Application.Run(new BookingsManager("Tennis Court", new DateTime(2018, 03, 24)));

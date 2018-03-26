@@ -23,5 +23,11 @@ namespace ElevenAlpha
             var occupancyRate = new ViewOccupancyRates();
             occupancyRate.ShowDialog();
         }
+
+        private void OccupancyTrendButton_Click(object sender, EventArgs e)
+        {
+            var occupancyTrend = new ViewOccupancyTrend();
+            occupancyTrend.ShowDialog();
+        }
     }
 }

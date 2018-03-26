@@ -215,7 +215,11 @@ namespace ElevenAlpha
 
         private void PreviousDayButton_Click(object sender, EventArgs e)
         {
-            BookingDateTimePicker.Value = BookingDateTimePicker.Value.AddDays(-1);
+            if (BookingDateTimePicker.Value.Date > BookingDateTimePicker.MinDate)
+            {
+                BookingDateTimePicker.Value = BookingDateTimePicker.Value.AddDays(-1);
+            }
+            
         }
 
         private void NextDayButton_Click(object sender, EventArgs e)

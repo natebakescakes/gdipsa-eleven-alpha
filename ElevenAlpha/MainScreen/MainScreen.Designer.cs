@@ -123,7 +123,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainScreen";
             this.Padding = new System.Windows.Forms.Padding(0, 150, 0, 0);
-            this.Text = "Form1";
+            this.Text = "Eleven Alpha Sports Hub";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

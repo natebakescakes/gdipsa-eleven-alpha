@@ -57,8 +57,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateMember.Designer.cs">
+      <DependentUpon>CreateMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Booking.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EditFacility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFacility.Designer.cs">
+      <DependentUpon>EditFacility.cs</DependentUpon>
     </Compile>
     <Compile Include="BookingsManager.cs">
       <SubType>Form</SubType>
@@ -72,10 +84,22 @@
     <Compile Include="BookingTab.Designer.cs">
       <DependentUpon>BookingTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMember.Designer.cs">
+      <DependentUpon>EditMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="ElevenAlphaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ElevenAlphaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CreateFacility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateFacility.Designer.cs">
+      <DependentUpon>CreateFacility.cs</DependentUpon>
     </Compile>
     <Compile Include="ElevenAlphaModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -98,6 +122,12 @@
     <Compile Include="FacilityType.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="FacilityTypeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacilityTypeManager.Designer.cs">
+      <DependentUpon>FacilityTypeManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="FacilitiesTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,11 +140,11 @@
     <Compile Include="MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="members-tab.cs">
+    <Compile Include="MembersTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="members-tab.Designer.cs">
-      <DependentUpon>members-tab.cs</DependentUpon>
+    <Compile Include="MembersTab.Designer.cs">
+      <DependentUpon>MembersTab.cs</DependentUpon>
     </Compile>
     <Compile Include="Member.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
@@ -127,6 +157,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateFacility.resx">
+      <DependentUpon>CreateFacility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacilityTypeManager.resx">
+      <DependentUpon>FacilityTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookingsManager.resx">
       <DependentUpon>BookingsManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,14 +172,23 @@
     <EmbeddedResource Include="FacilitiesTab.resx">
       <DependentUpon>FacilitiesTab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateMember.resx">
+      <DependentUpon>CreateMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMember.resx">
+      <DependentUpon>EditMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFacility.resx">
+      <DependentUpon>EditFacility.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberLookup.resx">
       <DependentUpon>MemberLookup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="members-tab.resx">
-      <DependentUpon>members-tab.cs</DependentUpon>
+    <EmbeddedResource Include="MembersTab.resx">
+      <DependentUpon>MembersTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

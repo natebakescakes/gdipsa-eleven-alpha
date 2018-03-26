@@ -28,110 +28,155 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.FacilitiesdataGridView1 = new System.Windows.Forms.DataGridView();
             this.FacilititesTabBtnNew = new System.Windows.Forms.Button();
             this.FacilitiesTabBtnEdit = new System.Windows.Forms.Button();
-            this.FacilitiesTabBtnDelete = new System.Windows.Forms.Button();
+            this.FacilitiesTabBtnDeactivate = new System.Windows.Forms.Button();
             this.FacilitiesTabBtnViewHist = new System.Windows.Forms.Button();
             this.ActiveCheckbox = new System.Windows.Forms.CheckBox();
             this.SearchTextbox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.FacilitiesTabBtnActivate = new System.Windows.Forms.Button();
+            this.SearchLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.FacilitiesdataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // FacilitiesdataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(842, 417);
-            this.dataGridView1.TabIndex = 1;
+            this.FacilitiesdataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FacilitiesdataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FacilitiesdataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.FacilitiesdataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.FacilitiesdataGridView1.Name = "FacilitiesdataGridView1";
+            this.FacilitiesdataGridView1.ReadOnly = true;
+            this.FacilitiesdataGridView1.RowTemplate.Height = 40;
+            this.FacilitiesdataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.FacilitiesdataGridView1.Size = new System.Drawing.Size(1848, 647);
+            this.FacilitiesdataGridView1.TabIndex = 1;
             // 
             // FacilititesTabBtnNew
             // 
-            this.FacilititesTabBtnNew.Location = new System.Drawing.Point(224, 439);
+            this.FacilititesTabBtnNew.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.FacilititesTabBtnNew.Location = new System.Drawing.Point(464, 683);
+            this.FacilititesTabBtnNew.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.FacilititesTabBtnNew.Name = "FacilititesTabBtnNew";
-            this.FacilititesTabBtnNew.Size = new System.Drawing.Size(75, 29);
+            this.FacilititesTabBtnNew.Size = new System.Drawing.Size(117, 45);
             this.FacilititesTabBtnNew.TabIndex = 2;
             this.FacilititesTabBtnNew.Text = "New";
             this.FacilititesTabBtnNew.UseVisualStyleBackColor = true;
             // 
             // FacilitiesTabBtnEdit
             // 
-            this.FacilitiesTabBtnEdit.Location = new System.Drawing.Point(305, 439);
+            this.FacilitiesTabBtnEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.FacilitiesTabBtnEdit.Location = new System.Drawing.Point(592, 683);
+            this.FacilitiesTabBtnEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.FacilitiesTabBtnEdit.Name = "FacilitiesTabBtnEdit";
-            this.FacilitiesTabBtnEdit.Size = new System.Drawing.Size(75, 29);
+            this.FacilitiesTabBtnEdit.Size = new System.Drawing.Size(117, 45);
             this.FacilitiesTabBtnEdit.TabIndex = 3;
             this.FacilitiesTabBtnEdit.Text = "Edit";
             this.FacilitiesTabBtnEdit.UseVisualStyleBackColor = true;
             // 
-            // FacilitiesTabBtnDelete
+            // FacilitiesTabBtnDeactivate
             // 
-            this.FacilitiesTabBtnDelete.Location = new System.Drawing.Point(386, 439);
-            this.FacilitiesTabBtnDelete.Name = "FacilitiesTabBtnDelete";
-            this.FacilitiesTabBtnDelete.Size = new System.Drawing.Size(75, 29);
-            this.FacilitiesTabBtnDelete.TabIndex = 4;
-            this.FacilitiesTabBtnDelete.Text = "Delete";
-            this.FacilitiesTabBtnDelete.UseVisualStyleBackColor = true;
+            this.FacilitiesTabBtnDeactivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.FacilitiesTabBtnDeactivate.Location = new System.Drawing.Point(720, 683);
+            this.FacilitiesTabBtnDeactivate.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.FacilitiesTabBtnDeactivate.Name = "FacilitiesTabBtnDeactivate";
+            this.FacilitiesTabBtnDeactivate.Size = new System.Drawing.Size(174, 45);
+            this.FacilitiesTabBtnDeactivate.TabIndex = 4;
+            this.FacilitiesTabBtnDeactivate.Text = "Deactivate";
+            this.FacilitiesTabBtnDeactivate.UseVisualStyleBackColor = true;
+            this.FacilitiesTabBtnDeactivate.Click += new System.EventHandler(this.FacilitiesTabBtnDeactivate_Click);
             // 
             // FacilitiesTabBtnViewHist
             // 
-            this.FacilitiesTabBtnViewHist.Location = new System.Drawing.Point(467, 439);
+            this.FacilitiesTabBtnViewHist.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.FacilitiesTabBtnViewHist.Location = new System.Drawing.Point(1048, 683);
+            this.FacilitiesTabBtnViewHist.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.FacilitiesTabBtnViewHist.Name = "FacilitiesTabBtnViewHist";
-            this.FacilitiesTabBtnViewHist.Size = new System.Drawing.Size(178, 29);
+            this.FacilitiesTabBtnViewHist.Size = new System.Drawing.Size(316, 45);
             this.FacilitiesTabBtnViewHist.TabIndex = 5;
             this.FacilitiesTabBtnViewHist.Text = "View Booking History";
             this.FacilitiesTabBtnViewHist.UseVisualStyleBackColor = true;
             // 
             // ActiveCheckbox
             // 
+            this.ActiveCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ActiveCheckbox.AutoSize = true;
-            this.ActiveCheckbox.Location = new System.Drawing.Point(678, 439);
+            this.ActiveCheckbox.Location = new System.Drawing.Point(1626, 688);
+            this.ActiveCheckbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ActiveCheckbox.Name = "ActiveCheckbox";
-            this.ActiveCheckbox.Size = new System.Drawing.Size(134, 24);
+            this.ActiveCheckbox.Size = new System.Drawing.Size(217, 36);
             this.ActiveCheckbox.TabIndex = 6;
-            this.ActiveCheckbox.Text = "Show Inactive";
+            this.ActiveCheckbox.Text = "Hide Inactive";
             this.ActiveCheckbox.UseVisualStyleBackColor = true;
+            this.ActiveCheckbox.CheckedChanged += new System.EventHandler(this.ActiveCheckbox_CheckedChanged);
+            this.ActiveCheckbox.Click += new System.EventHandler(this.SearchTextbox_Enter);
             // 
             // SearchTextbox
             // 
+            this.SearchTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SearchTextbox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.SearchTextbox.Location = new System.Drawing.Point(16, 439);
+            this.SearchTextbox.Location = new System.Drawing.Point(116, 687);
+            this.SearchTextbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.SearchTextbox.Name = "SearchTextbox";
-            this.SearchTextbox.Size = new System.Drawing.Size(184, 26);
+            this.SearchTextbox.Size = new System.Drawing.Size(572, 38);
             this.SearchTextbox.TabIndex = 7;
-            this.SearchTextbox.Text = "Search...";
-            this.SearchTextbox.Enter += new System.EventHandler(this.SearchTextbox_Enter);
-            this.SearchTextbox.Leave += new System.EventHandler(this.SearchTextbox_Leave);
+            this.SearchTextbox.TextChanged += new System.EventHandler(this.SearchTextbox_TextChanged);
+            // 
+            // FacilitiesTabBtnActivate
+            // 
+            this.FacilitiesTabBtnActivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.FacilitiesTabBtnActivate.Location = new System.Drawing.Point(905, 683);
+            this.FacilitiesTabBtnActivate.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.FacilitiesTabBtnActivate.Name = "FacilitiesTabBtnActivate";
+            this.FacilitiesTabBtnActivate.Size = new System.Drawing.Size(133, 45);
+            this.FacilitiesTabBtnActivate.TabIndex = 8;
+            this.FacilitiesTabBtnActivate.Text = "Activate";
+            this.FacilitiesTabBtnActivate.UseVisualStyleBackColor = true;
+            this.FacilitiesTabBtnActivate.Click += new System.EventHandler(this.FacilitiesTabBtnActivate_Click);
+            // 
+            // SearchLabel
+            // 
+            this.SearchLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SearchLabel.AutoSize = true;
+            this.SearchLabel.Location = new System.Drawing.Point(3, 690);
+            this.SearchLabel.Name = "SearchLabel";
+            this.SearchLabel.Size = new System.Drawing.Size(105, 32);
+            this.SearchLabel.TabIndex = 9;
+            this.SearchLabel.Text = "Search";
             // 
             // FacilitiesTab
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.SearchLabel);
+            this.Controls.Add(this.FacilitiesTabBtnActivate);
             this.Controls.Add(this.SearchTextbox);
             this.Controls.Add(this.ActiveCheckbox);
             this.Controls.Add(this.FacilitiesTabBtnViewHist);
-            this.Controls.Add(this.FacilitiesTabBtnDelete);
+            this.Controls.Add(this.FacilitiesTabBtnDeactivate);
             this.Controls.Add(this.FacilitiesTabBtnEdit);
             this.Controls.Add(this.FacilititesTabBtnNew);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.FacilitiesdataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "FacilitiesTab";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 75);
-            this.Size = new System.Drawing.Size(842, 492);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 116);
+            this.Size = new System.Drawing.Size(1848, 763);
+            ((System.ComponentModel.ISupportInitialize)(this.FacilitiesdataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView FacilitiesdataGridView1;
         private System.Windows.Forms.Button FacilititesTabBtnNew;
         private System.Windows.Forms.Button FacilitiesTabBtnEdit;
-        private System.Windows.Forms.Button FacilitiesTabBtnDelete;
+        private System.Windows.Forms.Button FacilitiesTabBtnDeactivate;
         private System.Windows.Forms.Button FacilitiesTabBtnViewHist;
         private System.Windows.Forms.CheckBox ActiveCheckbox;
         private System.Windows.Forms.TextBox SearchTextbox;
+        private System.Windows.Forms.Button FacilitiesTabBtnActivate;
+        private System.Windows.Forms.Label SearchLabel;
     }
 }

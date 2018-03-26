@@ -13,11 +13,14 @@ namespace ElevenAlpha
     public partial class MemberLookup : Form
     {
         ElevenAlphaEntities context;
+        BookingsManager parent;
 
-        public MemberLookup()
+        public MemberLookup(BookingsManager parent)
         {
             InitializeComponent();
             context = new ElevenAlphaEntities();
+
+            this.parent = parent;
 
             LoadMemberLookupDataGrid();
         }
@@ -46,7 +49,6 @@ namespace ElevenAlpha
                 .Where(x => (x.MemberID.ToString().Contains(SearchTextBox.Text) ||
                     x.FirstName.ToString().Contains(SearchTextBox.Text) ||
                     x.LastName.ToString().Contains(SearchTextBox.Text) ||
-                    x.Mobile.ToString().Contains(SearchTextBox.Text) ||
                     x.Email.ToString().Contains(SearchTextBox.Text)) &&
                     x.Active == 1)
                 .Select(x => new
@@ -69,7 +71,8 @@ namespace ElevenAlpha
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            parent.MemberIdTextBox.Text = MemberLookupDataGrid.SelectedCells[0].Value.ToString();
+            this.Close();
         }
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)

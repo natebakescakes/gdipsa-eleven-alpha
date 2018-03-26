@@ -79,6 +79,18 @@
     <Compile Include="Booking.cs">
       <DependentUpon>ElevenAlphaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BookingHistoryFacilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingHistoryFacilities.Designer.cs">
+      <DependentUpon>BookingHistoryFacilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingHistoryMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingHistoryMembers.Designer.cs">
+      <DependentUpon>BookingHistoryMembers.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditFacility.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +191,12 @@
     <EmbeddedResource Include="BookingReceipt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BookingReceipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingHistoryFacilities.resx">
+      <DependentUpon>BookingHistoryFacilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingHistoryMembers.resx">
+      <DependentUpon>BookingHistoryMembers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateFacility.resx">
       <DependentUpon>CreateFacility.cs</DependentUpon>

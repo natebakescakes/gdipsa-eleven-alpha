@@ -246,6 +246,17 @@ namespace ElevenAlpha
                 StatusFilter();
             }
         }
+
+        private void FacilitiesTabBtnViewHist_Click(object sender, EventArgs e)
+        {
+            var bookingHistoryFacilities = new BookingHistoryFacilities(
+                Int32.Parse(FacilitiesdataGridView1.SelectedCells[0].Value.ToString()),
+                System.DateTime.Now, 
+                System.DateTime.Now
+            );
+
+            bookingHistoryFacilities.ShowDialog();
+        }
     }
     public class Result
     {

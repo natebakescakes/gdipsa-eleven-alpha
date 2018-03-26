@@ -169,9 +169,13 @@ namespace ElevenAlpha
 
         private void BookHstryBttn_Click(object sender, EventArgs e)
         {
-            //int memberID = (int)MemberInfoTable.SelectedRows[0].Cells[0].Value;
-            //Member member = (from x in ctx.Members where x.MemberID == memberID select x).First();
-            
+            var bookingHistoryMembers = new BookingHistoryMembers(
+                Int32.Parse(MemberInfoTable.SelectedCells[0].Value.ToString()),
+                System.DateTime.Now,
+                System.DateTime.Now
+            );
+
+            bookingHistoryMembers.ShowDialog();
         }
 
         private void ActivateMemberButton_Click(object sender, EventArgs e)

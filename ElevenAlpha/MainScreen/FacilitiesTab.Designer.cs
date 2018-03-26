@@ -51,13 +51,13 @@
             this.FacilitiesdataGridView1.ReadOnly = true;
             this.FacilitiesdataGridView1.RowTemplate.Height = 40;
             this.FacilitiesdataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.FacilitiesdataGridView1.Size = new System.Drawing.Size(1849, 647);
+            this.FacilitiesdataGridView1.Size = new System.Drawing.Size(1849, 613);
             this.FacilitiesdataGridView1.TabIndex = 1;
             // 
             // FacilititesTabBtnNew
             // 
             this.FacilititesTabBtnNew.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.FacilititesTabBtnNew.Location = new System.Drawing.Point(464, 684);
+            this.FacilititesTabBtnNew.Location = new System.Drawing.Point(464, 666);
             this.FacilititesTabBtnNew.Margin = new System.Windows.Forms.Padding(5);
             this.FacilititesTabBtnNew.Name = "FacilititesTabBtnNew";
             this.FacilititesTabBtnNew.Size = new System.Drawing.Size(117, 45);
@@ -69,7 +69,7 @@
             // FacilitiesTabBtnEdit
             // 
             this.FacilitiesTabBtnEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.FacilitiesTabBtnEdit.Location = new System.Drawing.Point(592, 684);
+            this.FacilitiesTabBtnEdit.Location = new System.Drawing.Point(592, 666);
             this.FacilitiesTabBtnEdit.Margin = new System.Windows.Forms.Padding(5);
             this.FacilitiesTabBtnEdit.Name = "FacilitiesTabBtnEdit";
             this.FacilitiesTabBtnEdit.Size = new System.Drawing.Size(117, 45);
@@ -81,7 +81,7 @@
             // FacilitiesTabBtnDeactivate
             // 
             this.FacilitiesTabBtnDeactivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.FacilitiesTabBtnDeactivate.Location = new System.Drawing.Point(720, 684);
+            this.FacilitiesTabBtnDeactivate.Location = new System.Drawing.Point(720, 666);
             this.FacilitiesTabBtnDeactivate.Margin = new System.Windows.Forms.Padding(5);
             this.FacilitiesTabBtnDeactivate.Name = "FacilitiesTabBtnDeactivate";
             this.FacilitiesTabBtnDeactivate.Size = new System.Drawing.Size(174, 45);
@@ -93,7 +93,7 @@
             // FacilitiesTabBtnViewHist
             // 
             this.FacilitiesTabBtnViewHist.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.FacilitiesTabBtnViewHist.Location = new System.Drawing.Point(1049, 684);
+            this.FacilitiesTabBtnViewHist.Location = new System.Drawing.Point(1049, 666);
             this.FacilitiesTabBtnViewHist.Margin = new System.Windows.Forms.Padding(5);
             this.FacilitiesTabBtnViewHist.Name = "FacilitiesTabBtnViewHist";
             this.FacilitiesTabBtnViewHist.Size = new System.Drawing.Size(316, 45);
@@ -106,7 +106,7 @@
             // 
             this.ActiveCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ActiveCheckbox.AutoSize = true;
-            this.ActiveCheckbox.Location = new System.Drawing.Point(1627, 688);
+            this.ActiveCheckbox.Location = new System.Drawing.Point(1627, 670);
             this.ActiveCheckbox.Margin = new System.Windows.Forms.Padding(5);
             this.ActiveCheckbox.Name = "ActiveCheckbox";
             this.ActiveCheckbox.Size = new System.Drawing.Size(217, 36);
@@ -120,17 +120,17 @@
             // 
             this.SearchTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SearchTextbox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.SearchTextbox.Location = new System.Drawing.Point(116, 687);
+            this.SearchTextbox.Location = new System.Drawing.Point(116, 669);
             this.SearchTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.SearchTextbox.Name = "SearchTextbox";
-            this.SearchTextbox.Size = new System.Drawing.Size(335, 38);
+            this.SearchTextbox.Size = new System.Drawing.Size(593, 38);
             this.SearchTextbox.TabIndex = 7;
             this.SearchTextbox.TextChanged += new System.EventHandler(this.SearchTextbox_TextChanged);
             // 
             // FacilitiesTabBtnActivate
             // 
             this.FacilitiesTabBtnActivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.FacilitiesTabBtnActivate.Location = new System.Drawing.Point(905, 684);
+            this.FacilitiesTabBtnActivate.Location = new System.Drawing.Point(905, 666);
             this.FacilitiesTabBtnActivate.Margin = new System.Windows.Forms.Padding(5);
             this.FacilitiesTabBtnActivate.Name = "FacilitiesTabBtnActivate";
             this.FacilitiesTabBtnActivate.Size = new System.Drawing.Size(133, 45);
@@ -143,7 +143,7 @@
             // 
             this.SearchLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SearchLabel.AutoSize = true;
-            this.SearchLabel.Location = new System.Drawing.Point(4, 690);
+            this.SearchLabel.Location = new System.Drawing.Point(4, 672);
             this.SearchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SearchLabel.Name = "SearchLabel";
             this.SearchLabel.Size = new System.Drawing.Size(105, 32);
@@ -165,7 +165,7 @@
             this.Controls.Add(this.FacilitiesdataGridView1);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FacilitiesTab";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 116);
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 150);
             this.Size = new System.Drawing.Size(1849, 763);
             ((System.ComponentModel.ISupportInitialize)(this.FacilitiesdataGridView1)).EndInit();
             this.ResumeLayout(false);

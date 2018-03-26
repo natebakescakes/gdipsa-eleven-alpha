@@ -68,7 +68,7 @@ namespace ElevenAlpha
             {
                 foreach (Facility f1 in ctx.Facilities)
                 {
-                    if (f1.Name == inputname)
+                    if (f1.Name.ToLower() == inputname.ToLower())
                     {
                         flag++; break;
                     }
@@ -90,6 +90,9 @@ namespace ElevenAlpha
 
                         if (OpenHrsMskTxB.MaskedTextProvider.AssignedEditPositionCount == 0)
                         { MessageBox.Show("Please input the Opening Time."); }
+                        else if (Convert.ToDateTime(OpenHrsMskTxB.Text.ToString())>= Convert.ToDateTime(CloseHrsMskTxB.Text.ToString()))
+                        {MessageBox.Show("Please input a closing time later than opening time!");}
+                        
                         else
                         {
                             DateTime d1 = Convert.ToDateTime(OpenHrsMskTxB.Text.ToString());
@@ -125,6 +128,11 @@ namespace ElevenAlpha
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void OpenHrsMskTxB_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

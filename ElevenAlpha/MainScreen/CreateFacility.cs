@@ -14,19 +14,16 @@ namespace ElevenAlpha
     {
         ElevenAlphaEntities ctx = new ElevenAlphaEntities();
         string typename = "";
-
-
+        public FacilitiesTab facilitiesTab;
+        
         public CreateFacility()
         {
             InitializeComponent();
         }
-
-
+        
         public void CreatFacility_Load(object sender, EventArgs e)
         {
-
-            RefreshFacilityTypes();
-
+             RefreshFacilityTypes();
         }
 
         private void RefreshFacilityTypes()
@@ -41,28 +38,19 @@ namespace ElevenAlpha
         }
 
 
-
         private void FacilityTypeComB_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (FacilityTypeComB.SelectedItem.ToString() == "Manage Facility Types...")
             {
                 FacilityTypeManager ftm = new FacilityTypeManager(this);
                 ftm.ShowDialog();
-
             }
             else
             {
                 typename = FacilityTypeComB.SelectedItem.ToString();
-
             }
-
         }
-
-
-
-
-
-
+        
         private void AddFacilityButton_Click(object sender, EventArgs e)
         {
             Facility f = new Facility();
@@ -83,7 +71,6 @@ namespace ElevenAlpha
                     if (f1.Name == inputname)
                     {
                         flag++; break;
-
                     }
                 }
                 if (flag > 0)
@@ -95,7 +82,6 @@ namespace ElevenAlpha
                     if (typename == "")
                     {
                         MessageBox.Show("Please choose a Facility Type.");
-
                     }
                     else
                     {
@@ -107,8 +93,7 @@ namespace ElevenAlpha
                         else
                         {
                             DateTime d1 = Convert.ToDateTime(OpenHrsMskTxB.Text.ToString());
-                            
-                            
+                                                        
                             //OpenHrsMskTxB.value.hour
                             opentime = new DateTime(1900,1,1,d1.Hour,d1.Minute,d1.Second);//
 
@@ -126,7 +111,6 @@ namespace ElevenAlpha
                                 f.OpeningTime = opentime;
                                 f.ClosingTime = closetime;
                                 
-
                                 ctx.Facilities.Add(f);
                                 ctx.SaveChanges();
                                 MessageBox.Show("Successfully added Facility.");
@@ -139,6 +123,7 @@ namespace ElevenAlpha
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }

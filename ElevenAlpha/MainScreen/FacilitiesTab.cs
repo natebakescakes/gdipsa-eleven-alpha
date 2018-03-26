@@ -13,11 +13,15 @@ namespace ElevenAlpha
 {
     public partial class FacilitiesTab : UserControl
     {
+        private CreateFacility createfacilityform;
+        
         public FacilitiesTab()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
-            
+            createfacilityform = new CreateFacility();
+            createfacilityform.facilitiesTab = this;
+
             //Data Grid Columns
             FacilitiesdataGridView1.ColumnCount = 6;
             for (int i = 0; i < FacilitiesdataGridView1.ColumnCount; i++)
@@ -28,7 +32,7 @@ namespace ElevenAlpha
             }
             LoadDataGridView();
         }
-
+        //loads data 
         private void LoadDataGridView()
         {
             
@@ -88,7 +92,11 @@ namespace ElevenAlpha
 
         private void SearchTextbox_TextChanged(object sender, EventArgs e)
         {
-
+            LoadDataSearchFilter();
+        }
+        //loads data with search textbox filter
+        public void LoadDataSearchFilter()
+        {
             ElevenAlphaEntities context = new ElevenAlphaEntities();
             var searchValue = SearchTextbox.Text.Trim();
             var columns = context.Facilities
@@ -139,8 +147,8 @@ namespace ElevenAlpha
             FacilitiesdataGridView1.Columns[4].DataPropertyName = "HoursOpen";
             FacilitiesdataGridView1.Columns[5].DataPropertyName = "ActiveStatus";
             FacilitiesdataGridView1.DataSource = resultsList;
-            
         }
+
         //Cue for searchbox
         private void SearchTextbox_Enter(object sender, EventArgs e)
         {
@@ -149,6 +157,11 @@ namespace ElevenAlpha
         //Hiding or showing deactivated facilities via checkbox
         private void ActiveCheckbox_CheckedChanged(object sender, EventArgs e)
         {
+            StatusFilter();
+        }
+
+        public void StatusFilter()
+        {
             CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[FacilitiesdataGridView1.DataSource];
             currencyManager1.SuspendBinding();
             for (int i = 0; i < FacilitiesdataGridView1.RowCount; i++)
@@ -156,13 +169,14 @@ namespace ElevenAlpha
                 if (FacilitiesdataGridView1.Rows[i].Cells[5].Value.ToString() == "Deactivated" && ActiveCheckbox.Checked)
                 {
                     FacilitiesdataGridView1.Rows[i].Visible = false;
-                }   
+                }
                 if (FacilitiesdataGridView1.Rows[i].Cells[5].Value.ToString() == "Deactivated" && !ActiveCheckbox.Checked)
                 {
                     FacilitiesdataGridView1.Rows[i].Visible = true;
                 }
             }
         }
+
         //Activating facilities
         private void FacilitiesTabBtnActivate_Click(object sender, EventArgs e)
         {
@@ -179,7 +193,8 @@ namespace ElevenAlpha
                 toactive.Active = 1;
                 MessageBox.Show("Facility activated");
                 context.SaveChanges();
-                LoadDataGridView();
+                LoadDataSearchFilter();
+                StatusFilter();
             }
             
         }
@@ -189,9 +204,7 @@ namespace ElevenAlpha
             ElevenAlphaEntities context = new ElevenAlphaEntities();
             int q = (int)FacilitiesdataGridView1.SelectedRows[0].Cells[0].Value;
             Facility toinactive = context.Facilities.Where(x => x.FacilityID == q).First();
-
-
-
+            
             if (toinactive.Active == 0)
             {
                 MessageBox.Show("Facility already deactivated");
@@ -201,11 +214,38 @@ namespace ElevenAlpha
                 toinactive.Active = 0;
                 MessageBox.Show("Facility deactivated");
                 context.SaveChanges();
-                LoadDataGridView();
+                LoadDataSearchFilter();
+                StatusFilter();
             }
         }
 
-        
+        private void FacilititesTabBtnNew_Click(object sender, EventArgs e)
+        {
+            CreateFacility f2 = new CreateFacility();
+            f2.ShowDialog();
+
+            if (f2.DialogResult == DialogResult.OK)
+            {
+                //refresh();
+                LoadDataSearchFilter();
+                StatusFilter();
+            }
+        }
+
+        private void FacilitiesTabBtnEdit_Click(object sender, EventArgs e)
+        {
+            int facilityid =(int) FacilitiesdataGridView1.SelectedRows[0].Cells[0].Value;
+            EditFacility ftm = new EditFacility(facilityid );
+           
+            ftm.ShowDialog();
+           
+            if(ftm.DialogResult==DialogResult.OK)
+                {
+                //refresh();
+                LoadDataSearchFilter();
+                StatusFilter();
+            }
+        }
     }
     public class Result
     {

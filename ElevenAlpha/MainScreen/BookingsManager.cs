@@ -254,12 +254,13 @@ namespace ElevenAlpha
 
             string facility = BookingManagerDataGrid.SelectedCells[0].OwningColumn.HeaderText;
             int facilityId = context.Facilities.Where(x => x.Name == facility).FirstOrDefault().FacilityID;
+            DateTime insertDateTime = new DateTime(BookingDateTimePicker.Year, BookingDateTimePicker.Value.Month, BookingDateTimePicker.Value.Day, 0, 0, 0);
 
             Booking b = new Booking()
             {
                 FacilityID = facilityId,
                 MemberID = Int32.Parse(MemberIdTextBox.Text),
-                BookingDate = BookingDateTimePicker.Value,
+                BookingDate = insertDateTime,
                 Timeslot = BookingManagerDataGrid.SelectedCells[0].RowIndex + 1,
                 Status = 1,
                 DateRequested = System.DateTime.Now

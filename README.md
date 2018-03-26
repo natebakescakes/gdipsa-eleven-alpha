@@ -42,3 +42,5 @@ Allows management to visualise the trends in booking so that they may make decis
 2. When selecting a booking from the Booking Tab GridView, the subsequently opened Booking Details window does not pre-select the slot that was initially selected. This would be resolved in a future update.
 
 3. Our management reports are currently limited by not allowing users to view Occupancy Rates and Booking Trends with a customised range of dates. We would like to implement such functionality in the future.
+
+4. Occupancy Rates report will show Error Dialogs but can be bypassed. We intend to fix this in the near future.

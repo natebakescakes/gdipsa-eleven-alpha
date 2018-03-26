@@ -270,7 +270,9 @@ namespace ElevenAlpha
 
             LoadBookingDataGrid();
             parent.LoadBookingDataGrid();
-            MessageBox.Show($"Booking successful!{Environment.NewLine}{MemberIdTextBox.Text}{Environment.NewLine}{facility}{Environment.NewLine}{BookingDateTimePicker.Value}{Environment.NewLine}{BookingManagerDataGrid.SelectedCells[0].OwningRow.HeaderCell.Value.ToString()}");
+            MessageBox.Show($"Booking successful.");
+            var bookingReceipt = new ViewBookingReceipt(b.BookingID);
+            bookingReceipt.ShowDialog();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

@@ -13,6 +13,7 @@ namespace ElevenAlpha
     public partial class BookingTab : UserControl
     {
         ElevenAlphaEntities context;
+        BookingsManager bookingsManager;
 
         public BookingTab()
         {
@@ -29,6 +30,8 @@ namespace ElevenAlpha
 
         private void LoadDatePickers()
         {
+            ToDateTimePicker.Value = FromDateTimePicker.Value.AddDays(14);
+
             FromDateTimePicker.MinDate = System.DateTime.Now;
             ToDateTimePicker.MinDate = System.DateTime.Now;
             ToDateTimePicker.MaxDate = FromDateTimePicker.Value.AddDays(14);
@@ -37,7 +40,7 @@ namespace ElevenAlpha
         /// <summary>
         /// Load DB data into DataGrid
         /// </summary>
-        private void LoadBookingDataGrid()
+        public void LoadBookingDataGrid()
         {
             if (context.Facilities.Where(x => x.FacilityType.Name == FacilityTypeComboBox.Text).FirstOrDefault() is null)
             {
@@ -152,6 +155,7 @@ namespace ElevenAlpha
         private void FromDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             ToDateTimePicker.MaxDate = FromDateTimePicker.Value.AddDays(14);
+            ToDateTimePicker.MinDate = FromDateTimePicker.Value;
 
             if (FacilityTypeComboBox.Text != "")
             {
@@ -165,6 +169,12 @@ namespace ElevenAlpha
             {
                 LoadBookingDataGrid();
             }
+        }
+
+        private void BookingDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bookingsManager = new BookingsManager(this, FacilityTypeComboBox.Text, FromDateTimePicker.Value.AddDays(BookingDataGridView.SelectedCells[0].ColumnIndex));
+            bookingsManager.ShowDialog();
         }
     }
 }

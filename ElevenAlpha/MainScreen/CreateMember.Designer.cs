@@ -37,13 +37,11 @@
             this.MobileNumber = new System.Windows.Forms.Label();
             this.LNameTextBox = new System.Windows.Forms.TextBox();
             this.DOBPicker = new System.Windows.Forms.DateTimePicker();
-            this.MobileTextBox = new System.Windows.Forms.TextBox();
             this.GenderComboBox = new System.Windows.Forms.ComboBox();
             this.Email = new System.Windows.Forms.Label();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.EmergencyContact = new System.Windows.Forms.GroupBox();
             this.MemberRelationTextBox = new System.Windows.Forms.TextBox();
-            this.EmergencyNumberTextBox = new System.Windows.Forms.TextBox();
             this.EmergencyNameTextBox = new System.Windows.Forms.TextBox();
             this.MemberRelationship = new System.Windows.Forms.Label();
             this.ContactNumber = new System.Windows.Forms.Label();
@@ -52,6 +50,8 @@
             this.AddMemberButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.MobileTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.EmergencyNumberTextBox = new System.Windows.Forms.MaskedTextBox();
             this.EmergencyContact.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,15 +139,6 @@
             this.DOBPicker.TabIndex = 3;
             this.DOBPicker.Value = new System.DateTime(2018, 3, 24, 0, 0, 0, 0);
             // 
-            // MobileTextBox
-            // 
-            this.MobileTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MobileTextBox.Location = new System.Drawing.Point(289, 193);
-            this.MobileTextBox.Name = "MobileTextBox";
-            this.MobileTextBox.Size = new System.Drawing.Size(136, 26);
-            this.MobileTextBox.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.MobileTextBox, "Mobile Number Format: +65-0000-0000");
-            // 
             // GenderComboBox
             // 
             this.GenderComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -182,8 +173,8 @@
             // EmergencyContact
             // 
             this.EmergencyContact.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.EmergencyContact.Controls.Add(this.MemberRelationTextBox);
             this.EmergencyContact.Controls.Add(this.EmergencyNumberTextBox);
+            this.EmergencyContact.Controls.Add(this.MemberRelationTextBox);
             this.EmergencyContact.Controls.Add(this.EmergencyNameTextBox);
             this.EmergencyContact.Controls.Add(this.MemberRelationship);
             this.EmergencyContact.Controls.Add(this.ContactNumber);
@@ -202,14 +193,6 @@
             this.MemberRelationTextBox.Name = "MemberRelationTextBox";
             this.MemberRelationTextBox.Size = new System.Drawing.Size(237, 26);
             this.MemberRelationTextBox.TabIndex = 9;
-            // 
-            // EmergencyNumberTextBox
-            // 
-            this.EmergencyNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.EmergencyNumberTextBox.Location = new System.Drawing.Point(216, 79);
-            this.EmergencyNumberTextBox.Name = "EmergencyNumberTextBox";
-            this.EmergencyNumberTextBox.Size = new System.Drawing.Size(237, 26);
-            this.EmergencyNumberTextBox.TabIndex = 8;
             // 
             // EmergencyNameTextBox
             // 
@@ -282,12 +265,29 @@
             this.toolTip1.AutomaticDelay = 50;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // MobileTextBox
+            // 
+            this.MobileTextBox.Location = new System.Drawing.Point(287, 191);
+            this.MobileTextBox.Mask = "(+65) 0000-0000";
+            this.MobileTextBox.Name = "MobileTextBox";
+            this.MobileTextBox.Size = new System.Drawing.Size(136, 26);
+            this.MobileTextBox.TabIndex = 16;
+            // 
+            // EmergencyNumberTextBox
+            // 
+            this.EmergencyNumberTextBox.Location = new System.Drawing.Point(216, 78);
+            this.EmergencyNumberTextBox.Mask = "(+65) 0000-0000";
+            this.EmergencyNumberTextBox.Name = "EmergencyNumberTextBox";
+            this.EmergencyNumberTextBox.Size = new System.Drawing.Size(237, 26);
+            this.EmergencyNumberTextBox.TabIndex = 12;
+            // 
             // CreateMember
             // 
             this.AcceptButton = this.AddMemberButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 543);
+            this.Controls.Add(this.MobileTextBox);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.AddMemberButton);
             this.Controls.Add(this.FirstNameTxtBox);
@@ -295,7 +295,6 @@
             this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.GenderComboBox);
-            this.Controls.Add(this.MobileTextBox);
             this.Controls.Add(this.DOBPicker);
             this.Controls.Add(this.LNameTextBox);
             this.Controls.Add(this.MobileNumber);
@@ -324,7 +323,6 @@
         private System.Windows.Forms.Label MobileNumber;
         private System.Windows.Forms.TextBox LNameTextBox;
         private System.Windows.Forms.DateTimePicker DOBPicker;
-        private System.Windows.Forms.TextBox MobileTextBox;
         private System.Windows.Forms.ComboBox GenderComboBox;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.TextBox EmailTextBox;
@@ -334,10 +332,11 @@
         private System.Windows.Forms.Label ContactName;
         private System.Windows.Forms.TextBox FirstNameTxtBox;
         private System.Windows.Forms.TextBox MemberRelationTextBox;
-        private System.Windows.Forms.TextBox EmergencyNumberTextBox;
         private System.Windows.Forms.TextBox EmergencyNameTextBox;
         private System.Windows.Forms.Button AddMemberButton;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.MaskedTextBox MobileTextBox;
+        private System.Windows.Forms.MaskedTextBox EmergencyNumberTextBox;
     }
 }

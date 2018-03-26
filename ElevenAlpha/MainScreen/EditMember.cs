@@ -16,17 +16,23 @@ namespace ElevenAlpha
         private int memberId;
         ElevenAlphaEntities ctx;
         
+        int selectedIndex;
+        MembersTab memberTab;
+
+
         public EditMember()
         {
             InitializeComponent();
-            memberId = 6;
+            
             ctx = new ElevenAlphaEntities();
         }
 
-        public EditMember(int memberId)
+        public EditMember(int memberId,int selectedIndex,MembersTab memberTab)
         {
             InitializeComponent();
             this.memberId = memberId;
+            this.selectedIndex = selectedIndex;
+            this.memberTab = memberTab;
             ctx = new ElevenAlphaEntities();
         }
 
@@ -66,7 +72,7 @@ namespace ElevenAlpha
         private void UpdateMemberButton_Click(object sender, EventArgs e)
         {
 
-            Regex isValidNumber = new Regex(@"\+\d{2}-?\d{4}-?\d{4}$");
+            
             Regex isValidEmail = new Regex(@"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
                  @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$");
 
@@ -79,7 +85,7 @@ namespace ElevenAlpha
             {
                 MessageBox.Show("Please input Gender.");
             }
-            else if ((MobileTextBox.Text == "") || !isValidNumber.IsMatch(MobileTextBox.Text))
+            else if ((MobileTextBox.Text == "") || MobileTextBox.TextLength<8)
             {
                 MessageBox.Show("Please input a valid Mobile Number.");
             }
@@ -93,50 +99,57 @@ namespace ElevenAlpha
             {
                 MessageBox.Show("Please input an Emergency Contact Name.");
             }
-            else if (EmergencyNumberTextBox.Text == "" || !isValidNumber.IsMatch(MobileTextBox.Text))
+            else if (EmergencyNumberTextBox.Text == "" || EmergencyNumberTextBox.TextLength<8)
             {
-                MessageBox.Show("Please input an Emergency Contact Number.");
+                MessageBox.Show("Please input a valid Emergency Contact Number.");
             }
             else
             {
-                Member memberToEdit = (Member)(from x in ctx.Members where x.MemberID == memberId select x).First();
+                
+                    Member memberToEdit = (Member)(from x in ctx.Members where x.MemberID == memberId select x).First();
 
-                memberToEdit.FirstName = FirstNameTxtBox.Text;
-                memberToEdit.LastName = LNameTextBox.Text;
-                memberToEdit.Email = EmailTextBox.Text;
-                memberToEdit.DateOfBirth = DOBPicker.Value;
-                memberToEdit.Mobile = MobileTextBox.Text;
-                memberToEdit.EmergencyContact = EmergencyNumberTextBox.Text;
-                memberToEdit.EmergencyName = EmergencyNameTextBox.Text;
-                memberToEdit.EmergencyRelation = MemberRelationTextBox.Text;
+                    memberToEdit.FirstName = FirstNameTxtBox.Text;
+                    memberToEdit.LastName = LNameTextBox.Text;
+                    memberToEdit.Email = EmailTextBox.Text;
+                    memberToEdit.DateOfBirth = DOBPicker.Value;
+                    memberToEdit.Mobile = MobileTextBox.Text;
+                    memberToEdit.EmergencyContact = EmergencyNumberTextBox.Text;
+                    memberToEdit.EmergencyName = EmergencyNameTextBox.Text;
+                    memberToEdit.EmergencyRelation = MemberRelationTextBox.Text;
 
-                if (SalutationComboBox.SelectedItem == null)
-                {
-                    memberToEdit.Salutations = "";
+                    if (SalutationComboBox.SelectedItem == null)
+                    {
+                        memberToEdit.Salutations = "";
+                    }
+                    else
+                    {
+                        memberToEdit.Salutations = SalutationComboBox.SelectedItem.ToString();
+                    }
+
+                    if (GenderComboBox.SelectedItem.ToString() == "Male")
+                    {
+                        memberToEdit.Gender = "M";
+                    }
+                    else
+                    {
+                        memberToEdit.Gender = "F";
+                    }
+
+                    ctx.SaveChanges();
+                    MessageBox.Show(String.Format("The details of {0} {1} with Member ID: {2} has been updated!", memberToEdit.FirstName, memberToEdit.LastName, memberToEdit.MemberID));
+
+                    memberTab.MemberInfoTable.Refresh();
+                    memberTab.MemberInfoTable.Rows[selectedIndex].Selected = true;
+                    this.Close();
                 }
-                else
-                {
-                    memberToEdit.Salutations = SalutationComboBox.SelectedItem.ToString();
-                }
-
-                if (GenderComboBox.SelectedItem.ToString() == "Male")
-                {
-                    memberToEdit.Gender = "M";
-                }
-                else
-                {
-                    memberToEdit.Gender = "F";
-                }
-
-                ctx.SaveChanges();
-                MessageBox.Show(String.Format("The details of {0} {1} with Member ID: {2} has been updated!", memberToEdit.FirstName, memberToEdit.LastName, memberToEdit.MemberID));
-
             }
-        }
+
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            memberTab.MemberInfoTable.Refresh();
             this.Close();
+            
         }
     }
 }

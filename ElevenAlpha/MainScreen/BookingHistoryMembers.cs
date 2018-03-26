@@ -138,7 +138,8 @@ namespace ElevenAlpha
 
         private void CancelBookingButton_Click(object sender, EventArgs e)
         {
-            if (BookingMemberDataGrid.SelectedCells[7].Value.ToString() == "Cancelled")
+            if (BookingMemberDataGrid.SelectedCells[7].Value.
+                ToString() == "Cancelled")
             {
                 MessageBox.Show("Booking has already been cancelled.");
                 return;

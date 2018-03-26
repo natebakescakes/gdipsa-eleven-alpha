@@ -12,7 +12,23 @@ The software solution is for sports staff to make the booking/cancellation of fa
    * input memberID and make mooking
    
 ## Members Manager
+* new 
+* edit
+* deactive
+* Active
+* View booking history
+* Member List
+
+
+
 ## Facility Manager
+* new 
+* edit
+* deactive
+* Active
+* View booking history
+
+
 ## Reports
  
 

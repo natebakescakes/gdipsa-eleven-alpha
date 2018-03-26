@@ -110,13 +110,16 @@ namespace ElevenAlpha
 
                     }
                 }
-                if (flag > 0 && inputname != f.Name)
+                if (flag > 0 && inputname.ToLower() != f.Name.ToLower())
                 { MessageBox.Show("This Facility Name already exists. Please input a different one."); flag = 0; }
                 else
                 {
                     f.Name = inputname;
                     if (OpenTimeMaskT.MaskedTextProvider.AssignedEditPositionCount == 0)
                     { MessageBox.Show("Please input the Opening Time."); }
+                    else if (Convert.ToDateTime(OpenTimeMaskT.Text.ToString()) >= Convert.ToDateTime(CloseTimeMaskT.Text.ToString()))
+                    { MessageBox.Show("Please input a closing time later than opening time!"); }
+
                     else
                     {
                         DateTime d1 = Convert.ToDateTime(OpenTimeMaskT.Text.ToString());

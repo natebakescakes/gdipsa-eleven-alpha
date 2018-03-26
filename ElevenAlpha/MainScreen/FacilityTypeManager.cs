@@ -51,15 +51,26 @@ namespace ElevenAlpha
             int flag = 0;
             foreach(FacilityType f1 in ctx.FacilityTypes )
             {
-                if (f1.Name == inputname)
+                if (f1.Name.ToLower() == inputname.ToLower())
                 {
                     ElevenAlphaEntities ctx = new ElevenAlphaEntities();
                     FacilityType f = ctx.FacilityTypes.Where(x => x.Name == inputname).First();
-                    f.Active = 1;
+                    //f.Active = 1;
                     flag = 1;
+                    if (f.Active == 0)
+                    {
+                        f.Active = 1;
+                        MessageBox.Show("Facility Type successfully reactivated.");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Facility Type already exists!");
+
+                    }
                     ctx.SaveChanges();
                     refresh();
-                    MessageBox.Show("Facility Type successfully reactivated.");
+
                     break;
                 }
 

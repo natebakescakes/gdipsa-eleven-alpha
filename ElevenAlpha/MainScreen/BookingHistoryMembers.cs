@@ -174,6 +174,8 @@ namespace ElevenAlpha
         private void FromDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             LoadBookingHistoryDataGrid();
+
+            ToDateTimePicker.MinDate = FromDateTimePicker.Value;
         }
 
         private void ShowCancelledCheckBox_CheckedChanged(object sender, EventArgs e)

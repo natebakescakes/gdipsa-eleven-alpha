@@ -123,6 +123,8 @@ namespace ElevenAlpha
         private void FromDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             LoadBookingHistoryDataGrid();
+
+            ToDateTimePicker.MinDate = FromDateTimePicker.Value;
         }
 
         private void ToDateTimePicker_ValueChanged(object sender, EventArgs e)

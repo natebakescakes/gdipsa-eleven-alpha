@@ -13,11 +13,13 @@ namespace ElevenAlpha
     public partial class BookingHistoryMembers : Form
     {
         ElevenAlphaEntities context;
+        BookingsManager parent;
 
-        public BookingHistoryMembers(int memberId, DateTime fromDateTime, DateTime toDateTime)
+        public BookingHistoryMembers(BookingsManager parent, int memberId, DateTime fromDateTime, DateTime toDateTime)
         {
             InitializeComponent();
             context = new ElevenAlphaEntities();
+            this.parent = parent;
 
             MemberIdTextBox.Text = memberId.ToString();
 
@@ -161,6 +163,13 @@ namespace ElevenAlpha
             context.SaveChanges();
 
             LoadBookingHistoryDataGrid();
+            if (parent is BookingsManager)
+            {
+                parent.LoadBookingDataGrid();
+                parent.BookingManagerDataGrid.Rows[0].Selected = true;
+                parent.parent.LoadBookingDataGrid();
+            }
+
             MessageBox.Show("Booking has been cancelled.");
         }
 

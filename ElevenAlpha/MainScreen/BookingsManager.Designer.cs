@@ -211,6 +211,7 @@
             this.BookingManagerDataGrid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BookingManagerDataGrid.MultiSelect = false;
             this.BookingManagerDataGrid.Name = "BookingManagerDataGrid";
+            this.BookingManagerDataGrid.ReadOnly = true;
             this.BookingManagerDataGrid.RowHeadersWidth = 250;
             this.BookingManagerDataGrid.RowTemplate.Height = 80;
             this.BookingManagerDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -262,6 +263,6 @@
         private System.Windows.Forms.Button PreviousDayButton;
         private System.Windows.Forms.Button NextDayButton;
         public System.Windows.Forms.TextBox MemberIdTextBox;
-        private System.Windows.Forms.DataGridView BookingManagerDataGrid;
+        public System.Windows.Forms.DataGridView BookingManagerDataGrid;
     }
 }

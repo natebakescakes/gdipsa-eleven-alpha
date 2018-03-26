@@ -14,7 +14,7 @@ namespace ElevenAlpha
     {
         ElevenAlphaEntities context;
         MemberLookup memberLookup;
-        BookingTab parent;
+        public BookingTab parent;
 
         public BookingsManager(BookingTab parent, string facilityName, DateTime bookingDate)
         {
@@ -41,7 +41,7 @@ namespace ElevenAlpha
             LoadBookingDataGrid();
         }
 
-        private void LoadBookingDataGrid()
+        public void LoadBookingDataGrid()
         {
             // Check if there are Facilities that match Facility Type
             if (context.Facilities.Where(x => x.FacilityType.Name == FacilityTypeComboBox.Text && x.Active == 1).FirstOrDefault() is null)
@@ -301,7 +301,7 @@ namespace ElevenAlpha
                     x.BookingDate.Value.Day == dayComparison)
                 .FirstOrDefault();
 
-            var bookingHistoryMembers = new BookingHistoryMembers(b.MemberID ?? 0, b.BookingDate.Value, b.BookingDate.Value);
+            var bookingHistoryMembers = new BookingHistoryMembers(this, b.MemberID ?? 0, b.BookingDate.Value, b.BookingDate.Value);
             bookingHistoryMembers.ShowDialog();
         }
     }

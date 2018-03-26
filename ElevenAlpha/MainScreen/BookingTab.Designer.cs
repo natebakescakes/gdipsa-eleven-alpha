@@ -64,6 +64,7 @@
             this.BookingDataGridView.Location = new System.Drawing.Point(0, 75);
             this.BookingDataGridView.MultiSelect = false;
             this.BookingDataGridView.Name = "BookingDataGridView";
+            this.BookingDataGridView.ReadOnly = true;
             this.BookingDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;

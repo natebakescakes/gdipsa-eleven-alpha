@@ -28,24 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.BookingFacilityDataGrid = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.ToDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.FromDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.TildeLabel = new System.Windows.Forms.Label();
-            this.FacilityIdTextBox = new System.Windows.Forms.TextBox();
-            this.MemberIdLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.ShowCancelledCheckBox = new System.Windows.Forms.CheckBox();
-            this.CloseButton = new System.Windows.Forms.Button();
-            this.CancelBookingButton = new System.Windows.Forms.Button();
-            this.PrintReceiptButton = new System.Windows.Forms.Button();
-            this.ViewReceiptButton = new System.Windows.Forms.Button();
-            this.FacilityNameTextBox = new System.Windows.Forms.TextBox();
             this.BookingIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateRequestedColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookingDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +39,20 @@
             this.FirstNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.ToDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.FromDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.TildeLabel = new System.Windows.Forms.Label();
+            this.FacilityIdTextBox = new System.Windows.Forms.TextBox();
+            this.MemberIdLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.FacilityNameTextBox = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.ShowCancelledCheckBox = new System.Windows.Forms.CheckBox();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.CancelBookingButton = new System.Windows.Forms.Button();
+            this.ViewReceiptButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BookingFacilityDataGrid)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -82,14 +81,14 @@
             // BookingFacilityDataGrid
             // 
             this.BookingFacilityDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BookingFacilityDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BookingFacilityDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.BookingFacilityDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BookingFacilityDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BookingIdColumn,
@@ -108,6 +107,62 @@
             this.BookingFacilityDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.BookingFacilityDataGrid.Size = new System.Drawing.Size(2048, 529);
             this.BookingFacilityDataGrid.TabIndex = 0;
+            // 
+            // BookingIdColumn
+            // 
+            this.BookingIdColumn.DataPropertyName = "BookingId";
+            this.BookingIdColumn.HeaderText = "Booking ID";
+            this.BookingIdColumn.Name = "BookingIdColumn";
+            this.BookingIdColumn.Width = 207;
+            // 
+            // DateRequestedColumn
+            // 
+            this.DateRequestedColumn.DataPropertyName = "DateRequested";
+            this.DateRequestedColumn.HeaderText = "Transaction Date";
+            this.DateRequestedColumn.Name = "DateRequestedColumn";
+            this.DateRequestedColumn.Width = 285;
+            // 
+            // BookingDateColumn
+            // 
+            this.BookingDateColumn.DataPropertyName = "BookingDate";
+            this.BookingDateColumn.HeaderText = "Booking Date";
+            this.BookingDateColumn.Name = "BookingDateColumn";
+            this.BookingDateColumn.Width = 240;
+            // 
+            // TimeSlotColumn
+            // 
+            this.TimeSlotColumn.DataPropertyName = "Timeslot";
+            this.TimeSlotColumn.HeaderText = "Timeslot";
+            this.TimeSlotColumn.Name = "TimeSlotColumn";
+            this.TimeSlotColumn.Width = 177;
+            // 
+            // MemberIdColumn
+            // 
+            this.MemberIdColumn.DataPropertyName = "MemberID";
+            this.MemberIdColumn.HeaderText = "Member ID";
+            this.MemberIdColumn.Name = "MemberIdColumn";
+            this.MemberIdColumn.Width = 206;
+            // 
+            // FirstNameColumn
+            // 
+            this.FirstNameColumn.DataPropertyName = "FirstName";
+            this.FirstNameColumn.HeaderText = "First Name";
+            this.FirstNameColumn.Name = "FirstNameColumn";
+            this.FirstNameColumn.Width = 206;
+            // 
+            // LastNameColumn
+            // 
+            this.LastNameColumn.DataPropertyName = "LastName";
+            this.LastNameColumn.HeaderText = "Last Name";
+            this.LastNameColumn.Name = "LastNameColumn";
+            this.LastNameColumn.Width = 205;
+            // 
+            // StatusColumn
+            // 
+            this.StatusColumn.DataPropertyName = "Status";
+            this.StatusColumn.HeaderText = "Booking Status";
+            this.StatusColumn.Name = "StatusColumn";
+            this.StatusColumn.Width = 261;
             // 
             // tableLayoutPanel2
             // 
@@ -206,20 +261,29 @@
             this.SearchTextBox.TabIndex = 6;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
+            // FacilityNameTextBox
+            // 
+            this.FacilityNameTextBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FacilityNameTextBox.Location = new System.Drawing.Point(1076, 3);
+            this.FacilityNameTextBox.Name = "FacilityNameTextBox";
+            this.FacilityNameTextBox.ReadOnly = true;
+            this.FacilityNameTextBox.Size = new System.Drawing.Size(414, 38);
+            this.FacilityNameTextBox.TabIndex = 7;
+            this.FacilityNameTextBox.TextChanged += new System.EventHandler(this.FacilityNameTextBox_TextChanged);
+            // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 7;
+            this.tableLayoutPanel3.ColumnCount = 6;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 241F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.Controls.Add(this.ShowCancelledCheckBox, 6, 0);
-            this.tableLayoutPanel3.Controls.Add(this.CloseButton, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.CancelBookingButton, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.PrintReceiptButton, 2, 0);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.ShowCancelledCheckBox, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.CloseButton, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.CancelBookingButton, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.ViewReceiptButton, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 634);
@@ -246,7 +310,7 @@
             // 
             this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CloseButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CloseButton.Location = new System.Drawing.Point(1201, 3);
+            this.CloseButton.Location = new System.Drawing.Point(1102, 3);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(147, 43);
             this.CloseButton.TabIndex = 1;
@@ -257,7 +321,7 @@
             // CancelBookingButton
             // 
             this.CancelBookingButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CancelBookingButton.Location = new System.Drawing.Point(960, 3);
+            this.CancelBookingButton.Location = new System.Drawing.Point(861, 3);
             this.CancelBookingButton.Name = "CancelBookingButton";
             this.CancelBookingButton.Size = new System.Drawing.Size(235, 43);
             this.CancelBookingButton.TabIndex = 2;
@@ -265,93 +329,16 @@
             this.CancelBookingButton.UseVisualStyleBackColor = true;
             this.CancelBookingButton.Click += new System.EventHandler(this.CancelBookingButton_Click);
             // 
-            // PrintReceiptButton
-            // 
-            this.PrintReceiptButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PrintReceiptButton.Location = new System.Drawing.Point(741, 3);
-            this.PrintReceiptButton.Name = "PrintReceiptButton";
-            this.PrintReceiptButton.Size = new System.Drawing.Size(213, 43);
-            this.PrintReceiptButton.TabIndex = 3;
-            this.PrintReceiptButton.Text = "Print Receipt";
-            this.PrintReceiptButton.UseVisualStyleBackColor = true;
-            this.PrintReceiptButton.Click += new System.EventHandler(this.PrintReceiptButton_Click);
-            // 
             // ViewReceiptButton
             // 
             this.ViewReceiptButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ViewReceiptButton.Location = new System.Drawing.Point(530, 3);
+            this.ViewReceiptButton.Location = new System.Drawing.Point(650, 3);
             this.ViewReceiptButton.Name = "ViewReceiptButton";
             this.ViewReceiptButton.Size = new System.Drawing.Size(205, 43);
             this.ViewReceiptButton.TabIndex = 4;
             this.ViewReceiptButton.Text = "View Receipt";
             this.ViewReceiptButton.UseVisualStyleBackColor = true;
             this.ViewReceiptButton.Click += new System.EventHandler(this.ViewReceiptButton_Click);
-            // 
-            // FacilityNameTextBox
-            // 
-            this.FacilityNameTextBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FacilityNameTextBox.Location = new System.Drawing.Point(1076, 3);
-            this.FacilityNameTextBox.Name = "FacilityNameTextBox";
-            this.FacilityNameTextBox.ReadOnly = true;
-            this.FacilityNameTextBox.Size = new System.Drawing.Size(414, 38);
-            this.FacilityNameTextBox.TabIndex = 7;
-            this.FacilityNameTextBox.TextChanged += new System.EventHandler(this.FacilityNameTextBox_TextChanged);
-            // 
-            // BookingIdColumn
-            // 
-            this.BookingIdColumn.DataPropertyName = "BookingId";
-            this.BookingIdColumn.HeaderText = "Booking ID";
-            this.BookingIdColumn.Name = "BookingIdColumn";
-            this.BookingIdColumn.Width = 207;
-            // 
-            // DateRequestedColumn
-            // 
-            this.DateRequestedColumn.DataPropertyName = "DateRequested";
-            this.DateRequestedColumn.HeaderText = "Transaction Date";
-            this.DateRequestedColumn.Name = "DateRequestedColumn";
-            this.DateRequestedColumn.Width = 285;
-            // 
-            // BookingDateColumn
-            // 
-            this.BookingDateColumn.DataPropertyName = "BookingDate";
-            this.BookingDateColumn.HeaderText = "Booking Date";
-            this.BookingDateColumn.Name = "BookingDateColumn";
-            this.BookingDateColumn.Width = 240;
-            // 
-            // TimeSlotColumn
-            // 
-            this.TimeSlotColumn.DataPropertyName = "Timeslot";
-            this.TimeSlotColumn.HeaderText = "Timeslot";
-            this.TimeSlotColumn.Name = "TimeSlotColumn";
-            this.TimeSlotColumn.Width = 177;
-            // 
-            // MemberIdColumn
-            // 
-            this.MemberIdColumn.DataPropertyName = "MemberID";
-            this.MemberIdColumn.HeaderText = "Member ID";
-            this.MemberIdColumn.Name = "MemberIdColumn";
-            this.MemberIdColumn.Width = 206;
-            // 
-            // FirstNameColumn
-            // 
-            this.FirstNameColumn.DataPropertyName = "FirstName";
-            this.FirstNameColumn.HeaderText = "First Name";
-            this.FirstNameColumn.Name = "FirstNameColumn";
-            this.FirstNameColumn.Width = 206;
-            // 
-            // LastNameColumn
-            // 
-            this.LastNameColumn.DataPropertyName = "LastName";
-            this.LastNameColumn.HeaderText = "Last Name";
-            this.LastNameColumn.Name = "LastNameColumn";
-            this.LastNameColumn.Width = 205;
-            // 
-            // StatusColumn
-            // 
-            this.StatusColumn.DataPropertyName = "Status";
-            this.StatusColumn.HeaderText = "Booking Status";
-            this.StatusColumn.Name = "StatusColumn";
-            this.StatusColumn.Width = 261;
             // 
             // BookingHistoryFacilities
             // 
@@ -390,7 +377,6 @@
         private System.Windows.Forms.CheckBox ShowCancelledCheckBox;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Button CancelBookingButton;
-        private System.Windows.Forms.Button PrintReceiptButton;
         private System.Windows.Forms.Button ViewReceiptButton;
         private System.Windows.Forms.TextBox FacilityNameTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookingIdColumn;

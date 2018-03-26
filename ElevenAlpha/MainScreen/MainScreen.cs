@@ -31,7 +31,7 @@ namespace ElevenAlpha
 
             // Initialize Facilities Tab
             facilitiesTab = new FacilitiesTab();
-            facilitiesTabPage.Controls.Add(facilitiestab);
+            facilitiesTabPage.Controls.Add(facilitiesTab);
         }
     }
 }

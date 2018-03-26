@@ -14,7 +14,7 @@ namespace ElevenAlpha
     {
         ElevenAlphaEntities context;
         MemberLookup memberLookup;
-        BookingTab parent;
+        public BookingTab parent;
 
         public BookingsManager(BookingTab parent, string facilityName, DateTime bookingDate)
         {
@@ -41,7 +41,7 @@ namespace ElevenAlpha
             LoadBookingDataGrid();
         }
 
-        private void LoadBookingDataGrid()
+        public void LoadBookingDataGrid()
         {
             // Check if there are Facilities that match Facility Type
             if (context.Facilities.Where(x => x.FacilityType.Name == FacilityTypeComboBox.Text && x.Active == 1).FirstOrDefault() is null)
@@ -254,12 +254,13 @@ namespace ElevenAlpha
 
             string facility = BookingManagerDataGrid.SelectedCells[0].OwningColumn.HeaderText;
             int facilityId = context.Facilities.Where(x => x.Name == facility).FirstOrDefault().FacilityID;
+            DateTime insertDateTime = new DateTime(BookingDateTimePicker.Value.Year, BookingDateTimePicker.Value.Month, BookingDateTimePicker.Value.Day, 0, 0, 0);
 
             Booking b = new Booking()
             {
                 FacilityID = facilityId,
                 MemberID = Int32.Parse(MemberIdTextBox.Text),
-                BookingDate = BookingDateTimePicker.Value,
+                BookingDate = insertDateTime,
                 Timeslot = BookingManagerDataGrid.SelectedCells[0].RowIndex + 1,
                 Status = 1,
                 DateRequested = System.DateTime.Now
@@ -278,6 +279,30 @@ namespace ElevenAlpha
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BookingManagerDataGrid_DoubleClick(object sender, EventArgs e)
+        {
+            if (BookingManagerDataGrid.SelectedCells[0].Value.ToString() == "Vacant")
+                return;
+
+            int timeslot = BookingManagerDataGrid.SelectedCells[0].RowIndex + 1;
+            string facilityName = BookingManagerDataGrid.SelectedCells[0].OwningColumn.HeaderText;
+
+            int yearComparison = BookingDateTimePicker.Value.Year;
+            int monthComparison = BookingDateTimePicker.Value.Month;
+            int dayComparison = BookingDateTimePicker.Value.Day;
+
+            Booking b = context.Bookings
+                .Where(x => x.Timeslot == timeslot && 
+                    x.Facility.Name == facilityName &&
+                    x.BookingDate.Value.Year == yearComparison &&
+                    x.BookingDate.Value.Month == monthComparison &&
+                    x.BookingDate.Value.Day == dayComparison)
+                .FirstOrDefault();
+
+            var bookingHistoryMembers = new BookingHistoryMembers(this, b.MemberID ?? 0, b.BookingDate.Value, b.BookingDate.Value);
+            bookingHistoryMembers.ShowDialog();
         }
     }
 }

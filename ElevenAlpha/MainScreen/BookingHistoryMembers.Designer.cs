@@ -69,7 +69,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(56, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
@@ -103,7 +103,7 @@
             this.StatusColumn});
             this.BookingMemberDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BookingMemberDataGrid.Location = new System.Drawing.Point(2, 51);
-            this.BookingMemberDataGrid.Margin = new System.Windows.Forms.Padding(2);
+            this.BookingMemberDataGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BookingMemberDataGrid.Name = "BookingMemberDataGrid";
             this.BookingMemberDataGrid.RowTemplate.Height = 40;
             this.BookingMemberDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -192,7 +192,7 @@
             this.tableLayoutPanel2.Controls.Add(this.LastNameTextBox, 7, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 15);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -204,7 +204,7 @@
             this.ToDateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ToDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.ToDateTimePicker.Location = new System.Drawing.Point(827, 2);
-            this.ToDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.ToDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ToDateTimePicker.Name = "ToDateTimePicker";
             this.ToDateTimePicker.Size = new System.Drawing.Size(137, 26);
             this.ToDateTimePicker.TabIndex = 0;
@@ -215,7 +215,7 @@
             this.FromDateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FromDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FromDateTimePicker.Location = new System.Drawing.Point(666, 2);
-            this.FromDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.FromDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FromDateTimePicker.Name = "FromDateTimePicker";
             this.FromDateTimePicker.Size = new System.Drawing.Size(137, 26);
             this.FromDateTimePicker.TabIndex = 1;
@@ -236,7 +236,7 @@
             // 
             this.MemberIdTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemberIdTextBox.Location = new System.Drawing.Point(297, 2);
-            this.MemberIdTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.MemberIdTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MemberIdTextBox.Name = "MemberIdTextBox";
             this.MemberIdTextBox.Size = new System.Drawing.Size(108, 26);
             this.MemberIdTextBox.TabIndex = 3;
@@ -268,7 +268,7 @@
             // 
             this.SearchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SearchTextBox.Location = new System.Drawing.Point(81, 2);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(111, 26);
             this.SearchTextBox.TabIndex = 6;
@@ -278,7 +278,7 @@
             // 
             this.FirstNameTextBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.FirstNameTextBox.Location = new System.Drawing.Point(420, 2);
-            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.ReadOnly = true;
             this.FirstNameTextBox.Size = new System.Drawing.Size(108, 26);
@@ -289,7 +289,7 @@
             // 
             this.LastNameTextBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.LastNameTextBox.Location = new System.Drawing.Point(543, 2);
-            this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.ReadOnly = true;
             this.LastNameTextBox.Size = new System.Drawing.Size(108, 26);
@@ -312,7 +312,7 @@
             this.tableLayoutPanel3.Controls.Add(this.ViewReceiptButton, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 409);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -324,7 +324,7 @@
             this.ShowCancelledCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowCancelledCheckBox.AutoSize = true;
             this.ShowCancelledCheckBox.Location = new System.Drawing.Point(815, 2);
-            this.ShowCancelledCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ShowCancelledCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ShowCancelledCheckBox.Name = "ShowCancelledCheckBox";
             this.ShowCancelledCheckBox.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.ShowCancelledCheckBox.Size = new System.Drawing.Size(149, 27);
@@ -338,7 +338,7 @@
             this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CloseButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.CloseButton.Location = new System.Drawing.Point(516, 2);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(2);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(82, 28);
             this.CloseButton.TabIndex = 1;
@@ -350,7 +350,7 @@
             // 
             this.CancelBookingButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.CancelBookingButton.Location = new System.Drawing.Point(380, 2);
-            this.CancelBookingButton.Margin = new System.Windows.Forms.Padding(2);
+            this.CancelBookingButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CancelBookingButton.Name = "CancelBookingButton";
             this.CancelBookingButton.Size = new System.Drawing.Size(132, 28);
             this.CancelBookingButton.TabIndex = 2;
@@ -362,7 +362,7 @@
             // 
             this.ViewReceiptButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ViewReceiptButton.Location = new System.Drawing.Point(261, 2);
-            this.ViewReceiptButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ViewReceiptButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ViewReceiptButton.Name = "ViewReceiptButton";
             this.ViewReceiptButton.Size = new System.Drawing.Size(115, 28);
             this.ViewReceiptButton.TabIndex = 4;
@@ -377,7 +377,7 @@
             this.CancelButton = this.CloseButton;
             this.ClientSize = new System.Drawing.Size(1082, 455);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BookingHistoryMembers";
             this.Padding = new System.Windows.Forms.Padding(56, 0, 56, 0);
             this.Text = "Booking History (By Members)";

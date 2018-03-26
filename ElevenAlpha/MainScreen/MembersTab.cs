@@ -229,7 +229,8 @@ namespace ElevenAlpha
 
         private void MemberListCR_Click(object sender, EventArgs e)
         {
-            memberlistform.Show();
+            MemberList memberlistform = new MemberList();
+            memberlistform.ShowDialog();
         }
     }
 }

@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MemberInfoTable = new System.Windows.Forms.DataGridView();
             this.NewButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.BookHstryBttn = new System.Windows.Forms.Button();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
-            this.InactiveCheckbox = new System.Windows.Forms.CheckBox();
+            this.HideInactiveCheckbox = new System.Windows.Forms.CheckBox();
             this.SearchLabel = new System.Windows.Forms.Label();
             this.ActivateMemberButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MemberInfoTable)).BeginInit();
@@ -46,14 +46,14 @@
             this.MemberInfoTable.AllowUserToOrderColumns = true;
             this.MemberInfoTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.MemberInfoTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MemberInfoTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MemberInfoTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.MemberInfoTable.ColumnHeadersHeight = 40;
             this.MemberInfoTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemberInfoTable.Location = new System.Drawing.Point(0, 0);
@@ -117,17 +117,17 @@
             this.SearchTextBox.TabIndex = 5;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
-            // InactiveCheckbox
+            // HideInactiveCheckbox
             // 
-            this.InactiveCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.InactiveCheckbox.AutoSize = true;
-            this.InactiveCheckbox.Location = new System.Drawing.Point(831, 476);
-            this.InactiveCheckbox.Name = "InactiveCheckbox";
-            this.InactiveCheckbox.Size = new System.Drawing.Size(198, 24);
-            this.InactiveCheckbox.TabIndex = 6;
-            this.InactiveCheckbox.Text = "View Inactive Members";
-            this.InactiveCheckbox.UseVisualStyleBackColor = true;
-            this.InactiveCheckbox.CheckedChanged += new System.EventHandler(this.InactiveCheckbox_CheckedChanged);
+            this.HideInactiveCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.HideInactiveCheckbox.AutoSize = true;
+            this.HideInactiveCheckbox.Location = new System.Drawing.Point(832, 476);
+            this.HideInactiveCheckbox.Name = "HideInactiveCheckbox";
+            this.HideInactiveCheckbox.Size = new System.Drawing.Size(197, 24);
+            this.HideInactiveCheckbox.TabIndex = 6;
+            this.HideInactiveCheckbox.Text = "Hide Inactive Members";
+            this.HideInactiveCheckbox.UseVisualStyleBackColor = true;
+            this.HideInactiveCheckbox.CheckedChanged += new System.EventHandler(this.HideInactiveCheckbox_CheckedChanged);
             // 
             // SearchLabel
             // 
@@ -156,7 +156,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ActivateMemberButton);
             this.Controls.Add(this.SearchLabel);
-            this.Controls.Add(this.InactiveCheckbox);
+            this.Controls.Add(this.HideInactiveCheckbox);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.BookHstryBttn);
             this.Controls.Add(this.DeleteButton);
@@ -181,7 +181,7 @@
         private System.Windows.Forms.Label SearchLabel;
         private System.Windows.Forms.Button ActivateMemberButton;
         public System.Windows.Forms.DataGridView MemberInfoTable;
-        public System.Windows.Forms.CheckBox InactiveCheckbox;
+        public System.Windows.Forms.CheckBox HideInactiveCheckbox;
         public System.Windows.Forms.TextBox SearchTextBox;
     }
 }

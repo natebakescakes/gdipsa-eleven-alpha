@@ -19,10 +19,11 @@ namespace ElevenAlpha
         DateTime closetime;
 
         ElevenAlphaEntities ctx = new ElevenAlphaEntities();
-        public EditFacility(int facilityId)
+        
+        public EditFacility(int facilityID)
         {
             InitializeComponent();
-            this.facilityid = facilityId;
+            facilityid = facilityID;
         }
 
         private void EditFacility_Load(object sender, EventArgs e)
@@ -65,7 +66,6 @@ namespace ElevenAlpha
 
             LocationTextB.Text = f.Location;
             DescriptionTextB.Text = f.Description;
-
         }
 
 
@@ -73,9 +73,7 @@ namespace ElevenAlpha
 
         private void FacilityTypeComB_SelectedIndexChanged(object sender, EventArgs e)
         {
-         
-                typename = FacilityTypeComB.SelectedItem.ToString();
-
+           typename = FacilityTypeComB.SelectedItem.ToString();
         }
 
 
@@ -83,12 +81,12 @@ namespace ElevenAlpha
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-
             // faciliytid from another form
             Facility f = ctx.Facilities.Where(x => x.FacilityID == facilityid).FirstOrDefault();
             // the facility select
@@ -107,16 +105,18 @@ namespace ElevenAlpha
                     if (f1.Name == inputname)
                     {
                         flag++; break;
-
                     }
                 }
-                if (flag > 0 && inputname != f.Name)
+                if (flag > 0 && inputname.ToLower() != f.Name.ToLower())
                 { MessageBox.Show("This Facility Name already exists. Please input a different one."); flag = 0; }
                 else
                 {
                     f.Name = inputname;
                     if (OpenTimeMaskT.MaskedTextProvider.AssignedEditPositionCount == 0)
                     { MessageBox.Show("Please input the Opening Time."); }
+                    else if (Convert.ToDateTime(OpenTimeMaskT.Text.ToString()) >= Convert.ToDateTime(CloseTimeMaskT.Text.ToString()))
+                    { MessageBox.Show("Please input a closing time later than opening time!"); }
+
                     else
                     {
                         DateTime d1 = Convert.ToDateTime(OpenTimeMaskT.Text.ToString());
@@ -146,7 +146,7 @@ namespace ElevenAlpha
                 }
 
             }
-         }
+        }
 
     }
 }

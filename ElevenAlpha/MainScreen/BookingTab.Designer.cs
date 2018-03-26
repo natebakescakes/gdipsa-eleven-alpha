@@ -79,6 +79,7 @@
             this.BookingDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.BookingDataGridView.Size = new System.Drawing.Size(1561, 837);
             this.BookingDataGridView.TabIndex = 0;
+            this.BookingDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookingDataGridView_CellContentClick);
             // 
             // FacilityTypeLabel
             // 

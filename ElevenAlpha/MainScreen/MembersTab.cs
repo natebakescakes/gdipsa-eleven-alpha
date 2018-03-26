@@ -25,7 +25,7 @@ namespace ElevenAlpha
         }
         private void members_tab_Load(object sender, EventArgs e)
         {
-            ViewActiveMembers();  
+            ViewAllMembers();  
         }
 
 
@@ -92,24 +92,12 @@ namespace ElevenAlpha
             SetColumnHeader();
 
         }
-     
 
-        private void InactiveCheckbox_CheckedChanged(object sender, EventArgs e)
+
+        private void HideInactiveCheckbox_CheckedChanged(object sender, EventArgs e)
         {
 
-            if (InactiveCheckbox.Checked == true)
-            {
-                if (SearchTextBox.Text.ToString() == "")
-                {
-                    ViewAllMembers();
-                }
-                else
-                {
-                    SearchAllMembers();
-                }
-            }
-
-            else
+            if (HideInactiveCheckbox.Checked == true)
             {
                 if (SearchTextBox.Text.ToString() == "")
                 {
@@ -120,19 +108,30 @@ namespace ElevenAlpha
                     SearchActiveMembers();
                 }
             }
-        }
 
+            else
+            {
+                if (SearchTextBox.Text.ToString() == "")
+                {
+                    ViewAllMembers();
+                }
+                else
+                {
+                    SearchAllMembers();
+                }
+            }
+        }
 
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (InactiveCheckbox.Checked == true)
+            if (HideInactiveCheckbox.Checked == true)
             {
-                SearchAllMembers();
+                SearchActiveMembers();
             }
             else
             {
-                SearchActiveMembers();
+                SearchAllMembers();
             }
                 
         }
@@ -162,18 +161,25 @@ namespace ElevenAlpha
                 
             }
 
-            if (InactiveCheckbox.Checked == true)
+            if (HideInactiveCheckbox.Checked == true)
             {
-                SearchAllMembers();
+                SearchActiveMembers();
             }
             else
-                SearchActiveMembers();
+                SearchAllMembers();
 
 
         }
 
         private void BookHstryBttn_Click(object sender, EventArgs e)
         {
+            var bookingHistoryMembers = new BookingHistoryMembers(
+                Int32.Parse(MemberInfoTable.SelectedCells[0].Value.ToString()),
+                System.DateTime.Now,
+                System.DateTime.Now
+            );
+
+            bookingHistoryMembers.ShowDialog();
         }
 
         private void ActivateMemberButton_Click(object sender, EventArgs e)
@@ -197,12 +203,12 @@ namespace ElevenAlpha
                
             }
 
-            if (InactiveCheckbox.Checked == true)
+            if (HideInactiveCheckbox.Checked == true)
             {
-                SearchAllMembers();
+                SearchActiveMembers();
             }
             else
-                SearchActiveMembers();
+                SearchAllMembers();
        
         }
 

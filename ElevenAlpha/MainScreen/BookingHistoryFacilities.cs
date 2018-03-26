@@ -13,6 +13,7 @@ namespace ElevenAlpha
     public partial class BookingHistoryFacilities : Form
     {
         ElevenAlphaEntities context;
+        private int facilityId;
 
         public BookingHistoryFacilities(int facilityId, DateTime fromDateTime, DateTime toDateTime)
         {
@@ -20,10 +21,17 @@ namespace ElevenAlpha
             context = new ElevenAlphaEntities();
 
             FacilityIdTextBox.Text = facilityId.ToString();
+            this.facilityId = facilityId;
+
+            // Initialize DatePickers
             FromDateTimePicker.Value = fromDateTime;
             ToDateTimePicker.Value = toDateTime;
 
+            // Load DataGrid
             LoadBookingHistoryDataGrid();
+
+            // Initialize watermark
+            FacilityNameTextBox_TextChanged(FacilityNameTextBox, new EventArgs());
         }
 
         private void LoadBookingHistoryDataGrid()
@@ -85,11 +93,31 @@ namespace ElevenAlpha
                     })
                     .ToList();
             }
+
+            foreach (DataGridViewColumn column in BookingFacilityDataGrid.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void FacilityIdTextBox_TextChanged(object sender, EventArgs e)
         {
             LoadBookingHistoryDataGrid();
+
+            if (FacilityIdTextBox.Text == "") { }
+            else if (Int32.TryParse(FacilityIdTextBox.Text, out facilityId))
+            {
+                if (context.Facilities.Where(x => x.FacilityID == facilityId).FirstOrDefault() is null)
+                    FacilityNameTextBox.Text = "";
+                else
+                    FacilityNameTextBox.Text = context.Facilities.Where(x => x.FacilityID == facilityId).First().Name;
+
+            }
+            else
+            {
+                MessageBox.Show("You have entered an invalid Facility ID.");
+                FacilityNameTextBox.Text = "";
+            }
         }
 
         private void FromDateTimePicker_ValueChanged(object sender, EventArgs e)
@@ -152,6 +180,23 @@ namespace ElevenAlpha
         private void ShowCancelledCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             LoadBookingHistoryDataGrid();
+        }
+
+        private void FacilityNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (FacilityNameTextBox.Text.Length == 0)
+            {
+                FacilityNameTextBox.BackColor = SystemColors.Control;
+                FacilityNameTextBox.ForeColor = SystemColors.GrayText;
+                //FirstNameTextBox.Font = new Font(FirstNameTextBox.Font, FontStyle.Italic);
+                FacilityNameTextBox.Text = "Facility Name";
+            }
+            else if (FacilityNameTextBox.Text != "Facility Name")
+            {
+                FacilityNameTextBox.BackColor = SystemColors.Control;
+                FacilityNameTextBox.ForeColor = SystemColors.ControlText;
+                //FirstNameTextBox.Font = new Font(FirstNameTextBox.Font, FirstNameTextBox.Font.Style & ~FontStyle.Italic);
+            }
         }
     }
 }

@@ -45,6 +45,8 @@
             this.CancelBookingButton = new System.Windows.Forms.Button();
             this.PrintReceiptButton = new System.Windows.Forms.Button();
             this.ViewReceiptButton = new System.Windows.Forms.Button();
+            this.FirstNameTextBox = new System.Windows.Forms.TextBox();
+            this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.BookingIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateRequestedColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookingDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,22 +111,28 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 8;
+            this.tableLayoutPanel2.ColumnCount = 12;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
-            this.tableLayoutPanel2.Controls.Add(this.ToDateTimePicker, 7, 0);
-            this.tableLayoutPanel2.Controls.Add(this.FromDateTimePicker, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.TildeLabel, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.ToDateTimePicker, 11, 0);
+            this.tableLayoutPanel2.Controls.Add(this.FromDateTimePicker, 9, 0);
+            this.tableLayoutPanel2.Controls.Add(this.TildeLabel, 10, 0);
             this.tableLayoutPanel2.Controls.Add(this.MemberIdTextBox, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.MemberIdLabel, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.SearchLabel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.SearchTextBox, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.FirstNameTextBox, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.LastNameTextBox, 7, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 23);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -166,7 +174,7 @@
             // MemberIdTextBox
             // 
             this.MemberIdTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MemberIdTextBox.Location = new System.Drawing.Point(1115, 3);
+            this.MemberIdTextBox.Location = new System.Drawing.Point(675, 3);
             this.MemberIdTextBox.Name = "MemberIdTextBox";
             this.MemberIdTextBox.Size = new System.Drawing.Size(194, 38);
             this.MemberIdTextBox.TabIndex = 3;
@@ -175,7 +183,7 @@
             // MemberIdLabel
             // 
             this.MemberIdLabel.AutoSize = true;
-            this.MemberIdLabel.Location = new System.Drawing.Point(935, 0);
+            this.MemberIdLabel.Location = new System.Drawing.Point(495, 0);
             this.MemberIdLabel.Name = "MemberIdLabel";
             this.MemberIdLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.MemberIdLabel.Size = new System.Drawing.Size(152, 37);
@@ -197,7 +205,7 @@
             this.SearchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SearchTextBox.Location = new System.Drawing.Point(143, 3);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(786, 38);
+            this.SearchTextBox.Size = new System.Drawing.Size(346, 38);
             this.SearchTextBox.TabIndex = 6;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
@@ -282,6 +290,26 @@
             this.ViewReceiptButton.UseVisualStyleBackColor = true;
             this.ViewReceiptButton.Click += new System.EventHandler(this.ViewReceiptButton_Click);
             // 
+            // FirstNameTextBox
+            // 
+            this.FirstNameTextBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FirstNameTextBox.Location = new System.Drawing.Point(895, 3);
+            this.FirstNameTextBox.Name = "FirstNameTextBox";
+            this.FirstNameTextBox.ReadOnly = true;
+            this.FirstNameTextBox.Size = new System.Drawing.Size(194, 38);
+            this.FirstNameTextBox.TabIndex = 7;
+            this.FirstNameTextBox.TextChanged += new System.EventHandler(this.FirstNameTextBox_TextChanged);
+            // 
+            // LastNameTextBox
+            // 
+            this.LastNameTextBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LastNameTextBox.Location = new System.Drawing.Point(1115, 3);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.ReadOnly = true;
+            this.LastNameTextBox.Size = new System.Drawing.Size(194, 38);
+            this.LastNameTextBox.TabIndex = 8;
+            this.LastNameTextBox.TextChanged += new System.EventHandler(this.LastNameTextBox_TextChanged);
+            // 
             // BookingIdColumn
             // 
             this.BookingIdColumn.DataPropertyName = "BookingID";
@@ -292,9 +320,9 @@
             // DateRequestedColumn
             // 
             this.DateRequestedColumn.DataPropertyName = "DateRequested";
-            this.DateRequestedColumn.HeaderText = "Date Requested";
+            this.DateRequestedColumn.HeaderText = "Transaction Date";
             this.DateRequestedColumn.Name = "DateRequestedColumn";
-            this.DateRequestedColumn.Width = 274;
+            this.DateRequestedColumn.Width = 285;
             // 
             // BookingDateColumn
             // 
@@ -348,6 +376,7 @@
             this.Name = "BookingHistoryMembers";
             this.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
             this.Text = "Booking History (By Members)";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BookingMemberDataGrid)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -376,6 +405,8 @@
         private System.Windows.Forms.Button CancelBookingButton;
         private System.Windows.Forms.Button PrintReceiptButton;
         private System.Windows.Forms.Button ViewReceiptButton;
+        private System.Windows.Forms.TextBox FirstNameTextBox;
+        private System.Windows.Forms.TextBox LastNameTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookingIdColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateRequestedColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookingDateColumn;

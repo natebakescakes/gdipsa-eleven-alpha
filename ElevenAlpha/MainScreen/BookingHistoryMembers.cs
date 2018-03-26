@@ -20,8 +20,14 @@ namespace ElevenAlpha
             context = new ElevenAlphaEntities();
 
             MemberIdTextBox.Text = memberId.ToString();
+
+            // Initialize DateTimePicker
             FromDateTimePicker.Value = fromDateTime;
             ToDateTimePicker.Value = toDateTime;
+
+            // Initialize watermark
+            FirstNameTextBox_TextChanged(FirstNameTextBox, new EventArgs());
+            LastNameTextBox_TextChanged(LastNameTextBox, new EventArgs());
         }
 
         private void LoadBookingHistoryDataGrid()
@@ -83,11 +89,39 @@ namespace ElevenAlpha
                     })
                     .ToList();
             }
+
+            foreach (DataGridViewColumn column in BookingMemberDataGrid.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void MemberIdTextBox_TextChanged(object sender, EventArgs e)
         {
             LoadBookingHistoryDataGrid();
+
+            int memberId;
+
+            if (MemberIdTextBox.Text == "") { }
+            else if (Int32.TryParse(MemberIdTextBox.Text, out memberId))
+            {
+                if (context.Members.Where(x => x.MemberID == memberId).FirstOrDefault() is null)
+                {
+                    FirstNameTextBox.Text = "";
+                    LastNameTextBox.Text = "";
+                }
+                else
+                {
+                    FirstNameTextBox.Text = context.Members.Where(x => x.MemberID == memberId).First().FirstName;
+                    LastNameTextBox.Text = context.Members.Where(x => x.MemberID == memberId).First().LastName;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("You have entered an invalid Member ID.");
+                MemberIdTextBox.Text = "";
+            }
         }
 
         private void ViewReceiptButton_Click(object sender, EventArgs e)
@@ -150,6 +184,40 @@ namespace ElevenAlpha
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
             LoadBookingHistoryDataGrid();
+        }
+
+        private void FirstNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (FirstNameTextBox.Text.Length == 0)
+            {
+                FirstNameTextBox.BackColor = SystemColors.Control;
+                FirstNameTextBox.ForeColor = SystemColors.GrayText;
+                //FirstNameTextBox.Font = new Font(FirstNameTextBox.Font, FontStyle.Italic);
+                FirstNameTextBox.Text = "First Name";
+            }
+            else if (FirstNameTextBox.Text != "First Name")
+            {
+                FirstNameTextBox.BackColor = SystemColors.Control;
+                FirstNameTextBox.ForeColor = SystemColors.ControlText;
+                //FirstNameTextBox.Font = new Font(FirstNameTextBox.Font, FirstNameTextBox.Font.Style & ~FontStyle.Italic);
+            }
+        }
+
+        private void LastNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (LastNameTextBox.Text.Length == 0)
+            {
+                LastNameTextBox.BackColor = SystemColors.Control;
+                LastNameTextBox.ForeColor = SystemColors.GrayText;
+                //LastNameTextBox.Font = new Font(LastNameTextBox.Font, FontStyle.Italic);
+                LastNameTextBox.Text = "Last Name";
+            }
+            else if (LastNameTextBox.Text != "Last Name")
+            {
+                LastNameTextBox.BackColor = SystemColors.Control;
+                LastNameTextBox.ForeColor = SystemColors.ControlText;
+                //LastNameTextBox.Font = new Font(LastNameTextBox.Font, FirstNameTextBox.Font.Style & ~FontStyle.Italic);
+            }
         }
     }
 }

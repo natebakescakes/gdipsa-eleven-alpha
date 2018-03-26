@@ -47,12 +47,12 @@
             this.tabControl.Controls.Add(this.reportsTabPage);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl.Location = new System.Drawing.Point(0, 97);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl.Location = new System.Drawing.Point(0, 150);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl.Name = "tabControl";
             this.tabControl.Padding = new System.Drawing.Point(150, 10);
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1082, 580);
+            this.tabControl.Size = new System.Drawing.Size(1082, 527);
             this.tabControl.TabIndex = 0;
             // 
             // bookingsTabPage
@@ -62,7 +62,7 @@
             this.bookingsTabPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bookingsTabPage.Name = "bookingsTabPage";
             this.bookingsTabPage.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.bookingsTabPage.Size = new System.Drawing.Size(1074, 516);
+            this.bookingsTabPage.Size = new System.Drawing.Size(1074, 463);
             this.bookingsTabPage.TabIndex = 0;
             this.bookingsTabPage.Text = "📕 Bookings";
             this.bookingsTabPage.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             this.membersTabPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.membersTabPage.Name = "membersTabPage";
             this.membersTabPage.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.membersTabPage.Size = new System.Drawing.Size(1916, 850);
+            this.membersTabPage.Size = new System.Drawing.Size(1074, 516);
             this.membersTabPage.TabIndex = 1;
             this.membersTabPage.Text = "👪 Members";
             this.membersTabPage.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             this.facilitiesTabPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.facilitiesTabPage.Name = "facilitiesTabPage";
             this.facilitiesTabPage.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.facilitiesTabPage.Size = new System.Drawing.Size(1916, 850);
+            this.facilitiesTabPage.Size = new System.Drawing.Size(1074, 516);
             this.facilitiesTabPage.TabIndex = 2;
             this.facilitiesTabPage.Text = "🎾 Facilities";
             this.facilitiesTabPage.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             this.reportsTabPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.reportsTabPage.Name = "reportsTabPage";
             this.reportsTabPage.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.reportsTabPage.Size = new System.Drawing.Size(1916, 850);
+            this.reportsTabPage.Size = new System.Drawing.Size(1074, 516);
             this.reportsTabPage.TabIndex = 3;
             this.reportsTabPage.Text = "📃 Reports";
             this.reportsTabPage.UseVisualStyleBackColor = true;
@@ -107,9 +107,9 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(215, 147);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -122,7 +122,7 @@
             this.ClientSize = new System.Drawing.Size(1082, 677);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainScreen";
             this.Padding = new System.Windows.Forms.Padding(0, 150, 0, 0);
             this.Text = "Eleven Alpha Sports Hub";

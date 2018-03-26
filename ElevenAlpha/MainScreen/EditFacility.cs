@@ -117,6 +117,9 @@ namespace ElevenAlpha
                     f.Name = inputname;
                     if (OpenTimeMaskT.MaskedTextProvider.AssignedEditPositionCount == 0)
                     { MessageBox.Show("Please input the Opening Time."); }
+                    else if (Convert.ToDateTime(OpenTimeMaskT.Text.ToString()) >= Convert.ToDateTime(CloseTimeMaskT.Text.ToString()))
+                    { MessageBox.Show("Please input a closing time later than opening time!"); }
+
                     else
                     {
                         DateTime d1 = Convert.ToDateTime(OpenTimeMaskT.Text.ToString());

@@ -29,7 +29,6 @@ namespace ElevenAlpha
 
         private void LoadDataGridView()
         {
-            
             //filling columns
             FacilitiesdataGridView1.AutoGenerateColumns = false;
             ElevenAlphaEntities context = new ElevenAlphaEntities();
@@ -86,7 +85,11 @@ namespace ElevenAlpha
 
         private void SearchTextbox_TextChanged(object sender, EventArgs e)
         {
+            SearchBarLoadData();
+        }
 
+        private void SearchBarLoadData()
+        {
             ElevenAlphaEntities context = new ElevenAlphaEntities();
             var searchValue = SearchTextbox.Text.Trim();
             var columns = context.Facilities
@@ -99,7 +102,6 @@ namespace ElevenAlpha
                     Active = (int)x.Active,
                     OpeningTime = (DateTime)x.OpeningTime,
                     ClosingTime = (DateTime)x.ClosingTime
-
                 });
 
             var resultsList = columns.ToList();
@@ -129,7 +131,6 @@ namespace ElevenAlpha
                 }
                 result.ActiveStatus = activestatus;
             }
-
             FacilitiesdataGridView1.Columns[0].DataPropertyName = "FacilityID";
             FacilitiesdataGridView1.Columns[1].DataPropertyName = "Name";
             FacilitiesdataGridView1.Columns[2].DataPropertyName = "TypeID";
@@ -137,8 +138,8 @@ namespace ElevenAlpha
             FacilitiesdataGridView1.Columns[4].DataPropertyName = "HoursOpen";
             FacilitiesdataGridView1.Columns[5].DataPropertyName = "ActiveStatus";
             FacilitiesdataGridView1.DataSource = resultsList;
-            
         }
+
         //Cue for searchbox
         private void SearchTextbox_Enter(object sender, EventArgs e)
         {
@@ -147,6 +148,11 @@ namespace ElevenAlpha
         //Hiding or showing deactivated facilities via checkbox
         private void ActiveCheckbox_CheckedChanged(object sender, EventArgs e)
         {
+            ShowStatus();
+        }
+
+        private void ShowStatus()
+        {
             CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[FacilitiesdataGridView1.DataSource];
             currencyManager1.SuspendBinding();
             for (int i = 0; i < FacilitiesdataGridView1.RowCount; i++)
@@ -154,13 +160,14 @@ namespace ElevenAlpha
                 if (FacilitiesdataGridView1.Rows[i].Cells[5].Value.ToString() == "Deactivated" && ActiveCheckbox.Checked)
                 {
                     FacilitiesdataGridView1.Rows[i].Visible = false;
-                }   
+                }
                 if (FacilitiesdataGridView1.Rows[i].Cells[5].Value.ToString() == "Deactivated" && !ActiveCheckbox.Checked)
                 {
                     FacilitiesdataGridView1.Rows[i].Visible = true;
                 }
             }
         }
+
         //Activating facilities
         private void FacilitiesTabBtnActivate_Click(object sender, EventArgs e)
         {
@@ -177,9 +184,9 @@ namespace ElevenAlpha
                 toactive.Active = 1;
                 MessageBox.Show("Facility activated");
                 context.SaveChanges();
-                LoadDataGridView();
-            }
-            
+                SearchBarLoadData();
+                ShowStatus();
+            }  
         }
         //deactivating facilities
         private void FacilitiesTabBtnDeactivate_Click(object sender, EventArgs e)//already deactivated keeps popping out
@@ -187,9 +194,7 @@ namespace ElevenAlpha
             ElevenAlphaEntities context = new ElevenAlphaEntities();
             int q = (int)FacilitiesdataGridView1.SelectedRows[0].Cells[0].Value;
             Facility toinactive = context.Facilities.Where(x => x.FacilityID == q).First();
-
-
-
+            
             if (toinactive.Active == 0)
             {
                 MessageBox.Show("Facility already deactivated");
@@ -199,11 +204,10 @@ namespace ElevenAlpha
                 toinactive.Active = 0;
                 MessageBox.Show("Facility deactivated");
                 context.SaveChanges();
-                LoadDataGridView();
+                SearchBarLoadData();
+                ShowStatus();
             }
-        }
-
-        
+        }              
     }
     public class Result
     {
@@ -216,7 +220,6 @@ namespace ElevenAlpha
         public string Difference { get; set; }
         public double HoursOpen { get; set; }
         public string ActiveStatus { get; set; }
-         
     }
 }
 

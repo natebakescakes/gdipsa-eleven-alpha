@@ -110,7 +110,7 @@ namespace ElevenAlpha
                             x.BookingDate.Value.Year == yearComparison &&
                             x.BookingDate.Value.Month == monthComparison &&
                             x.BookingDate.Value.Day == dayComparison &&
-                            x.Timeslot == j &&
+                            x.Timeslot == j + 1 &&
                             x.Status == 1)
                         .FirstOrDefault();
 
@@ -242,6 +242,12 @@ namespace ElevenAlpha
                 return;
             }
 
+            if (FirstNameTextBox.Text == "First Name" || LastNameTextBox.Text == "Last Name")
+            {
+                MessageBox.Show("Member ID is invalid.");
+                return;
+            }
+
             string facility = BookingManagerDataGrid.SelectedCells[0].OwningColumn.HeaderText;
             int facilityId = context.Facilities.Where(x => x.Name == facility).FirstOrDefault().FacilityID;
 
@@ -250,7 +256,7 @@ namespace ElevenAlpha
                 FacilityID = facilityId,
                 MemberID = Int32.Parse(MemberIdTextBox.Text),
                 BookingDate = BookingDateTimePicker.Value,
-                Timeslot = BookingManagerDataGrid.SelectedCells[0].RowIndex,
+                Timeslot = BookingManagerDataGrid.SelectedCells[0].RowIndex + 1,
                 Status = 1,
                 DateRequested = System.DateTime.Now
             };

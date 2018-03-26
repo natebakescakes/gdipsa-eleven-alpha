@@ -137,6 +137,7 @@
             this.OpenHrsMskTxB.TabIndex = 10;
             this.OpenHrsMskTxB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.OpenHrsMskTxB.ValidatingType = typeof(System.DateTime);
+            this.OpenHrsMskTxB.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.OpenHrsMskTxB_MaskInputRejected);
             // 
             // CloseHrsMskTxB
             // 

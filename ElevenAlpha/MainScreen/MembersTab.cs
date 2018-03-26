@@ -165,6 +165,8 @@ namespace ElevenAlpha
             }
             else
                 SearchActiveMembers();
+
+
         }
 
         private void BookHstryBttn_Click(object sender, EventArgs e)

@@ -144,6 +144,11 @@ namespace ElevenAlpha
         {
             this.Close();
         }
+
+        private void OpenHrsMskTxB_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
 

@@ -26,8 +26,8 @@ namespace ElevenAlpha
         private void AddMemberButton_Click(object sender, EventArgs e)
         {
             
-            Regex isValidEmail = new Regex(@"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
-                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$");
+            Regex isValidEmail = new Regex(@"^(?("")("".+?(?<!\\)""@)|(([0-9a-zA-Z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-zA-Z])@))" +
+                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9A-Za-z][-\w]*[0-9A-Za-z]*\.)+[a-zA-Z0-9][\-a-zA-Z0-9]{0,22}[a-zA-Z0-9]))$");
 
             if (FirstNameTxtBox.Text == "")
             {
@@ -38,7 +38,7 @@ namespace ElevenAlpha
             {
                 MessageBox.Show("Please input Gender.");
             }
-            else if ((MobileTextBox.Text == "") || MobileTextBox.TextLength<8)
+            else if(MobileTextBox.MaskedTextProvider.AssignedEditPositionCount <8)
             {
                 MessageBox.Show("Please input a valid Mobile number.");
             }
@@ -52,7 +52,7 @@ namespace ElevenAlpha
             {
                 MessageBox.Show("Please input an Emergency Contact Name.");
             }
-            else if (EmergencyNumberTextBox.Text == "" || EmergencyNumberTextBox.TextLength<8)
+            else if (EmergencyNumberTextBox.MaskedTextProvider.AssignedEditPositionCount <8 )
             {
                 MessageBox.Show("Please input a valid Emergency Contact Number.");
             }
@@ -72,8 +72,7 @@ namespace ElevenAlpha
                 }
                 if (flag == 0)
                 {
-                    int i = MobileTextBox.TextLength;
-                    MessageBox.Show(i.ToString());
+                    
                     flag = 0;
 
                     Member newMember = new Member
@@ -112,9 +111,38 @@ namespace ElevenAlpha
 
 
                     MessageBox.Show(String.Format("New member {0} {1} with Member ID: {2} has been added!", newMember.FirstName, newMember.LastName, newMember.MemberID));
+                    
+                    if (memberTab.SearchTextBox.Text != "")
+                    {
+                        if (memberTab.InactiveCheckbox.Checked == true)
+                        {
+                            memberTab.SearchAllMembers();
+                        }
+                        else
+                        {
+                            memberTab.SearchActiveMembers();
+                        }
+
+                    }
+
+                    else
+                    {
+                        if (memberTab.InactiveCheckbox.Checked == true)
+                        {
+                            memberTab.ViewAllMembers();
+                        }
+                        else
+                        {
+                            memberTab.ViewActiveMembers();
+                        }
+
+                    }
+
+
                     int selectedIndex = memberTab.MemberInfoTable.Rows.Count - 1;
-                    memberTab.MemberInfoTable.Refresh();
+
                     memberTab.MemberInfoTable.Rows[selectedIndex].Selected = true;
+                    memberTab.MemberInfoTable.FirstDisplayedScrollingRowIndex = selectedIndex;
                     this.Close();
                 }
 

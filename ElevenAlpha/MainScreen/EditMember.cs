@@ -73,8 +73,8 @@ namespace ElevenAlpha
         {
 
             
-            Regex isValidEmail = new Regex(@"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
-                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$");
+            Regex isValidEmail = new Regex(@"^(?("")("".+?(?<!\\)""@)|(([0-9a-zA-Z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-zA-Z])@))" +
+                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-zA-Z][-\w]*[0-9a-z]*\.)+[a-zA-Z0-9][\-a-zA-Z0-9]{0,22}[a-zA-Z0-9]))$");
 
             if (FirstNameTxtBox.Text == "")
             {
@@ -85,7 +85,7 @@ namespace ElevenAlpha
             {
                 MessageBox.Show("Please input Gender.");
             }
-            else if ((MobileTextBox.Text == "") || MobileTextBox.TextLength<8)
+            else if (MobileTextBox.MaskedTextProvider.AssignedEditPositionCount < 8)
             {
                 MessageBox.Show("Please input a valid Mobile Number.");
             }
@@ -99,7 +99,7 @@ namespace ElevenAlpha
             {
                 MessageBox.Show("Please input an Emergency Contact Name.");
             }
-            else if (EmergencyNumberTextBox.Text == "" || EmergencyNumberTextBox.TextLength<8)
+            else if (EmergencyNumberTextBox.MaskedTextProvider.AssignedEditPositionCount < 8)
             {
                 MessageBox.Show("Please input a valid Emergency Contact Number.");
             }
@@ -138,8 +138,33 @@ namespace ElevenAlpha
                     ctx.SaveChanges();
                     MessageBox.Show(String.Format("The details of {0} {1} with Member ID: {2} has been updated!", memberToEdit.FirstName, memberToEdit.LastName, memberToEdit.MemberID));
 
-                    memberTab.MemberInfoTable.Refresh();
-                    memberTab.MemberInfoTable.Rows[selectedIndex].Selected = true;
+                if (memberTab.SearchTextBox.Text != "")
+                {
+                    if (memberTab.InactiveCheckbox.Checked == true)
+                    {
+                        memberTab.SearchAllMembers();
+                    }
+                    else
+                    {
+                        memberTab.SearchActiveMembers();
+                    }
+
+                }
+
+                else
+                {
+                    if (memberTab.InactiveCheckbox.Checked == true)
+                    {
+                        memberTab.ViewAllMembers();
+                    }
+                    else
+                    {
+                        memberTab.ViewActiveMembers();
+                    }
+
+                }
+
+                memberTab.MemberInfoTable.Rows[selectedIndex].Selected = true;
                     this.Close();
                 }
             }

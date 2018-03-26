@@ -13,7 +13,7 @@ Our solution aims to provide Sports Centre Staff at Eleven Alpha Sports Hub intu
 
 ### High-level Bookings View
 
-[](https://gfycat.com/DetailedOccasionalAiredale)
+![Booking Visualisation](https://thumbs.gfycat.com/DetailedOccasionalAiredale-size_restricted.gif)
 
 Provides a high-level view of bookings for the Facility Type and Date Range selected. Clicking on a time slot will open the booking details screen.
 

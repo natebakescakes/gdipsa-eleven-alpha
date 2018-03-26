@@ -2,37 +2,38 @@ Sports Facility Booking System
 ========================
 GDipSA (Team 11A) Eleven Alpha
 
-The software solution is for sports staff to make the booking/cancellation of facility in a sports center.This project is written uising C# on visual studio 2017.
+The software solution is for sports staff to make the booking/cancellation of facility in a sports center.This project is written using C# on visual studio 2017.
 
 Function
 ==================
 # Bookings 
-* Select Facility Type and Date Period, View the avalible time slot .
+* Select Facility Type and Date Period, View the vacancy for each facililty type.
 * Click any time slot to see details in Booking Manager Form.
 ## Booking Manager Form
-* All facility avalilibity information of one type in the same day(can re-choose date and facility Type).
-* Input memberID and make mooking.
+* All facility availability information of one type in the same day(can re-choose date and facility Type).
+* Input memberID and make booking.
    
 # Members 
 * In member Tab, system shows all member List.
-* Screen can hide inactive Member by click "Hide Inactive Members".
-* In this Tab, there are New,Edit,Deactive,Active,View Booking hitory,View Member Report total 6 button.
+* Screen can hide inactive Member by checking "Hide Inactive Members" checkbox.
+* In this Tab, there are New,Edit,Deactivate,Activate,View Booking history and View Member Report buttons.
+
 New Button
 * Click New button, New Member form shows.
 
 ## New button-New Member Form
-* Input Member Information, click Add Member and close,back to Members Manager and member list refresh.
-* Can't add exist member.
+* Input Member Information, click Add Member and close,back to Members Manager and member list is refreshed.
+* Cannot add existing member.
 
 ## Edit Button-Edit Member Form
-* Select any member,click Edit button, Edit Member form shows and pops out the member information which is selected.
-* Change the information and click Update button and close,back to Members Manager and member list refresh.
+* Select any member,click Edit button, Edit Member form shows and pops out that members information.
+* Change the information and click Update button and close,back to Members Manager and member list is refreshed.
 
 ## Deactive Button
-* select any member,click Deactive,the member which is selected is set deactive and member list refresh.
+* select any member,click Deactivate,the member which is selected is set to "discontinued" and member list is refreshed.
 
 ## Active Button
-* Select any member,click Active,the member which is selected is set Active and member list refresh.
+* Select any member,click Activate,the member which is selected is set to "Active" and member list is refreshed.
 
 ## View booking history Button —— Booking History(By Members) Form
 * Click View Booking History button,Booking History(By Members) form shows.
@@ -47,7 +48,7 @@ New Button
 # Facility
 * In Facility Tab, system shows all facility List.
 * Screen can hide inactive Facility by click "Hide Inactive Facilities".
-* In this Tab, there are New,Edit,Deactive,Active,View Booking hitory total 6 button.
+* In this Tab, there are New,Edit,Deactive,Active,View Booking history.
 New Button
 * Click New button, New Facility shows.
 ## New button-New Facility Form
@@ -55,14 +56,14 @@ New Button
 * Click Update, new facility is created (Facility Name can't be found the same in the facilty list)
 * If need create new facility type, choose "Manage Facility Type..." in Facility Type Box,Facility Type Manager Form shows.
 ### Manage Facility Type... —— Facility Type Manager Form
-* In Facility Type Manager Form, Can do Add/Delete/Update Facility Type.
+* In Facility Type Manager Form,  there are buttons to Add/Delete/Update Facility Type.
 * Can't delete Facility Type that has booking records.
 * Click close button, go back to New facility Form, Facility Type Box refreshed.
 
 
 ## Edit Button —— Edit Facility Form
-* Chose a facilty and click edit, Edit facility Form shows.
-* In Edit Facility Form, the information deafault is what already choosed but also can be edit.
+* Chose a facility and click edit, Edit facility Form shows.
+* In Edit Facility Form, the selected members details can be edited.
 * Click Update Button, Facility information is changed and saved(Facility Name can't be found the same in the facilty list).
 
 ## Deactive Button

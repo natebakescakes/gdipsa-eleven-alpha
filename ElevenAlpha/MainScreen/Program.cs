@@ -17,10 +17,10 @@ namespace ElevenAlpha
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainScreen());
-          
+
             // Debug Application Calls
-          
-            //Application.Run(new BookingHistoryMembers(6, new DateTime(2018, 03, 24), new DateTime(2018, 03, 24)));
+
+           // Application.Run(new BookingHistoryMembers(6, new DateTime(2018, 03, 24), new DateTime(2018, 03, 24)));
             //Application.Run(new BookingHistoryFacilities(17, new DateTime(2018, 03, 24), new DateTime(2018, 03, 24)));
             //Application.Run(new MemberLookup());
             //Application.Run(new BookingsManager("Tennis Court", new DateTime(2018, 03, 24)));
@@ -28,11 +28,17 @@ namespace ElevenAlpha
             //Application.Run(new BookingHistoryMembers(6, new DateTime(2018, 03, 24), new DateTime(2018, 03, 24)));
             //Application.Run(new BookingHistoryFacilities(17, new DateTime(2018, 03, 24), new DateTime(2018, 03, 24)));
             //Application.Run(new CreateFacility());
+            //CreateFacility f = new CreateFacility();
+            //Application.Run(new FacilityTypeManager(f));
+
             //Application.Run(new MemberLookup());
             //Application.Run(new BookingsManager("Tennis Court", new DateTime(2018, 03, 24)));
             //Application.Run(new EditFacility(17));
+            //Application.Run(new CreateMember());
+            //Application.Run(new EditMember(76));
             //Application.Run(new AddNewMember());
             //Application.Run(new EditMember(68));
+            //Application.Run(new ViewBookingReceipt(100));
         }
     }
 }

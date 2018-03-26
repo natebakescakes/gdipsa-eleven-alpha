@@ -114,7 +114,7 @@
             this.ActiveCheckbox.Text = "Hide Inactive";
             this.ActiveCheckbox.UseVisualStyleBackColor = true;
             this.ActiveCheckbox.CheckedChanged += new System.EventHandler(this.ActiveCheckbox_CheckedChanged);
-            this.ActiveCheckbox.Click += new System.EventHandler(this.SearchTextbox_Enter);
+            
             // 
             // SearchTextbox
             // 

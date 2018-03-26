@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MemberInfoTable = new System.Windows.Forms.DataGridView();
             this.NewButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
@@ -54,6 +55,14 @@
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.MemberInfoTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MemberInfoTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.MemberInfoTable.ColumnHeadersHeight = 40;
             this.MemberInfoTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemberInfoTable.Location = new System.Drawing.Point(0, 0);
@@ -75,6 +84,7 @@
             this.NewButton.TabIndex = 3;
             this.NewButton.Text = "New";
             this.NewButton.UseVisualStyleBackColor = true;
+            this.NewButton.Click += new System.EventHandler(this.NewButton_Click);
             // 
             // EditButton
             // 
@@ -86,6 +96,7 @@
             this.EditButton.TabIndex = 3;
             this.EditButton.Text = "Edit";
             this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // DeleteButton
             // 
@@ -93,7 +104,7 @@
             this.DeleteButton.Location = new System.Drawing.Point(724, 665);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(5);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(169, 45);
+            this.DeleteButton.Size = new System.Drawing.Size(95, 29);
             this.DeleteButton.TabIndex = 4;
             this.DeleteButton.Text = "Deactivate";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -117,7 +128,7 @@
             this.SearchTextBox.Location = new System.Drawing.Point(121, 669);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(593, 38);
+            this.SearchTextBox.Size = new System.Drawing.Size(335, 26);
             this.SearchTextBox.TabIndex = 5;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
@@ -141,7 +152,7 @@
             this.SearchLabel.Location = new System.Drawing.Point(5, 672);
             this.SearchLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.SearchLabel.Name = "SearchLabel";
-            this.SearchLabel.Size = new System.Drawing.Size(105, 32);
+            this.SearchLabel.Size = new System.Drawing.Size(60, 20);
             this.SearchLabel.TabIndex = 8;
             this.SearchLabel.Text = "Search";
             // 
@@ -159,7 +170,7 @@
             // 
             // MembersTab
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ActivateMemberButton);
             this.Controls.Add(this.SearchLabel);
@@ -182,15 +193,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView MemberInfoTable;
         private System.Windows.Forms.Button NewButton;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button BookHstryBttn;
-        private System.Windows.Forms.TextBox SearchTextBox;
-        private System.Windows.Forms.CheckBox InactiveCheckbox;
         private System.Windows.Forms.Label SearchLabel;
         private System.Windows.Forms.Button ActivateMemberButton;
+        public System.Windows.Forms.DataGridView MemberInfoTable;
+        public System.Windows.Forms.CheckBox InactiveCheckbox;
+        public System.Windows.Forms.TextBox SearchTextBox;
     }
 }

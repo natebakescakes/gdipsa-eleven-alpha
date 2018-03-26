@@ -49,20 +49,19 @@
             // FacilityNameTxtB
             // 
             this.FacilityNameTxtB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.FacilityNameTxtB.Location = new System.Drawing.Point(255, 41);
-            this.FacilityNameTxtB.Margin = new System.Windows.Forms.Padding(6);
+            this.FacilityNameTxtB.Location = new System.Drawing.Point(143, 26);
+            this.FacilityNameTxtB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FacilityNameTxtB.Name = "FacilityNameTxtB";
-            this.FacilityNameTxtB.Size = new System.Drawing.Size(404, 38);
+            this.FacilityNameTxtB.Size = new System.Drawing.Size(229, 26);
             this.FacilityNameTxtB.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(21, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 32);
+            this.label1.Size = new System.Drawing.Size(103, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Facility Name";
             // 
@@ -70,10 +69,9 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 94);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(21, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 32);
+            this.label2.Size = new System.Drawing.Size(107, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Opening Time";
             // 
@@ -81,10 +79,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 144);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(21, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 32);
+            this.label3.Size = new System.Drawing.Size(70, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Location";
             // 
@@ -92,10 +89,9 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 201);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(21, 130);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 32);
+            this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Description";
             // 
@@ -103,10 +99,9 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(671, 44);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(377, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(175, 32);
+            this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Facility Type";
             // 
@@ -114,10 +109,9 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(671, 94);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(377, 61);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 32);
+            this.label6.Size = new System.Drawing.Size(99, 20);
             this.label6.TabIndex = 7;
             this.label6.Text = "Closing Time";
             // 
@@ -125,34 +119,39 @@
             // 
             this.FacilityTypeComB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FacilityTypeComB.FormattingEnabled = true;
-            this.FacilityTypeComB.Location = new System.Drawing.Point(876, 40);
-            this.FacilityTypeComB.Margin = new System.Windows.Forms.Padding(6);
+            this.FacilityTypeComB.Location = new System.Drawing.Point(493, 26);
+            this.FacilityTypeComB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FacilityTypeComB.Name = "FacilityTypeComB";
-            this.FacilityTypeComB.Size = new System.Drawing.Size(412, 39);
+            this.FacilityTypeComB.Size = new System.Drawing.Size(234, 28);
             this.FacilityTypeComB.TabIndex = 9;
             this.FacilityTypeComB.SelectedIndexChanged += new System.EventHandler(this.FacilityTypeComB_SelectedIndexChanged);
             // 
             // OpenHrsMskTxB
             // 
             this.OpenHrsMskTxB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.OpenHrsMskTxB.Location = new System.Drawing.Point(255, 91);
-            this.OpenHrsMskTxB.Margin = new System.Windows.Forms.Padding(6);
+            this.OpenHrsMskTxB.Location = new System.Drawing.Point(143, 59);
+            this.OpenHrsMskTxB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OpenHrsMskTxB.Mask = "00:00";
             this.OpenHrsMskTxB.Name = "OpenHrsMskTxB";
+            this.OpenHrsMskTxB.ReadOnly = true;
             this.OpenHrsMskTxB.Size = new System.Drawing.Size(281, 38);
             this.OpenHrsMskTxB.TabIndex = 10;
+            this.OpenHrsMskTxB.Text = "0800";
             this.OpenHrsMskTxB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.OpenHrsMskTxB.ValidatingType = typeof(System.DateTime);
+            this.OpenHrsMskTxB.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.OpenHrsMskTxB_MaskInputRejected);
             // 
             // CloseHrsMskTxB
             // 
             this.CloseHrsMskTxB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CloseHrsMskTxB.Location = new System.Drawing.Point(876, 91);
-            this.CloseHrsMskTxB.Margin = new System.Windows.Forms.Padding(6);
+            this.CloseHrsMskTxB.Location = new System.Drawing.Point(493, 59);
+            this.CloseHrsMskTxB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CloseHrsMskTxB.Mask = "00:00";
             this.CloseHrsMskTxB.Name = "CloseHrsMskTxB";
+            this.CloseHrsMskTxB.ReadOnly = true;
             this.CloseHrsMskTxB.Size = new System.Drawing.Size(289, 38);
             this.CloseHrsMskTxB.TabIndex = 11;
+            this.CloseHrsMskTxB.Text = "2000";
             this.CloseHrsMskTxB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CloseHrsMskTxB.ValidatingType = typeof(System.DateTime);
             // 
@@ -160,10 +159,9 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(548, 94);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Location = new System.Drawing.Point(308, 61);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 32);
+            this.label7.Size = new System.Drawing.Size(63, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "(XX:00)";
             // 
@@ -171,39 +169,38 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1177, 94);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Location = new System.Drawing.Point(662, 61);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 32);
+            this.label8.Size = new System.Drawing.Size(63, 20);
             this.label8.TabIndex = 13;
             this.label8.Text = "(XX:00)";
             // 
             // LocationTexB
             // 
             this.LocationTexB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LocationTexB.Location = new System.Drawing.Point(255, 141);
-            this.LocationTexB.Margin = new System.Windows.Forms.Padding(6);
+            this.LocationTexB.Location = new System.Drawing.Point(143, 91);
+            this.LocationTexB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LocationTexB.Name = "LocationTexB";
-            this.LocationTexB.Size = new System.Drawing.Size(1033, 38);
+            this.LocationTexB.Size = new System.Drawing.Size(583, 26);
             this.LocationTexB.TabIndex = 14;
             // 
             // DescriptionTexB
             // 
             this.DescriptionTexB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DescriptionTexB.Location = new System.Drawing.Point(255, 198);
-            this.DescriptionTexB.Margin = new System.Windows.Forms.Padding(6);
+            this.DescriptionTexB.Location = new System.Drawing.Point(143, 128);
+            this.DescriptionTexB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DescriptionTexB.Multiline = true;
             this.DescriptionTexB.Name = "DescriptionTexB";
-            this.DescriptionTexB.Size = new System.Drawing.Size(1033, 380);
+            this.DescriptionTexB.Size = new System.Drawing.Size(583, 247);
             this.DescriptionTexB.TabIndex = 15;
             // 
             // AddFacilityButton
             // 
             this.AddFacilityButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddFacilityButton.Location = new System.Drawing.Point(485, 637);
-            this.AddFacilityButton.Margin = new System.Windows.Forms.Padding(6);
+            this.AddFacilityButton.Location = new System.Drawing.Point(273, 411);
+            this.AddFacilityButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddFacilityButton.Name = "AddFacilityButton";
-            this.AddFacilityButton.Size = new System.Drawing.Size(236, 48);
+            this.AddFacilityButton.Size = new System.Drawing.Size(133, 31);
             this.AddFacilityButton.TabIndex = 16;
             this.AddFacilityButton.Text = "Add Facility";
             this.AddFacilityButton.UseVisualStyleBackColor = true;
@@ -213,10 +210,10 @@
             // 
             this.CloseButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CloseButton.Location = new System.Drawing.Point(733, 637);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(6);
+            this.CloseButton.Location = new System.Drawing.Point(412, 411);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(150, 48);
+            this.CloseButton.Size = new System.Drawing.Size(84, 31);
             this.CloseButton.TabIndex = 0;
             this.CloseButton.Text = "Close";
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
@@ -224,10 +221,10 @@
             // CreateFacility
             // 
             this.AcceptButton = this.AddFacilityButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CloseButton;
-            this.ClientSize = new System.Drawing.Size(1360, 735);
+            this.ClientSize = new System.Drawing.Size(765, 474);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.AddFacilityButton);
             this.Controls.Add(this.DescriptionTexB);
@@ -244,8 +241,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FacilityNameTxtB);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CreateFacility";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Facility";
             this.Load += new System.EventHandler(this.CreatFacility_Load);
             this.ResumeLayout(false);

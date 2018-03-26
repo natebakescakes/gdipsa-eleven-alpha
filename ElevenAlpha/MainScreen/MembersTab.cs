@@ -26,14 +26,14 @@ namespace ElevenAlpha
         }
 
 
-        private void ViewAllMembers()
+        public void ViewAllMembers()
         {
             MemberInfoTable.DataSource = ctx.Members
               .Select(x => new { x.MemberID, x.FirstName, x.LastName, x.Gender, x.Mobile, x.Email, x.EmergencyContact, Active = x.Active == 1 ? "Active" : "Discontinued" }).ToList();
             SetColumnHeader();
         }
 
-        private void ViewActiveMembers()
+        public void ViewActiveMembers()
         {
             MemberInfoTable.DataSource = ctx.Members.Where(x => x.Active == 1)
               .Select(x => new { x.MemberID, x.FirstName, x.LastName, x.Gender, x.Mobile, x.Email, x.EmergencyContact, Active = x.Active == 1 ? "Active" : "Discontinued" }).ToList();
@@ -41,7 +41,7 @@ namespace ElevenAlpha
             //if(MemberInfoTable.)
         }
 
-        private void SetColumnHeader()
+        public void SetColumnHeader()
         {
             MemberInfoTable.Columns[0].HeaderText = "Member ID";
             MemberInfoTable.Columns[1].HeaderText = "First Name";
@@ -58,7 +58,7 @@ namespace ElevenAlpha
             }
         }
 
-        private void SearchAllMembers()
+        public void SearchAllMembers()
         {
             string searchValue = SearchTextBox.Text.ToString();
             int searchValueLength = searchValue.Length;
@@ -73,7 +73,7 @@ namespace ElevenAlpha
             SetColumnHeader();
         }
 
-        private void SearchActiveMembers()
+        public void SearchActiveMembers()
         {
             string searchValue = SearchTextBox.Text.ToString();
             int searchValueLength = searchValue.Length;
@@ -165,6 +165,8 @@ namespace ElevenAlpha
             }
             else
                 SearchActiveMembers();
+
+
         }
 
         private void BookHstryBttn_Click(object sender, EventArgs e)
@@ -206,6 +208,21 @@ namespace ElevenAlpha
             else
                 SearchActiveMembers();
        
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            int memberIdToEdit=(int)MemberInfoTable.SelectedRows[0].Cells[0].Value;
+            int selectedIndex = MemberInfoTable.SelectedRows[0].Index;
+            EditMember editMember = new EditMember(memberIdToEdit,selectedIndex,this);
+            
+            editMember.ShowDialog();
+        }
+
+        private void NewButton_Click(object sender, EventArgs e)
+        {
+            CreateMember createNewMember = new CreateMember(this);
+            createNewMember.ShowDialog();
         }
     }
 }

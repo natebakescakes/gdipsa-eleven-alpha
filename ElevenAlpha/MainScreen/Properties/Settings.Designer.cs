@@ -26,7 +26,8 @@ namespace ElevenAlpha.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=ElevenAlpha;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local)\\RANIAHSQL;Initial Catalog=ElevenAlpha;Integrated Security=Tru" +
+            "e")]
         public string ElevenAlphaConnectionString {
             get {
                 return ((string)(this["ElevenAlphaConnectionString"]));

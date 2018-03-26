@@ -15,6 +15,7 @@ namespace ElevenAlpha
         ElevenAlphaEntities context;
         MemberLookup memberLookup;
         public BookingTab parent;
+        
 
         public BookingsManager(BookingTab parent, string facilityName, DateTime bookingDate)
         {
@@ -215,6 +216,7 @@ namespace ElevenAlpha
 
         private void PreviousDayButton_Click(object sender, EventArgs e)
         {
+            BookingDateTimePicker.MinDate = DateTime.Today;
             if (BookingDateTimePicker.Value.Date > BookingDateTimePicker.MinDate)
             {
                 BookingDateTimePicker.Value = BookingDateTimePicker.Value.AddDays(-1);
@@ -232,7 +234,80 @@ namespace ElevenAlpha
             LoadBookingDataGrid();
         }
 
-        private void BookButton_Click(object sender, EventArgs e)
+        //private void BookButton_Click(object sender, EventArgs e)
+        //{
+        //    if (BookingManagerDataGrid.SelectedCells[0].Value.ToString() != "Vacant")
+        //    {
+        //        MessageBox.Show("Cannot book timeslot that has already been booked.");
+        //        return;
+        //    }
+
+        //    if (MemberIdTextBox.Text == "")
+        //    {
+        //        MessageBox.Show("Member ID is a required field.");
+        //        return;
+        //    }
+
+        //    if (FirstNameTextBox.Text == "First Name" || LastNameTextBox.Text == "Last Name")
+        //    {
+        //        MessageBox.Show("Member ID is invalid.");
+        //        return;
+        //    }
+
+        //    string facility = BookingManagerDataGrid.SelectedCells[0].OwningColumn.HeaderText;
+        //    int facilityId = context.Facilities.Where(x => x.Name == facility).FirstOrDefault().FacilityID;
+        //    DateTime insertDateTime = new DateTime(BookingDateTimePicker.Value.Year, BookingDateTimePicker.Value.Month, BookingDateTimePicker.Value.Day, 0, 0, 0);
+
+        //    Booking b = new Booking()
+        //    {
+        //        FacilityID = facilityId,
+        //        MemberID = Int32.Parse(MemberIdTextBox.Text),
+        //        BookingDate = insertDateTime,
+        //        Timeslot = BookingManagerDataGrid.SelectedCells[0].RowIndex + 1,
+        //        Status = 1,
+        //        DateRequested = System.DateTime.Now
+        //    };
+
+        //    context.Bookings.Add(b);
+        //    context.SaveChanges();
+
+        //    LoadBookingDataGrid();
+        //    parent.LoadBookingDataGrid();
+        //    MessageBox.Show($"Booking successful.");
+        //    var bookingReceipt = new ViewBookingReceipt(b.BookingID);
+        //    bookingReceipt.ShowDialog();
+        //}
+
+        //private void CloseButton_Click(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}
+
+        private void BookingManagerDataGrid_DoubleClick(object sender, EventArgs e)
+        {
+            if (BookingManagerDataGrid.SelectedCells[0].Value.ToString() == "Vacant")
+                return;
+
+            int timeslot = BookingManagerDataGrid.SelectedCells[0].RowIndex + 1;
+            string facilityName = BookingManagerDataGrid.SelectedCells[0].OwningColumn.HeaderText;
+
+            int yearComparison = BookingDateTimePicker.Value.Year;
+            int monthComparison = BookingDateTimePicker.Value.Month;
+            int dayComparison = BookingDateTimePicker.Value.Day;
+
+            Booking b = context.Bookings
+                .Where(x => x.Timeslot == timeslot && 
+                    x.Facility.Name == facilityName &&
+                    x.BookingDate.Value.Year == yearComparison &&
+                    x.BookingDate.Value.Month == monthComparison &&
+                    x.BookingDate.Value.Day == dayComparison)
+                .FirstOrDefault();
+
+            var bookingHistoryMembers = new BookingHistoryMembers(this, b.MemberID ?? 0, b.BookingDate.Value, b.BookingDate.Value);
+            bookingHistoryMembers.ShowDialog();
+        }
+
+        private void BookButton1_Click(object sender, EventArgs e)
         {
             if (BookingManagerDataGrid.SelectedCells[0].Value.ToString() != "Vacant")
             {
@@ -274,35 +349,12 @@ namespace ElevenAlpha
             MessageBox.Show($"Booking successful.");
             var bookingReceipt = new ViewBookingReceipt(b.BookingID);
             bookingReceipt.ShowDialog();
+
         }
 
-        private void CloseButton_Click(object sender, EventArgs e)
+        private void CloseButton1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void BookingManagerDataGrid_DoubleClick(object sender, EventArgs e)
-        {
-            if (BookingManagerDataGrid.SelectedCells[0].Value.ToString() == "Vacant")
-                return;
-
-            int timeslot = BookingManagerDataGrid.SelectedCells[0].RowIndex + 1;
-            string facilityName = BookingManagerDataGrid.SelectedCells[0].OwningColumn.HeaderText;
-
-            int yearComparison = BookingDateTimePicker.Value.Year;
-            int monthComparison = BookingDateTimePicker.Value.Month;
-            int dayComparison = BookingDateTimePicker.Value.Day;
-
-            Booking b = context.Bookings
-                .Where(x => x.Timeslot == timeslot && 
-                    x.Facility.Name == facilityName &&
-                    x.BookingDate.Value.Year == yearComparison &&
-                    x.BookingDate.Value.Month == monthComparison &&
-                    x.BookingDate.Value.Day == dayComparison)
-                .FirstOrDefault();
-
-            var bookingHistoryMembers = new BookingHistoryMembers(this, b.MemberID ?? 0, b.BookingDate.Value, b.BookingDate.Value);
-            bookingHistoryMembers.ShowDialog();
         }
     }
 }

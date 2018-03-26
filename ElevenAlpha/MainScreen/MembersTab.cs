@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ElevenAlpha
 {
-    public partial class members_tab : UserControl
+    public partial class MembersTab : UserControl
     {
         ElevenAlphaEntities ctx= new ElevenAlphaEntities();
         
-        public members_tab()
+        public MembersTab()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
@@ -51,6 +51,11 @@ namespace ElevenAlpha
             MemberInfoTable.Columns[5].HeaderText = "Email Address";
             MemberInfoTable.Columns[6].HeaderText = "Emergency Contact Number";
             MemberInfoTable.Columns[7].HeaderText = "Member Status";
+
+            foreach (DataGridViewColumn column in MemberInfoTable.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void SearchAllMembers()

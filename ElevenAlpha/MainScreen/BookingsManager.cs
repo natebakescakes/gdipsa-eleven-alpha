@@ -279,5 +279,29 @@ namespace ElevenAlpha
         {
             this.Close();
         }
+
+        private void BookingManagerDataGrid_DoubleClick(object sender, EventArgs e)
+        {
+            if (BookingManagerDataGrid.SelectedCells[0].Value.ToString() == "Vacant")
+                return;
+
+            int timeslot = BookingManagerDataGrid.SelectedCells[0].RowIndex + 1;
+            string facilityName = BookingManagerDataGrid.SelectedCells[0].OwningColumn.HeaderText;
+
+            int yearComparison = BookingDateTimePicker.Value.Year;
+            int monthComparison = BookingDateTimePicker.Value.Month;
+            int dayComparison = BookingDateTimePicker.Value.Day;
+
+            Booking b = context.Bookings
+                .Where(x => x.Timeslot == timeslot && 
+                    x.Facility.Name == facilityName &&
+                    x.BookingDate.Value.Year == yearComparison &&
+                    x.BookingDate.Value.Month == monthComparison &&
+                    x.BookingDate.Value.Day == dayComparison)
+                .FirstOrDefault();
+
+            var bookingHistoryMembers = new BookingHistoryMembers(b.MemberID ?? 0, b.BookingDate.Value, b.BookingDate.Value);
+            bookingHistoryMembers.ShowDialog();
+        }
     }
 }

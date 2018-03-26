@@ -171,15 +171,6 @@ namespace ElevenAlpha
 
         private void BookHstryBttn_Click(object sender, EventArgs e)
         {
-            //int memberID = (int)MemberInfoTable.SelectedRows[0].Cells[0].Value;
-
-            //DateTime toDate = DateTime.Today;
-            //DateTime fromDate = toDate.AddDays(-30);
-            //shows a members booking history for last 30 days
-
-            //BookingHistoryMembers viewHistory = new BookingHistoryMembers(memberID,fromDate,toDate);
-            //viewHistory.ShowDialog();
-
         }
 
         private void ActivateMemberButton_Click(object sender, EventArgs e)

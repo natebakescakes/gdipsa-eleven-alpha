@@ -155,6 +155,7 @@ namespace ElevenAlpha
         private void FromDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             ToDateTimePicker.MaxDate = FromDateTimePicker.Value.AddDays(14);
+            ToDateTimePicker.MinDate = FromDateTimePicker.Value;
 
             if (FacilityTypeComboBox.Text != "")
             {

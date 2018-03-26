@@ -23,10 +23,10 @@ namespace ElevenAlpha
             createfacilityform.facilitiesTab = this;
 
             //Data Grid Columns
-            FacilitiesdataGridView1.ColumnCount = 6;
+            FacilitiesdataGridView1.ColumnCount = 5;
             for (int i = 0; i < FacilitiesdataGridView1.ColumnCount; i++)
             {
-                string[] FacilityGridColumns = new string[] { "Facility ID", "Facility Name", "Facility Type", "Opening Hours", "No. of Slots", "Active" };
+                string[] FacilityGridColumns = new string[] { "Facility ID", "Facility Name", "Opening Hours", "No. of Slots", "Active" };
                 FacilitiesdataGridView1.Columns[i].Name = FacilityGridColumns[i];
                 FacilitiesdataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
@@ -46,11 +46,9 @@ namespace ElevenAlpha
                 {
                     FacilityID = x.FacilityID,
                     Name = x.Name,
-                    TypeID = (int)x.TypeID,
                     Active = (int)x.Active,
                     OpeningTime = (DateTime)x.OpeningTime,
                     ClosingTime = (DateTime)x.ClosingTime
-
                 });
 
             var resultsList = columns.ToList();
@@ -83,10 +81,9 @@ namespace ElevenAlpha
 
             FacilitiesdataGridView1.Columns[0].DataPropertyName = "FacilityID";
             FacilitiesdataGridView1.Columns[1].DataPropertyName = "Name";
-            FacilitiesdataGridView1.Columns[2].DataPropertyName = "TypeID";
-            FacilitiesdataGridView1.Columns[3].DataPropertyName = "Difference";
-            FacilitiesdataGridView1.Columns[4].DataPropertyName = "HoursOpen";
-            FacilitiesdataGridView1.Columns[5].DataPropertyName = "ActiveStatus";
+            FacilitiesdataGridView1.Columns[2].DataPropertyName = "Difference";
+            FacilitiesdataGridView1.Columns[3].DataPropertyName = "HoursOpen";
+            FacilitiesdataGridView1.Columns[4].DataPropertyName = "ActiveStatus";
             FacilitiesdataGridView1.DataSource = resultsList;
         }
 
@@ -105,7 +102,6 @@ namespace ElevenAlpha
                 {
                     FacilityID = x.FacilityID,
                     Name = x.Name,
-                    TypeID = (int)x.TypeID,
                     Active = (int)x.Active,
                     OpeningTime = (DateTime)x.OpeningTime,
                     ClosingTime = (DateTime)x.ClosingTime
@@ -142,18 +138,12 @@ namespace ElevenAlpha
 
             FacilitiesdataGridView1.Columns[0].DataPropertyName = "FacilityID";
             FacilitiesdataGridView1.Columns[1].DataPropertyName = "Name";
-            FacilitiesdataGridView1.Columns[2].DataPropertyName = "TypeID";
-            FacilitiesdataGridView1.Columns[3].DataPropertyName = "Difference";
-            FacilitiesdataGridView1.Columns[4].DataPropertyName = "HoursOpen";
-            FacilitiesdataGridView1.Columns[5].DataPropertyName = "ActiveStatus";
+            FacilitiesdataGridView1.Columns[2].DataPropertyName = "Difference";
+            FacilitiesdataGridView1.Columns[3].DataPropertyName = "HoursOpen";
+            FacilitiesdataGridView1.Columns[4].DataPropertyName = "ActiveStatus";
             FacilitiesdataGridView1.DataSource = resultsList;
         }
-
-        //Cue for searchbox
-        private void SearchTextbox_Enter(object sender, EventArgs e)
-        {
-            
-        }
+       
         //Hiding or showing deactivated facilities via checkbox
         private void ActiveCheckbox_CheckedChanged(object sender, EventArgs e)
         {
@@ -166,11 +156,11 @@ namespace ElevenAlpha
             currencyManager1.SuspendBinding();
             for (int i = 0; i < FacilitiesdataGridView1.RowCount; i++)
             {
-                if (FacilitiesdataGridView1.Rows[i].Cells[5].Value.ToString() == "Deactivated" && ActiveCheckbox.Checked)
+                if (FacilitiesdataGridView1.Rows[i].Cells[4].Value.ToString() == "Deactivated" && ActiveCheckbox.Checked)
                 {
                     FacilitiesdataGridView1.Rows[i].Visible = false;
                 }
-                if (FacilitiesdataGridView1.Rows[i].Cells[5].Value.ToString() == "Deactivated" && !ActiveCheckbox.Checked)
+                if (FacilitiesdataGridView1.Rows[i].Cells[4].Value.ToString() == "Deactivated" && !ActiveCheckbox.Checked)
                 {
                     FacilitiesdataGridView1.Rows[i].Visible = true;
                 }
@@ -257,8 +247,7 @@ namespace ElevenAlpha
         public DateTime ClosingTime { get; set; }
         public string Difference { get; set; }
         public double HoursOpen { get; set; }
-        public string ActiveStatus { get; set; }
-         
+        public string ActiveStatus { get; set; }    
     }
 }
 

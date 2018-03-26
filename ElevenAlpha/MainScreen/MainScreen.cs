@@ -16,6 +16,7 @@ namespace ElevenAlpha
         BookingTab bookingTab;
         MembersTab membersUserControl;
         FacilitiesTab facilitiesTab;
+        ReportsTab reportsTab;
 
         public MainScreen()
         {
@@ -32,6 +33,10 @@ namespace ElevenAlpha
             // Initialize Facilities Tab
             facilitiesTab = new FacilitiesTab();
             facilitiesTabPage.Controls.Add(facilitiesTab);
+
+            // Initialize Reports Tab
+            reportsTab = new ReportsTab();
+            reportsTabPage.Controls.Add(reportsTab);
         }
     }
 }

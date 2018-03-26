@@ -114,26 +114,26 @@ namespace ElevenAlpha
                     
                     if (memberTab.SearchTextBox.Text != "")
                     {
-                        if (memberTab.InactiveCheckbox.Checked == true)
+                        if (memberTab.HideInactiveCheckbox.Checked == true)
                         {
-                            memberTab.SearchAllMembers();
+                            memberTab.SearchActiveMembers();
                         }
                         else
                         {
-                            memberTab.SearchActiveMembers();
+                            memberTab.SearchAllMembers();
                         }
 
                     }
 
                     else
                     {
-                        if (memberTab.InactiveCheckbox.Checked == true)
+                        if (memberTab.HideInactiveCheckbox.Checked == true)
                         {
-                            memberTab.ViewAllMembers();
+                            memberTab.ViewActiveMembers();
                         }
                         else
                         {
-                            memberTab.ViewActiveMembers();
+                            memberTab.ViewAllMembers();
                         }
 
                     }

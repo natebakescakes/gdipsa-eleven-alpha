@@ -13,16 +13,16 @@ namespace ElevenAlpha
     
     public partial class MainScreen : Form
     {
-        BookingTab bookingTab;
-        MembersTab membersUserControl;
-        FacilitiesTab facilitiesTab;
-
+        public BookingTab bookingTab;
+        public MembersTab membersUserControl;
+        public FacilitiesTab facilitiesTab;
+       
         public MainScreen()
         {
             InitializeComponent();
             
             // Initialize Bookings Tab
-            bookingTab = new BookingTab();
+            bookingTab = new BookingTab(this);
             bookingsTabPage.Controls.Add(bookingTab);
             
             // Initialize Members Tab
@@ -30,7 +30,7 @@ namespace ElevenAlpha
             membersTabPage.Controls.Add(membersUserControl);
 
             // Initialize Facilities Tab
-            facilitiesTab = new FacilitiesTab();
+            facilitiesTab = new FacilitiesTab(this);
             facilitiesTabPage.Controls.Add(facilitiesTab);
         }
     }

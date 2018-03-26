@@ -5,7 +5,7 @@ GDipSA (Team 11A) Eleven Alpha
 The software solution is for sports staff to make the booking/cancellation of facilittie in a sports center.This project is written uising C# on visual studio 2017.
 
 Function
------------------
+==================
 # Bookings 
 * Select Facility Type and Date Period, View the avalible time slot .
 * click any time slot to see details in Booking Manager Form.
@@ -34,12 +34,12 @@ New Button
 ## Active Button
 * select any member,click Active,the member which is selected is set Active and member list refresh.
 
-## View booking history Button
-* Click View Booking History button,Booking History(By Members) Manager form shows.
+## View booking history Button —— Booking History(By Members) Form
+* Click View Booking History button,Booking History(By Members) form shows.
 * Select date period,input member ID,the booking history shows in screen.
 * Search box can provide search by BookingID,Member Name and FacilityID.
-* select one Booking Transaction,click View button to View Booking Receipt.
-* select one Booking Transaction ,click cancel button to cancel booking(only when booking date is later than system date).
+* select one Booking Transaction,click View Receipt button to View Booking Receipt.
+* select one Booking Transaction ,click Cancel Booking button to cancel booking(only when booking date is later than system date).
     
 ## View Member Report Button
 * Click View Member Report to view all Member List whick Contains MemberID,FirstName,LasteName,DateOfBirth,Mobile,EmailAdress.
@@ -55,17 +55,34 @@ New Button
 * Click Update, new facility is created (Facility Name can't be found the same in the facilty list)
 * if need create new facility type, choose "Manage Facility Type..." in Facility Type Box,Facility Type Manager Form shows.
 ### Manage Facility Type... —— Facility Type Manager Form
+* In Facility Type Manager Form, Can do Add/Delete/Update Facility Type.
+* Can't delete Facility Type that has booking records.
+* Click close button, go back to New facility Form, Facility Type Box refreshed.
 
 
 ## Edit Button —— Edit Facility Form
+* Chose a facilty and click edit, Edit facility Form shows.
+* In Edit Facility Form, the information deafault is what already choosed but also can be edit.
+* Click Update Button, Facility information is changed and saved(Facility Name can't be found the same in the facilty list).
 
 ## Deactive Button
+* select a facility,click Deactive button, choosen facility is deactive.
 
 ## Active Button
+* select a facility,click Active button, choosen facility is active.
 
-## View booking history Button
-
+## View booking history Button —— Booking History(By Facility) Form
+* Click View Booking History button,Booking History(By Facility)  form shows.
+* Select date period,input facility ID,the booking history shows in screen.
+* Search box can provide search by BookingID,Member Name and FacilityID.
+* select one Booking Transaction,click View Receipt button to View Booking Receipt.
+* select one Booking Transaction ,click Cancel Booking button to cancel booking(only when booking date is later than system date).
 
 # Reports
- 
+## View Occupancy Rates(All-time) button
+* Click View Occupancy Rates(All-time) button to generate a report that shows the booking record for each time slot in each facility before generate reports time.
+
+## View Booking Trends(Charts) button
+* Click View Booking Trends(Charts) button to generate a report that shows the booking records trend by day/week/month.
+
 

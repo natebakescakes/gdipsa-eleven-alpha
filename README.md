@@ -1,8 +1,8 @@
-# Eleven Alpha Sports Hub Booking System
+# Eleven Alpha Sports Facility
 
 GDipSA (Team 11A) Eleven Alpha
 
-Our solution aims to provide Sports Centre Staff at Eleven Alpha Sports Hub intuitive control over their bookings. It is written in C# using Visual Studio 2017.
+Our solution aims to provide Sports Centre Staff at Eleven Alpha Sports Facility intuitive control over their bookings. It is written in C# using Visual Studio 2017.
 
 ## Installation
 

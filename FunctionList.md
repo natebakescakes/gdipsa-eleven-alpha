@@ -24,7 +24,7 @@
 
 * Clicking the new button brings the user to the Edit Member form.
 
-### Deactive Button
+### Deactivate Button
 
 * select any member,click Deactivate,the member which is selected is set to "discontinued" and member list is refreshed.
 
@@ -88,13 +88,13 @@
 * In Edit Facility Form, the selected member's details can be edited.
 * Click Update Button, Facility information is changed and saved(Facility Name can't be found the same in the facility list).
 
-### Deactive Button
+### Deactivate Button
 
-* Select a facility,click Deactive button, choosen facility is deactive.
+* Select a facility,click Deactivate button, chosen facility is deactivated.
 
 ### Active Button
 
-* Select a facility,click Active button, choosen facility is active.
+* Select a facility,click Active button, chosen facility is activated.
 
 ### View booking history Button —— Booking History(By Facility) Form
 

@@ -35,12 +35,14 @@ Facilities Tab allows users to view a list of all facilities in the Sports Hub. 
 
 Allows management to visualise the trends in booking so that they may make decisions on opening or closing Facilities, extending or reducing the opening hours as they see fit.
 
-## Future Updates
+## Future Updates (and Known Issues)
 
 1. Currently, opening hours are hard coded as 08:00 - 20:00 for all facilities. Our future release would allow users to customise the opening hours for each Facility.
 
 2. When selecting a booking from the Booking Tab GridView, the subsequently opened Booking Details window does not pre-select the slot that was initially selected. This would be resolved in a future update.
 
-3. Our management reports are currently limited by not allowing users to view Occupancy Rates and Booking Trends with a customised range of dates. We would like to implement such functionality in the future.
+3. Our management reports are currently limited by not allowing users to view Occupancy Rates and Booking Trends with a customised range of dates. We would like to implement such functionality in the future along with new reports.
 
 4. Occupancy Rates report will show Error Dialogs but can be bypassed. We intend to fix this in the near future.
+
+5. When deactivating member/facility, booking records still remain as 'Booked'. We intend to show it as a different status so that Staff Members will be aware of such situations.

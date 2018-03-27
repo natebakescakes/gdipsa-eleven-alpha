@@ -27,6 +27,9 @@ namespace ElevenAlpha
             // Initialize DB context
             context = new ElevenAlphaEntities();
 
+            // Initialize Window Size
+            this.Size = new Size(1000, (int)(Screen.PrimaryScreen.Bounds.Height * 0.75));
+
             // Initialize values based on slot selected
             FacilityTypeComboBox.Text = facilityName;
             BookingDateTimePicker.Value = bookingDate;

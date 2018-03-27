@@ -74,7 +74,7 @@
             this.membersTabPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.membersTabPage.Name = "membersTabPage";
             this.membersTabPage.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.membersTabPage.Size = new System.Drawing.Size(1074, 516);
+            this.membersTabPage.Size = new System.Drawing.Size(1074, 463);
             this.membersTabPage.TabIndex = 1;
             this.membersTabPage.Text = "👪 Members";
             this.membersTabPage.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             this.facilitiesTabPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.facilitiesTabPage.Name = "facilitiesTabPage";
             this.facilitiesTabPage.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.facilitiesTabPage.Size = new System.Drawing.Size(1074, 516);
+            this.facilitiesTabPage.Size = new System.Drawing.Size(1074, 463);
             this.facilitiesTabPage.TabIndex = 2;
             this.facilitiesTabPage.Text = "🎾 Facilities";
             this.facilitiesTabPage.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             this.reportsTabPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.reportsTabPage.Name = "reportsTabPage";
             this.reportsTabPage.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.reportsTabPage.Size = new System.Drawing.Size(1074, 516);
+            this.reportsTabPage.Size = new System.Drawing.Size(1074, 463);
             this.reportsTabPage.TabIndex = 3;
             this.reportsTabPage.Text = "📃 Reports";
             this.reportsTabPage.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainScreen";
             this.Padding = new System.Windows.Forms.Padding(0, 150, 0, 0);
-            this.Text = "Eleven Alpha Sports Hub";
+            this.Text = "Eleven Alpha Sports Facility";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

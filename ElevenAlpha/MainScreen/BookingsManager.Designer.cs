@@ -44,6 +44,8 @@
             this.PreviousDayButton = new System.Windows.Forms.Button();
             this.NextDayButton = new System.Windows.Forms.Button();
             this.BookingManagerDataGrid = new System.Windows.Forms.DataGridView();
+            this.BookButton1 = new System.Windows.Forms.Button();
+            this.CloseButton1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BookingManagerDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,8 +81,9 @@
             // 
             // FirstNameTextBox
             // 
+            this.FirstNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FirstNameTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.FirstNameTextBox.Location = new System.Drawing.Point(711, 36);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(584, 36);
             this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.ReadOnly = true;
@@ -90,7 +93,8 @@
             // 
             // LastNameTextBox
             // 
-            this.LastNameTextBox.Location = new System.Drawing.Point(972, 36);
+            this.LastNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LastNameTextBox.Location = new System.Drawing.Point(845, 36);
             this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.ReadOnly = true;
@@ -121,8 +125,9 @@
             // 
             // FacilityTypeLabel
             // 
+            this.FacilityTypeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FacilityTypeLabel.AutoSize = true;
-            this.FacilityTypeLabel.Location = new System.Drawing.Point(791, 85);
+            this.FacilityTypeLabel.Location = new System.Drawing.Point(664, 85);
             this.FacilityTypeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FacilityTypeLabel.Name = "FacilityTypeLabel";
             this.FacilityTypeLabel.Size = new System.Drawing.Size(175, 32);
@@ -131,8 +136,9 @@
             // 
             // FacilityTypeComboBox
             // 
+            this.FacilityTypeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FacilityTypeComboBox.FormattingEnabled = true;
-            this.FacilityTypeComboBox.Location = new System.Drawing.Point(972, 84);
+            this.FacilityTypeComboBox.Location = new System.Drawing.Point(845, 84);
             this.FacilityTypeComboBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FacilityTypeComboBox.Name = "FacilityTypeComboBox";
             this.FacilityTypeComboBox.Size = new System.Drawing.Size(255, 39);
@@ -142,27 +148,25 @@
             // BookButton
             // 
             this.BookButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.BookButton.Location = new System.Drawing.Point(576, 1302);
+            this.BookButton.Location = new System.Drawing.Point(477, 1245);
             this.BookButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BookButton.Name = "BookButton";
             this.BookButton.Size = new System.Drawing.Size(128, 46);
             this.BookButton.TabIndex = 10;
             this.BookButton.Text = "Book";
             this.BookButton.UseVisualStyleBackColor = true;
-            this.BookButton.Click += new System.EventHandler(this.BookButton_Click);
             // 
             // CloseButton
             // 
             this.CloseButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CloseButton.Location = new System.Drawing.Point(711, 1302);
+            this.CloseButton.Location = new System.Drawing.Point(612, 1245);
             this.CloseButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(128, 46);
             this.CloseButton.TabIndex = 11;
             this.CloseButton.Text = "Close";
             this.CloseButton.UseVisualStyleBackColor = true;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // PreviousDayButton
             // 
@@ -215,16 +219,42 @@
             this.BookingManagerDataGrid.RowHeadersWidth = 250;
             this.BookingManagerDataGrid.RowTemplate.Height = 80;
             this.BookingManagerDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.BookingManagerDataGrid.Size = new System.Drawing.Size(1203, 1104);
+            this.BookingManagerDataGrid.Size = new System.Drawing.Size(1004, 692);
             this.BookingManagerDataGrid.TabIndex = 0;
             this.BookingManagerDataGrid.DoubleClick += new System.EventHandler(this.BookingManagerDataGrid_DoubleClick);
+            // 
+            // BookButton1
+            // 
+            this.BookButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.BookButton1.Location = new System.Drawing.Point(386, 890);
+            this.BookButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BookButton1.Name = "BookButton1";
+            this.BookButton1.Size = new System.Drawing.Size(188, 46);
+            this.BookButton1.TabIndex = 14;
+            this.BookButton1.Text = "Book";
+            this.BookButton1.UseVisualStyleBackColor = true;
+            this.BookButton1.Click += new System.EventHandler(this.BookButton1_Click);
+            // 
+            // CloseButton1
+            // 
+            this.CloseButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.CloseButton1.Location = new System.Drawing.Point(585, 890);
+            this.CloseButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.CloseButton1.Name = "CloseButton1";
+            this.CloseButton1.Size = new System.Drawing.Size(188, 46);
+            this.CloseButton1.TabIndex = 15;
+            this.CloseButton1.Text = "Close";
+            this.CloseButton1.UseVisualStyleBackColor = true;
+            this.CloseButton1.Click += new System.EventHandler(this.CloseButton1_Click);
             // 
             // BookingsManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CloseButton;
-            this.ClientSize = new System.Drawing.Size(1403, 1404);
+            this.ClientSize = new System.Drawing.Size(1204, 992);
+            this.Controls.Add(this.CloseButton1);
+            this.Controls.Add(this.BookButton1);
             this.Controls.Add(this.NextDayButton);
             this.Controls.Add(this.PreviousDayButton);
             this.Controls.Add(this.CloseButton);
@@ -242,6 +272,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "BookingsManager";
             this.Padding = new System.Windows.Forms.Padding(100, 150, 100, 150);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Booking Manager";
             ((System.ComponentModel.ISupportInitialize)(this.BookingManagerDataGrid)).EndInit();
             this.ResumeLayout(false);
@@ -264,5 +295,7 @@
         private System.Windows.Forms.Button NextDayButton;
         public System.Windows.Forms.TextBox MemberIdTextBox;
         public System.Windows.Forms.DataGridView BookingManagerDataGrid;
+        private System.Windows.Forms.Button BookButton1;
+        private System.Windows.Forms.Button CloseButton1;
     }
 }
